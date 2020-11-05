@@ -1,0 +1,102 @@
+.container_admin {
+  display: block;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.card {
+  border: 0;
+  box-shadow: 0 3px 10px rgba(62,85,120,.045);
+  margin-bottom: 25px;
+  border-radius: 4px;
+}
+
+.card .card-body {
+  padding: 25px;
+}
+
+.card .card-body .card-title {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.card.text-white .card-title {
+  color: #ffffff;
+}
+
+.info-container-text ul {
+ list-style-type: circle;
+  color: rgba(255,255,255,.7);
+  padding-left: 25px;
+  font-weight: 500;
+}
+
+.info-container-image {
+  height: 200px;
+  background-image: image-url('dashboard-info.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.card-stat h2 {
+  margin-top: -7px;
+  font-size: 28px;
+}
+
+.card-stat p {
+  float: left;
+  opacity: .7;
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #e9ecef;
+  border-radius: .25rem;
+}
+
+.navigation {
+  padding: 15px 25px;
+}
+
+.title-page-contain .navigation {
+  background: 0 0;
+}
+
+.navigation-item+.navigation-item {
+  padding-left: .5rem;
+}
+
+.navigation-item.active {
+  color: #384c6d;
+}
+
+.icon-navigation-item {
+  display: inline-block;
+  font-size: 8px;
+  color: rgba(27,29,93,.3);
+  vertical-align: middle;
+}
+
+.icon-navigation-item-m {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.title-page-contain h3 {
+  padding: 0 25px;
+  display: block;
+  margin: 0 0 30px 0;
+  font-size: 22px;
+}
+
+.title-page-contain .desc-page-contain {
+  font-size: 14px;
+  margin: 0 25px 30px;
+}

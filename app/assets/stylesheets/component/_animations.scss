@@ -1,0 +1,43 @@
+@keyframes icon-navigation-slide-to {
+  100% {
+    transform: rotate(180deg)
+  }
+}
+
+@keyframes icon-navigation-slide-to-before {
+  100% {
+    transform: rotate(45deg);
+    margin: -5% 40%;
+    width: 75%
+  }
+}
+
+@keyframes icon-navigation-slide-to-after {
+  100% {
+    transform: rotate(-45deg);
+    margin: -5% 40%;
+    width: 75%
+  }
+}
+
+@keyframes icon-navigation-slide-from {
+  0% {
+    transform: rotate(-180deg)
+  }
+}
+
+@keyframes icon-navigation-slide-before-from {
+  0% {
+    transform: rotate(45deg);
+    margin: -5% 40%;
+    width: 75%
+  }
+}
+
+@keyframes icon-navigation-slide-after-from {
+  0% {
+    transform: rotate(-45deg);
+    margin: -5% 40%;
+    width: 75%
+  }
+}

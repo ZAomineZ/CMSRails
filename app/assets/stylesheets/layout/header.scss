@@ -1,0 +1,123 @@
+.header {
+  padding: 30px;
+  width: 100%;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  z-index: 9;
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 15px;
+  }
+}
+
+.header .navbar {
+  padding: 8px 13px;
+}
+
+.navigation-header a {
+  display: block;
+  border: none;
+  background: 0 0;
+  outline: 0;
+  margin-right: 10px;
+}
+
+.icon-navigation-header {
+  padding: 15px;
+  cursor: pointer;
+  background: 0 0;
+  border: none;
+}
+
+.icon-navigation {
+  display: block;
+  width: 13px;
+  height: 2px;
+  background: #7d7d83;
+  position: relative;
+  animation-duration: .2s;
+  animation-timing-function: ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.icon-navigation:hover {
+  background: #000;
+}
+
+.icon-navigation_from_arrow {
+  animation: icon-navigation-slide-from;
+}
+
+.icon-navigation_to_arrow {
+  animation-name: icon-navigation-slide-to;
+  animation-fill-mode: forwards;
+}
+
+.icon-navigation:after,
+.icon-navigation:before {
+  content: '';
+  display: block;
+  width: inherit;
+  height: 2px;
+  position: absolute;
+  background: inherit;
+  left: 0;
+  animation-duration: .1s;
+  animation-timing-function: cubic-bezier(.4,0,.2,1);
+}
+
+.icon-navigation:before {
+  bottom: 250%;
+}
+
+.icon-navigation_from_arrow:before {
+  animation-name: icon-navigation-slide-before-from;
+}
+
+.icon-navigation_from_arrow:after {
+  animation-name: icon-navigation-slide-after-from;
+}
+
+.icon-navigation:after {
+  top: 250%;
+}
+
+.icon-navigation_to_arrow:before {
+  animation-name: icon-navigation-slide-to-before;
+  animation-fill-mode: forwards;
+  bottom: 200%;
+}
+
+.icon-navigation_to_arrow:after {
+  animation-name: icon-navigation-slide-to-after;
+  animation-fill-mode: forwards;
+  top: 200%;
+}
+
+.header .navbar-brand {
+  color: #037afb;
+  font-size: 22px;
+  font-weight: 700;
+  margin-right: 25px;
+}
+
+.navbar-toggler {
+  padding: 0;
+  line-height: 32px;
+  font-size: 24px;
+  border: none;
+  color: #7d7d83;
+  outline: 0!important;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}

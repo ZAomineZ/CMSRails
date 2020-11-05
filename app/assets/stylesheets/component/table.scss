@@ -1,0 +1,16 @@
+.table {
+  color: #384c6d;
+}
+
+.table * {
+  border-color: #e6e6e6!important;
+}
+
+.table td, .table th {
+  padding: 12px 20px;
+}
+
+.table thead th {
+  font-weight: 600;
+  border-top: 0;
+}

@@ -1,0 +1,46 @@
+.form-control {
+  padding: 10px 15px;
+  border-color: #e6e6e6;
+  border-radius: 4px;
+  height: auto;
+  color: #838d91;
+}
+
+
+.form-group div.svelte-tags-input-layout.svelte-qtb38v {
+  border-radius: 4px;
+  color: #838d91;
+  font-weight: 400;
+}
+
+.form-group div.svelte-tags-input-layout.svelte-qtb38v:hover,
+.form-control:hover {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.form-group div.svelte-tags-input-layout.svelte-qtb38v input.svelte-tags-input.svelte-qtb38v {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  height: calc(1.5em + .75rem + 2px);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-group div.svelte-tags-input-layout.svelte-qtb38v input.svelte-tags-input.svelte-qtb38v {
+  color: #838d91;
+  font-family: inherit;
+}
+
+.form-group span.svelte-tags-input-tag.svelte-qtb38v {
+  background: #037afb;
+}
