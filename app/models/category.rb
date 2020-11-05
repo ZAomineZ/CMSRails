@@ -4,7 +4,7 @@ class Category < ApplicationRecord
   validates :name, presence: true, :length => {minimum: 3, maximum: 60}
   validates :resume, presence: true, :length => {minimum: 10}
 
-  def resume
+  def getResume
     read_attribute(:resume)[0, 150] + '...'
   end
 

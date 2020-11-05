@@ -3,6 +3,14 @@ FactoryBot.define do
     sequence(:name) { |i| "Category name #{i}" }
     sequence(:slug) { |i| "category-name-#{i}" }
     sequence(:resume) { |i| "Description category #{i}" }
+    sequence(:date_cat) { |i| Time.now}
+
+    factory :category_past do
+      sequence(:name) { |i| "Category name #{i}" }
+      sequence(:slug) { |i| "category-name-#{i}" }
+      sequence(:resume) { |i| "Description category #{i}" }
+      sequence(:date_cat) { |i| Date.yesterday}
+    end
 
     factory :category_invalid_name_presence do
       sequence(:name) { "" }

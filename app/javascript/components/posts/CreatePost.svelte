@@ -5,6 +5,13 @@
 
     // Libs
     import Tags from 'svelte-tags-input'
+    import {onMount} from "svelte";
+    // Data
+    let csrfValue = null
+
+    onMount(() => {
+        csrfValue = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    })
 </script>
 
 <Sidebar/>
@@ -18,7 +25,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eos hic illum ipsam molestiae,
                 mollitia porro quibusdam reiciendis rem suscipit vel vero? Exercitationem fugit illo iure libero natus
                 ratione recusandae.</p>
-            <form action="/posts/create" method="POST">
+            <form action="/posts" method="POST">
+                <input type="hidden" name="authenticity_token" value={csrfValue}>
                 <div class="form-group">
                     <label for="title">Post Title</label>
                     <input class="form-control" id="title" name="title" placeholder="Enter your title..." type="text">
