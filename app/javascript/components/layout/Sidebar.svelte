@@ -2,9 +2,9 @@
     import MenuItem from "./MenuItem.svelte";
 
     // Data
-    let linksPost = ['Posts', 'Create Post']
-    let linksCategory = ['Categories', 'Create Category']
-    let linksImage = ['Images', 'Create Image']
+    let linksPost = [{label: 'Posts', link: '/posts'}, {label: 'Create Post', link: '/posts/new'}]
+    let linksCategory = [{label: 'Categories', link: '/category'}, {label: 'Create Category', link: '/category/new'}]
+    let linksImage = [{label: 'Images', link: '/images'}, {label: 'Create Image', link: '/images/new'}]
 </script>
 <div class="sidebar">
     <div class="sidebar-inner">

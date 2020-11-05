@@ -10,60 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/fonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/component/_animations.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/component/_fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/component/background.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/component/badge.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/component/form.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/component/pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/component/progress.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/component/table.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/element/container.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/layout/header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/layout/sidebar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/lib/fontawesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/category_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/Home.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/Icons/ChevronDown.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/Icons/ChevronLeft.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/category/CategoriesTable.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/category/Category.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/category/NewCategory.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/form/Pagination.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/layout/MenuItem.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/layout/Sidebar.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/layout/navigation/BroadCast.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/posts/CreatePost.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/posts/Post.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/posts/PostsTable.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/packs/lib/fontawesome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/category/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/category/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/pages/home.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/posts/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/controllers/category_controller_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/controllers/post_controller_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/post_slug.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/posts.rb" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Init CMSRails project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/category/CategoriesTable.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/category/CategoriesTable.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/MenuItem.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/MenuItem.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/Sidebar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/Sidebar.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,8 +95,16 @@
       <workItem from="1604395179395" duration="14715000" />
       <workItem from="1604411653310" duration="14381000" />
       <workItem from="1604483880787" duration="24717000" />
-      <workItem from="1604565656071" duration="5718000" />
+      <workItem from="1604565656071" duration="7152000" />
     </task>
+    <task id="LOCAL-00001" summary="Init CMSRails project">
+      <created>1604571584790</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604571584790</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,15 +122,27 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Init CMSRails project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init CMSRails project" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="3016" y="3" width="672" height="1077" key="#HTML" timestamp="1604571255522">
+    <state x="3016" y="3" width="672" height="1077" key="#HTML" timestamp="1604571911079">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="3016" y="3" width="672" height="1077" key="#HTML/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604571255522" />
+    <state x="3016" y="3" width="672" height="1077" key="#HTML/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604571911079" />
     <state x="2509" y="206" width="738" height="634" key="#Inspections" timestamp="1604569292751">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2509" y="206" width="738" height="634" key="#Inspections/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604569292751" />
+    <state x="2518" y="0" width="753" height="1077" key="#JavaScript" timestamp="1604572149293">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2518" y="0" width="753" height="1077" key="#JavaScript/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604572149293" />
+    <state x="2700" y="0" width="356" height="1077" key="#JavaScript_Additions" timestamp="1604572162040">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2700" y="0" width="356" height="1077" key="#JavaScript_Additions/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604572162040" />
     <state x="2555" y="0" width="645" height="1077" key="#Ruby" timestamp="1604571149178">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -200,11 +171,16 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2149" y="259" width="540" height="540" key="StructurePopup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604418029094" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604571251477">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604571599001">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604571599001" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604572445194">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604487463655" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604571251477" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604571902106" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604572445194" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>
 </project>

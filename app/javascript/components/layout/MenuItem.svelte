@@ -30,8 +30,8 @@
 </a>
 <ul class="menu {chevronOpen ? 'active' : ''}">
     <li>
-        {#each dataLinks as link}
-            <a href="#">{link}</a>
+        {#each dataLinks as data}
+            <a href={data.link}>{data.label}</a>
         {/each}
     </li>
 </ul>
