@@ -3,6 +3,8 @@
     import Sidebar from "../layout/Sidebar.svelte";
     import PostsTable from "./PostsTable.svelte";
 
+    // Props
+    export let posts = []
 </script>
 
 <Sidebar />
@@ -29,5 +31,5 @@
             </div>
         </div>
     </div>
-    <PostsTable title="Posts List"/>
+    <PostsTable title="Posts List" posts={posts}/>
 </div>

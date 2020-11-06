@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_04_134448) do
+ActiveRecord::Schema.define(version: 2020_11_05_144731) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2020_11_04_134448) do
     t.text "img_medium"
     t.text "img_thumb"
     t.text "img_mini"
+    t.string "category_id"
   end
 
 end

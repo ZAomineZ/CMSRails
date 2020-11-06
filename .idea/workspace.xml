@@ -10,20 +10,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add action edit for the controller category">
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/category/EditCategory.svelte" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Action CRUD category finish">
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/component/alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/components/concern/Alert.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/packs/helper/FetchApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CMSRailsSvelt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CMSRailsSvelt.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/category_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/category_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/category/CategoriesTable.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/category/CategoriesTable.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/CreatePost.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/CreatePost.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/Post.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/Post.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/PostsTable.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/PostsTable.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/category.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/category/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/category/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/category_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/category_controller_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/controllers/post_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/post_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/categories.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/categories.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +34,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Header" />
-        <option value="JavaScript File" />
         <option value="lastPosts" />
         <option value="MenuItem" />
         <option value="ChevronLeft" />
@@ -43,15 +42,23 @@
         <option value="Pagination" />
         <option value="CreatePost" />
         <option value="BroadCast" />
-        <option value="SCSS File" />
         <option value="index" />
         <option value="CreateCategory" />
         <option value="EditCategory" />
+        <option value="JavaScript File" />
+        <option value="Alert" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1jjGcrVcRN4oO8TRHwOZ7gb8LmK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -64,10 +71,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/category" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -80,13 +87,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -107,7 +116,9 @@
       <workItem from="1604395179395" duration="14715000" />
       <workItem from="1604411653310" duration="14381000" />
       <workItem from="1604483880787" duration="24717000" />
-      <workItem from="1604565656071" duration="21103000" />
+      <workItem from="1604565656071" duration="29496000" />
+      <workItem from="1604655587216" duration="4321000" />
+      <workItem from="1604659985102" duration="191000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -123,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604572947988</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Action CRUD category finish">
+      <created>1604590337504</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604590337504</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,13 +162,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init CMSRails project" />
     <MESSAGE value="Add action edit for the controller category" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add action edit for the controller category" />
+    <MESSAGE value="Action CRUD category finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="Action CRUD category finish" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2910" y="3" width="672" height="1077" key="#HTML" timestamp="1604580631806">
+    <state x="3016" y="3" width="672" height="1077" key="#HTML" timestamp="1604660047747">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="3016" y="3" width="672" height="1077" key="#HTML/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604571911079" />
+    <state x="3016" y="3" width="672" height="1077" key="#HTML/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604660047747" />
     <state x="2910" y="3" width="672" height="1077" key="#HTML/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604580631806" />
     <state x="2509" y="206" width="738" height="634" key="#Inspections" timestamp="1604569292751">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -185,30 +204,31 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="222" height="539" key="HiddenNamespacesPopup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604417921247" />
-    <state x="2401" y="199" key="SettingsEditor" timestamp="1604580687606">
+    <state x="2401" y="199" key="SettingsEditor" timestamp="1604660171680">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2401" y="199" key="SettingsEditor/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604571294518" />
+    <state x="2401" y="199" key="SettingsEditor/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604660171680" />
     <state x="2401" y="199" key="SettingsEditor/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604580687606" />
     <state x="2149" y="259" width="540" height="540" key="StructurePopup" timestamp="1604418029094">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2149" y="259" width="540" height="540" key="StructurePopup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604418029094" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604572950454">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604590340899">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604571599001" />
-    <state x="2475" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604572950454" />
-    <state x="2541" y="240" key="run.anything.popup" timestamp="1604586568457">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
+    <state x="2541" y="240" key="run.anything.popup" timestamp="1604659906062">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604659906062" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604590144089">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604660116799">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604487463655" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604571902106" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590144089" />
+    <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604659250253" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604660116799" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>
 </project>
