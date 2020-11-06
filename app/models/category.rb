@@ -34,7 +34,7 @@ class Category < ApplicationRecord
       end
 
       data.each do |category|
-        slug = category.downcase
+        slug = category.parameterize
         cat = Category.find_by_slug(slug).to_a
         if cat.empty?
           dont_exist = true

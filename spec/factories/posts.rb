@@ -10,6 +10,18 @@ FactoryBot.define do
     sequence(:img_thumb) { |i| "/images/posts/#{i}/image_thumb.jpg" }
     sequence(:img_mini) { |i| "/images/posts/#{i}/image_mini.jpg" }
 
+    factory :post_categories do
+      sequence(:name) { |i| "Post name #{i}" }
+      sequence(:slug) { |i| "" }
+      sequence(:descr) { |i| "Post content #{i}" }
+      sequence(:category_id) { |i| "Manga,Anime" }
+      sequence(:date_post) { |i| Time.now }
+      sequence(:img_original) { |i| "/images/posts/#{i}/image.jpg" }
+      sequence(:img_medium) { |i| "/images/posts/#{i}/image_medium.jpg" }
+      sequence(:img_thumb) { |i| "/images/posts/#{i}/image_thumb.jpg" }
+      sequence(:img_mini) { |i| "/images/posts/#{i}/image_mini.jpg" }
+    end
+
     factory :post_invalid_name_presence do
       sequence(:name) { "" }
     end

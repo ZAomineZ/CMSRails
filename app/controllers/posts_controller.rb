@@ -44,6 +44,45 @@ class PostsController < ApplicationController
     render json: response
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    categories = params[:categories]
+    if categories.empty?
+      response = {
+          success: false,
+          message: 'One category must be selected.'
+      }
+      return render json: response
+    end
+
+    if Category.dontExist(categories)
+      response = {
+          success: false,
+          message: 'One of the selected categories don\'t exist.'
+      }
+      return render json: response
+    end
+
+    @post = Post.find(params[:id])
+    @post.category_id = categories
+    if @post.update(params_post)
+      response = {
+          success: true,
+          message: 'Post was successfully created.'
+      }
+    else
+      response = {
+          success: false,
+          message: 'An error occurred when validating to your request.',
+          errorFields: @post.errors.messages
+      }
+    end
+    render json: response
+  end
+
   private
 
   def params_post
