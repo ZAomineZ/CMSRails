@@ -291,7 +291,7 @@ RSpec.describe PostsController, type: :controller do
       it 'should return response true' do
         data = JSON.parse(response.body)
         expect(data['success']).to be_truthy
-        expect(data['message']).to eq('Post was successfully created.')
+        expect(data['message']).to eq('Post was successfully edited.')
       end
 
       it 'should return error contain slug' do
@@ -328,7 +328,7 @@ RSpec.describe PostsController, type: :controller do
       it 'should return response true' do
         data = JSON.parse(response.body)
         expect(data['success']).to be_truthy
-        expect(data['message']).to eq('Post was successfully created.')
+        expect(data['message']).to eq('Post was successfully edited.')
       end
 
       it 'should return the contain post' do
@@ -374,7 +374,7 @@ RSpec.describe PostsController, type: :controller do
       it 'should return response true' do
         data = JSON.parse(response.body)
         expect(data['success']).to be_truthy
-        expect(data['message']).to eq('Post was successfully created.')
+        expect(data['message']).to eq('Post was successfully edited.')
       end
 
       it 'should return the contain post' do
@@ -427,7 +427,7 @@ RSpec.describe PostsController, type: :controller do
       it 'should return response true' do
         data = JSON.parse(response.body)
         expect(data['success']).to be_truthy
-        expect(data['message']).to eq('Post was successfully created.')
+        expect(data['message']).to eq('Post was successfully edited.')
       end
 
       it 'should return attributes categories' do
@@ -511,6 +511,48 @@ RSpec.describe PostsController, type: :controller do
         expect(post.slug).not_to eq('test-de-test-de-test')
         expect(post.category_id).not_to eq('')
         expect(post.name).not_to eq('test de test')
+      end
+    end
+  end
+
+  describe 'DELETE #destroy' do
+    context 'error request action delete' do
+      before do
+        create(:post_categories)
+        delete :destroy, params: {id: 5}
+      end
+
+      it 'should return error when post dont exist' do
+        expect(flash[:danger]).to match(/An error occurred when delete your post.*/)
+      end
+
+      it 'redirect destroy method' do
+        expect(response).to redirect_to(posts_path)
+      end
+
+      it 'error occurred delete category' do
+        count = Post.count
+        expect(count).to eq(1)
+      end
+    end
+
+    context 'success method destroy' do
+      before do
+        cat = create(:post_categories)
+        delete :destroy, params: {id: cat.id}
+      end
+
+      it 'should return a message flash success' do
+        expect(flash[:success]).to match(/Post was successfully deleted.*/)
+      end
+
+      it 'redirect destroy method' do
+        expect(response).to redirect_to(posts_path)
+      end
+
+      it 'error occurred delete post' do
+        count = Post.count
+        expect(count).to eq(0)
       end
     end
   end

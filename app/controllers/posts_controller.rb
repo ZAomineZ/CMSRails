@@ -83,6 +83,21 @@ class PostsController < ApplicationController
     render json: response
   end
 
+  def destroy
+    id = params[:id]
+    @post = Post.exists?(id)
+
+    if @post
+      @post = Post.find(id)
+      @post.delete
+      flash.now[:success] = "Post was successfully deleted."
+    else
+      flash.now[:danger] = "An error occurred when delete your post."
+    end
+
+    redirect_to posts_path
+  end
+
   private
 
   def params_post
