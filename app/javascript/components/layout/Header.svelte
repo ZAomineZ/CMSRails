@@ -1,5 +1,7 @@
 <script>
     import {onMount} from 'svelte';
+    // Modules HTML
+    import AccountDetailsHeader from "./navigation/AccountDetailsHeader.svelte";
 
     let navigation = false
     let body = null
@@ -25,7 +27,7 @@
 
 
 <div class="header">
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg">
         <section class="navigation-header">
             <a class="button-collapse icon-navigation-header" href="#" on:click={toggleNavigation}>
                 {#if navigation}
@@ -41,8 +43,9 @@
         </button>
         <div class="collapse navbar-collapse">
             <form action="#" id="search-header" class="form-inline my-2 mt-lg-0">
-                <i class="fa fa-search icon-search-header"></i>
+                <input class="form-control mr-sm-2" type="search" placeholder="Search your posts, categories, images..." aria-label="Search">
             </form>
+            <AccountDetailsHeader />
         </div>
     </nav>
 </div>

@@ -112,7 +112,7 @@
 .navbar-toggler {
   padding: 0;
   line-height: 32px;
-  font-size: 24px;
+  font-size: 18px;
   border: none;
   color: #7d7d83;
   outline: 0!important;
@@ -120,4 +120,66 @@
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+}
+
+.header #search-header {
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.header #search-header:before {
+  content: "\f002";
+  font-family: "Font Awesome 5 Free", Poppins, sans-serif;
+  display: block;
+  font-size: 20px;
+  height: 50px;
+  width: 30px;
+  line-height: 50px;
+  padding: 0 20px;
+  position: absolute;
+  z-index: 99;
+  color: rgba(131,141,145,.6);
+}
+
+.header #search-header input {
+  border: none;
+  padding: 15px 15px 15px 50px;
+  height: 50px;
+  width: 100%;
+  font-size: 13px;
+  background: rgba(255,255,255,.95);
+  opacity: .95;
+  color: #838d91;
+  border-radius: 4px;
+  background: rgba(255,255,255,.95);
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.header .navbar-nav > li > a {
+  font-size: 13px;
+  color: #7d7d83;
+  line-height: 30px;
+  padding: 10px !important;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.header .navbar-nav > li > a:hover,
+.header .navbar-nav > li.show > a {
+  color: #000000;
+}
+
+.header .navbar-nav > li > a > svg {
+  vertical-align: middle;
 }
