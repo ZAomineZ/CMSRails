@@ -1,6 +1,7 @@
 <script>
     import Pagination from "../form/Pagination.svelte";
     import {onMount} from "svelte";
+    import DeleteEntity from "../concern/Actions/DeleteEntity.svelte";
 
     // Props
     export let title = ''
@@ -41,11 +42,7 @@
                         <td>{category.date_cat}</td>
                         <td>
                             <a href="/category/{category.id}/edit" class="btn btn-primary">Edit</a>
-                            <form action="/category/{category.id}" method="POST">
-                                <input type="hidden" name="_method" value="delete">
-                                <input type="hidden" name="authenticity_token" value={csrfValue}>
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
+                            <DeleteEntity uriAction="/category/{category.id}" csrfValue={csrfValue} />
                         </td>
                     </tr>
                 {/each}

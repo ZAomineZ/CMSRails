@@ -1,8 +1,16 @@
 <script>
     import Pagination from "../form/Pagination.svelte";
+    import DeleteEntity from "../concern/Actions/DeleteEntity.svelte";
+    import {onMount} from "svelte";
 
     export let title = ''
     export let posts = []
+    // Data
+    let csrfValue = null
+
+    onMount(() => {
+        csrfValue = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    })
 </script>
 
 <div class="card">
@@ -36,8 +44,8 @@
                             <span class="badge badge-success">YES</span>
                         </td>
                         <td>
-                            <a href="posts/{post.id}/edit" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Delete</a>
+                            <a href="/posts/{post.id}/edit" class="btn btn-primary">Edit</a>
+                            <DeleteEntity uriAction="/posts/{post.id}" csrfValue={csrfValue} />
                         </td>
                     </tr>
                 {/each}

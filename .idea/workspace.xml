@@ -10,10 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Refactor form action edit to post entity">
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Test success action delete to post">
+      <change afterPath="$PROJECT_DIR$/app/javascript/components/concern/Actions/DeleteEntity.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/post_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/post_controller_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/layout/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/layout/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/category/CategoriesTable.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/category/CategoriesTable.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/PostsTable.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/PostsTable.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +44,7 @@
         <option value="Form" />
         <option value="Input" />
         <option value="TextareaField" />
+        <option value="DeleteEntity" />
       </list>
     </option>
   </component>
@@ -114,7 +118,7 @@
       <workItem from="1604565656071" duration="29496000" />
       <workItem from="1604655587216" duration="4321000" />
       <workItem from="1604659985102" duration="4084000" />
-      <workItem from="1604664089976" duration="11176000" />
+      <workItem from="1604664089976" duration="12709000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -172,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604673919182</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Test success action delete to post">
+      <created>1604675456794</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1604675456794</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +210,8 @@
     <MESSAGE value="Add test success for edit action" />
     <MESSAGE value="Refactor form to post entity" />
     <MESSAGE value="Refactor form action edit to post entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor form action edit to post entity" />
+    <MESSAGE value="Test success action delete to post" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test success action delete to post" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3016" y="3" width="672" height="1077" key="#HTML" timestamp="1604660047747">
@@ -249,21 +261,25 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2149" y="259" width="540" height="540" key="StructurePopup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604418029094" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604673920950">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604675458600">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604673920950" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604675458600" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
+    <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2575" y="124" width="609" height="801" key="find.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604675635832" />
     <state x="2541" y="240" key="run.anything.popup" timestamp="1604668035992">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604668035992" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604674995354">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604676244103">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604659250253" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604674995354" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604676244103" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

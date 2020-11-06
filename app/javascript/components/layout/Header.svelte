@@ -39,5 +39,10 @@
         <button class="navbar-toggler">
             <i class="fas fa-angle-down"></i>
         </button>
+        <div class="collapse navbar-collapse">
+            <form action="#" id="search-header" class="form-inline my-2 mt-lg-0">
+                <i class="fa fa-search icon-search-header"></i>
+            </form>
+        </div>
     </nav>
 </div>
