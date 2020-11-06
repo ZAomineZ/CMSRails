@@ -71,7 +71,7 @@ class PostsController < ApplicationController
     if @post.update(params_post)
       response = {
           success: true,
-          message: 'Post was successfully created.'
+          message: 'Post was successfully edited.'
       }
     else
       response = {

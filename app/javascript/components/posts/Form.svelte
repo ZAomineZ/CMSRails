@@ -5,6 +5,8 @@
     // Libs
     import Tags from 'svelte-tags-input'
     import {Fetch} from "../../packs/helper/FetchApi";
+    import InputField from "../form/InputField.svelte";
+    import TextareaField from "../form/TextareaField.svelte";
 
     // Props
     export let uriForm = ''
@@ -24,6 +26,10 @@
 
     onMount(() => {
         csrfValue = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        // Mutate Data Credentials
+        name = post ? post.name : name
+        slug = post ? post.slug : slug
+        descr = post ? post.descr : descr
     })
 
     // Methods
@@ -50,7 +56,7 @@
         formData.append('descr', descr)
 
         const actionUri = event.composedPath()[0] ? event.composedPath()[0].action : ''
-        const method = uriForm === '/posts/create' ? 'POST': 'PUT'
+        const method = uriForm.indexOf('create') !== -1 ? 'POST' : 'PUT'
         const request = await fetch.api(actionUri, method, formData)
         if (request.status === 200 || request.status === 302 || request.status === 301) {
             const response = await request.json()
@@ -61,27 +67,16 @@
 </script>
 
 <form action={uriForm} method="POST" on:submit|preventDefault={handleSubmit}>
-    {#if uriForm !== '/posts/create'}
+    {#if uriForm.indexOf('create') !== -1}
         <input name="_method" type="hidden" value="put">
     {/if}
-    <div class="form-group">
-        <label for="name">Post Name</label>
-        <input class="form-control" id="name" name="name" placeholder="Enter your name..." type="text"
-               value={post ? post.name : ''}>
-    </div>
-    <div class="form-group">
-        <label for="slug">Post Slug</label>
-        <input class="form-control" id="slug" name="slug" placeholder="Enter your slug..." type="text"
-               value={post ? post.slug : ''}>
-    </div>
+    <InputField id="name" label="Post Name" placeHolder="Enter your name..." bind:value={name}/>
+    <InputField id="slug" label="Post Slug" placeHolder="Enter your slug..." bind:value={slug}/>
     <div class="form-group">
         <label for="categories">Post Categories</label>
-        <Tags class="form-control" id="categories" value={post ? post.category_id: ''} on:tags={getTags} placeholder="Your categories..."/>
+        <Tags class="form-control" id="categories" on:tags={getTags} placeholder="Your categories..."/>
     </div>
-    <div class="form-group">
-        <label for="descr">Post Content</label>
-        <textarea class="form-control" cols="30" id="descr" name="descr" placeholder="Your content..."
-                  rows="10">{post ? post.descr : ''}</textarea>
-    </div>
+    <TextareaField cols="30" id="descr" label="Post Content" placeHolder="Enter your content"
+                   bind:value={descr}/>
     <button class="btn btn-primary" type="submit">Send</button>
 </form>

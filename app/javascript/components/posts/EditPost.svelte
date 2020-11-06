@@ -5,6 +5,7 @@
 
     // Component HTML
     import Form from "./Form.svelte";
+    import Alert from "../concern/Alert.svelte";
 
     // Props
     export let uriForm = ''
@@ -12,7 +13,7 @@
 
     // Data
     let successResponse = null
-    let messageResponse  = ''
+    let messageResponse = ''
 </script>
 
 <Sidebar/>
@@ -21,6 +22,9 @@
     <BroadCast
             content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur consequuntur distinctio, dolore ex fugit illum in modi necessitatibus nisi non, odio rerum, soluta unde ut? Cumque rem sequi voluptates."
             title="Edit Post '{post.name}' "/>
+    {#if successResponse !== null}
+        <Alert type={successResponse ? 'success' : 'danger'} message={messageResponse}/>
+    {/if}
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Form to Edit Post "{post.name}"</h5>
