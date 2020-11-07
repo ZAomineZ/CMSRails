@@ -10,15 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="System pagination for category entity">
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="refactor category pagination and fix bug module pagination entity">
+      <change afterPath="$PROJECT_DIR$/spec/controllers/pagination_controller_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/pagination_posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/pagination_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/category/CategoriesTable.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/category/CategoriesTable.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/category/Category.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/category/Category.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/PostsTable.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/PostsTable.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/pagination_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/pagination_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/pagination_entity.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/pagination_entity.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/category/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/category/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +120,7 @@
       <workItem from="1604659985102" duration="4084000" />
       <workItem from="1604664089976" duration="19700000" />
       <workItem from="1604741134203" duration="8126000" />
-      <workItem from="1604751887427" duration="10626000" />
+      <workItem from="1604751887427" duration="13270000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -224,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604761662949</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="refactor category pagination and fix bug module pagination entity">
+      <created>1604763039778</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1604763039778</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +260,8 @@
     <MESSAGE value="Init pagination to posts for the front and refactor module" />
     <MESSAGE value="System pagination for posts entity and refactor component Post index" />
     <MESSAGE value="System pagination for category entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="System pagination for category entity" />
+    <MESSAGE value="refactor category pagination and fix bug module pagination entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor category pagination and fix bug module pagination entity" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3016" y="3" width="672" height="1077" key="#HTML" timestamp="1604660047747">
@@ -311,10 +315,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604752586359" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604761665745">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604763041892">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604761665745" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604763041892" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -325,11 +329,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604742783529" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604762634377">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604763241417">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604689125468" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604762634377" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604763241417" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

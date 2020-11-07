@@ -7,7 +7,7 @@ class PaginationEntity
 
   def get_data
     page = @page
-    offset = @page != 0 && @page != 1 ? (page - 1) : 0
+    offset = @page != 0 && @page != 1 ? @per_page * (page - 1) : 0
     items = @entity.limit(@per_page).offset(offset)
 
     {page: @page, items: items, current_page: page}
