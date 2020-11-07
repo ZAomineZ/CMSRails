@@ -1,37 +1,12 @@
 <script>
     import Pagination from "../form/Pagination.svelte";
     import DeleteEntity from "../concern/Actions/DeleteEntity.svelte";
-    import {onMount} from "svelte";
-    import {Fetch} from "../../packs/helper/FetchApi";
 
     export let title = ''
     export let posts = []
     export let pages = 1
     export let currentPage = 1
-    // Data
-    let csrfValue = null
-
-    onMount(() => {
-        csrfValue = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-    })
-
-    // Methods
-    /**
-     * @param {Event} event
-     */
-    async function handlePagination(event)
-    {
-        let formData = new FormData()
-        formData.append('authenticity_token', csrfValue)
-
-        const page = event.composedPath()[0].dataset ? event.composedPath()[0].dataset.page : 1
-        const uriFetch = '/posts/pagination/' + page
-        const request = await (new Fetch()).api(uriFetch, 'POST', formData)
-        if (request.status === 200 || request.status === 301 || request.status === 302) {
-            const response = await request.json()
-            console.log(response)
-        }
-    }
+    export let message = null
 </script>
 
 <div class="card">
@@ -53,7 +28,7 @@
                     <th scope="col">Actions</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody-posts">
                 {#each posts as post}
                     <tr>
                         <td>{post.id}</td>
@@ -72,7 +47,9 @@
                 {/each}
                 </tbody>
             </table>
-            <Pagination pages={pages} currentPage={1} on:click={handlePagination}/>
+            {#if pages !== 1}
+                <Pagination pages={pages} currentPage={currentPage} on:click={handlePagination}/>
+            {/if}
         </div>
     </div>
 </div>

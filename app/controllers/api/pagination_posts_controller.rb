@@ -1,10 +1,16 @@
-module Api
-  class PaginationPostsController < ApplicationController
+  class Api::PaginationPostsController < ApplicationController
 
     def set_pagination
-      test = {success: true, data: 'test'}
-      render json: test
+      page = params[:page]
+      pagination = PaginationEntity.new(page, Post)
+      if pagination.is_possible
+        data = pagination.get_data
+
+        response = {success: true, data: data}
+      else
+        response = {success: false, message: 'This page don\'t exist for this entity.'}
+      end
+      render json: response
     end
 
   end
-end

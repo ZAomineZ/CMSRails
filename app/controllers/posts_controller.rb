@@ -3,12 +3,10 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    count = Post.count
-    per_page = 1
-
-    @posts = Post.limit(per_page)
-    @pages = count <= per_page ? 1 : (count / per_page).round(half: :up)
-    @current_page = 1
+    pagination = PaginationEntity.new(1, Post)
+    @posts = pagination.get_data[:items]
+    @pages = pagination.get_pages
+    @current_page = pagination.get_data[:current_page]
   end
 
   def new
