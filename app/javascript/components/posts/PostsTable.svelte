@@ -3,10 +3,14 @@
     import DeleteEntity from "../concern/Actions/DeleteEntity.svelte";
 
     export let title = ''
-    export let posts = []
-    export let pages = 1
-    export let currentPage = 1
+    export let data = {
+        posts: [],
+        currentPage: 1,
+        pages: 1
+    }
     export let message = null
+    export let handlePagination = () => {}
+    export let csrfValue = ''
 </script>
 
 <div class="card">
@@ -29,7 +33,7 @@
                 </tr>
                 </thead>
                 <tbody id="tbody-posts">
-                {#each posts as post}
+                {#each data.posts as post}
                     <tr>
                         <td>{post.id}</td>
                         <td>{post.name}</td>
@@ -47,8 +51,8 @@
                 {/each}
                 </tbody>
             </table>
-            {#if pages !== 1}
-                <Pagination pages={pages} currentPage={currentPage} on:click={handlePagination}/>
+            {#if data.pages !== 1}
+                <Pagination pages={data.pages} currentPage={data.currentPage} on:click={handlePagination}/>
             {/if}
         </div>
     </div>

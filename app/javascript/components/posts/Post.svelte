@@ -67,10 +67,11 @@
                     voluptates!
                 </p>
             </div>
+            {#if message !== null}
+                <Alert message={message} type="danger"/>
+            {/if}
         </div>
-        {#if message !== null}
-            <Alert message={message} type="danger"/>
-        {/if}
     </div>
-    <PostsTable data={{items: posts, currentPage: currentPage, pages}} message={message} title="Posts List"/>
+    <PostsTable csrfValue={csrfValue} data={{posts, currentPage, pages}} handlePagination={handlePagination}
+                message={message} title="Posts List"/>
 </div>

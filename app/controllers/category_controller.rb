@@ -1,7 +1,10 @@
 class CategoryController < ApplicationController
 
   def index
-    @categories = Category.paginate(:page => params[:page])
+    pagination = PaginationEntity.new(1, Category)
+    @categories = pagination.get_data[:items]
+    @pages = pagination.get_pages
+    @current_page = pagination.get_data[:current_page]
   end
 
   def new

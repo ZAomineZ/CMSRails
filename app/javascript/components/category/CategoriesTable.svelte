@@ -1,17 +1,16 @@
 <script>
     import Pagination from "../form/Pagination.svelte";
-    import {onMount} from "svelte";
     import DeleteEntity from "../concern/Actions/DeleteEntity.svelte";
 
-    // Props
     export let title = ''
-    export let categories = []
-    // Data
-    let csrfValue = null
-
-    onMount(() => {
-        csrfValue = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-    })
+    export let data = {
+        categories: [],
+        currentPage: 1,
+        pages: 1
+    }
+    export let message = null
+    export let handlePagination = () => {}
+    export let csrfValue = ''
 </script>
 
 <div class="card">
@@ -33,7 +32,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                {#each categories as category}
+                {#each data.categories as category}
                     <tr>
                         <td>{category.id}</td>
                         <td>{category.name}</td>
@@ -48,7 +47,9 @@
                 {/each}
                 </tbody>
             </table>
-            <Pagination />
+            {#if data.pages !== 1}
+                <Pagination pages={data.pages} currentPage={data.currentPage} on:click={handlePagination} />
+            {/if}
         </div>
     </div>
 </div>

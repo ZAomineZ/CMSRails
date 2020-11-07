@@ -1,7 +1,7 @@
 class PaginationEntity
   def initialize(page, entity)
     @page = page.to_i
-    @per_page = 10
+    @per_page = 1
     @entity = entity
   end
 
