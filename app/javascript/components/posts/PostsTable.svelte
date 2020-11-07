@@ -38,7 +38,7 @@
                         <td>{post.id}</td>
                         <td>{post.name}</td>
                         <td>{post.slug}</td>
-                        <td>{post.descr.slice(0, 150) + '...'}</td>
+                        <td>{post.descr.length >= 150 ? post.descr.slice(0, 150) + '...' : post.descr}</td>
                         <td>{post.category_id}</td>
                         <td>
                             <span class="badge badge-success">YES</span>

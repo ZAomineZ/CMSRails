@@ -37,7 +37,7 @@
                         <td>{category.id}</td>
                         <td>{category.name}</td>
                         <td>{category.slug}</td>
-                        <td>{category.resume.slice(0, 150) + '...'}</td>
+                        <td>{category.resume.length >= 150 ? category.resume.slice(0, 150) + '...' : category.resume}</td>
                         <td>{category.date_cat}</td>
                         <td>
                             <a href="/category/{category.id}/edit" class="btn btn-primary">Edit</a>

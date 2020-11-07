@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :posts, controller: 'posts'
   resources :category, controller: 'category'
 
-  post '/posts/pagination/:page' => 'api/pagination_posts#set_pagination'
+  # Entity routes post pagination
+  post '/posts/pagination/:page' => 'api/pagination#set_pagination_posts'
+  post '/categories/pagination/:page' => 'api/pagination#set_pagination_categories'
 
 end

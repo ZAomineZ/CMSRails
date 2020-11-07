@@ -52,6 +52,6 @@
     {#if message !== null}
         <Alert message={message} type="danger"/>
     {/if}
-    <CategoriesTable csrfValue={csrfValue} data={{categories, currentPage, pages}} handlePaggination={handlePagination}
+    <CategoriesTable csrfValue={csrfValue} data={{categories, currentPage, pages}} handlePagination={handlePagination}
                      message={message} title="Categories List"/>
 </div>
