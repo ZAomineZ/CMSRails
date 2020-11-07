@@ -2,9 +2,12 @@
     import Header from "../layout/Header.svelte";
     import Sidebar from "../layout/Sidebar.svelte";
     import PostsTable from "./PostsTable.svelte";
+    import {onMount} from "svelte";
 
     // Props
     export let posts = []
+    export let pages = 1
+    export let currentPage = 1
 </script>
 
 <Sidebar />
@@ -31,5 +34,5 @@
             </div>
         </div>
     </div>
-    <PostsTable title="Posts List" posts={posts}/>
+    <PostsTable title="Posts List" posts={posts} pages={pages} currentPage={currentPage}/>
 </div>

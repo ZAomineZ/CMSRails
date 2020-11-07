@@ -56,7 +56,7 @@
         formData.append('descr', descr)
 
         const actionUri = event.composedPath()[0] ? event.composedPath()[0].action : ''
-        const method = uriForm.indexOf('create') !== -1 ? 'POST' : 'PUT'
+        const method = uriForm === '/posts' ? 'POST' : 'PUT'
         const request = await fetch.api(actionUri, method, formData)
         if (request.status === 200 || request.status === 302 || request.status === 301) {
             const response = await request.json()
@@ -67,7 +67,7 @@
 </script>
 
 <form action={uriForm} method="POST" on:submit|preventDefault={handleSubmit}>
-    {#if uriForm.indexOf('create') !== -1}
+    {#if uriForm === '/posts'}
         <input name="_method" type="hidden" value="put">
     {/if}
     <InputField id="name" label="Post Name" placeHolder="Enter your name..." bind:value={name}/>

@@ -1,7 +1,14 @@
 class PostsController < ApplicationController
 
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+
   def index
-    @posts = Post.paginate(:page => params[:page])
+    count = Post.count
+    per_page = 1
+
+    @posts = Post.limit(per_page)
+    @pages = count <= per_page ? 1 : (count / per_page).round(half: :up)
+    @current_page = 1
   end
 
   def new
@@ -45,7 +52,6 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
@@ -66,7 +72,6 @@ class PostsController < ApplicationController
       return render json: response
     end
 
-    @post = Post.find(params[:id])
     @post.category_id = categories
     if @post.update(params_post)
       response = {
@@ -85,10 +90,9 @@ class PostsController < ApplicationController
 
   def destroy
     id = params[:id]
-    @post = Post.exists?(id)
+    @exist = Post.exists?(id)
 
-    if @post
-      @post = Post.find(id)
+    if @exist
       @post.delete
       flash.now[:success] = "Post was successfully deleted."
     else
@@ -102,6 +106,10 @@ class PostsController < ApplicationController
 
   def params_post
     params.permit(:name, :slug, :descr)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 
 end

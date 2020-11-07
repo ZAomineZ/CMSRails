@@ -27,7 +27,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eos hic illum ipsam molestiae,
                 mollitia porro quibusdam reiciendis rem suscipit vel vero? Exercitationem fugit illo iure libero natus
                 ratione recusandae.</p>
-            <Form uriForm="/posts/create" successResponse={successResponse} messageResponse={messageResponse}/>
+            <Form uriForm="/posts" successResponse={successResponse} messageResponse={messageResponse}/>
         </div>
     </div>
 </div>

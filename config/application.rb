@@ -13,6 +13,8 @@ module CMSRailsSvelt
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
+    config.autoload_paths << Rails.root.join('app/concern/**/')
+
     config.svelte.prerender_default = false
 
     # Settings in config/environments/* take precedence over those specified here.

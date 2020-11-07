@@ -516,6 +516,7 @@ RSpec.describe PostsController, type: :controller do
   end
 
   describe 'DELETE #destroy' do
+
     context 'error request action delete' do
       before do
         create(:post_categories)

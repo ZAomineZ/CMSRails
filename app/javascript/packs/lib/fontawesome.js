@@ -2005,7 +2005,7 @@
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
-            throw new TypeError("Cannot call a class as a function");
+            throw new TypeError("Cannot api a class as a function");
         }
     }
 
@@ -2495,7 +2495,7 @@
             }
 
             if (this._state === FULFILLED || this._state === REJECTED) {
-                // already resolved, call callback async
+                // already resolved, api callback async
                 asyncCall(invokeCallback, subscriber);
             } else {
                 // subscribe
