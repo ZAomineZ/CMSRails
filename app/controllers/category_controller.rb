@@ -1,5 +1,7 @@
 class CategoryController < ApplicationController
 
+  before_action :set_category, only: [:show, :edit, :update, :destroy]
+
   def index
     pagination = PaginationEntity.new(1, Category)
     @categories = pagination.get_data[:items]
@@ -24,11 +26,9 @@ class CategoryController < ApplicationController
   end
 
   def edit
-    @category = Category.find(params[:id])
   end
 
   def update
-    @category = Category.find(params[:id])
     if @category.update(params_category)
       flash.now[:success] = "Category was successfully edited."
       redirect_to category_path
@@ -43,7 +43,6 @@ class CategoryController < ApplicationController
     id = params[:id]
     @category = Category.exists?(id)
     if @category
-      @category = Category.find(id)
       @category.delete
       flash.now[:success] = "Category was successfully deleted."
     else
@@ -56,6 +55,10 @@ class CategoryController < ApplicationController
 
   def params_category
     params.permit(:name, :slug, :resume)
+  end
+
+  def set_category
+    @category = Category.find(params[:id])
   end
 
 end

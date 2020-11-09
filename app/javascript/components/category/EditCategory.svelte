@@ -2,10 +2,10 @@
     import Sidebar from "../layout/Sidebar.svelte";
     import Header from "../layout/Header.svelte";
     import BroadCast from "../layout/navigation/BroadCast.svelte";
+    import Form from "./Form.svelte";
 
     // Modules Svelte
-    import { onMount } from 'svelte'
-
+    import {onMount} from 'svelte'
     // Props
     export let uriForm = ''
     export let category = {}
@@ -29,24 +29,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eos hic illum ipsam molestiae,
                 mollitia porro quibusdam reiciendis rem suscipit vel vero? Exercitationem fugit illo iure libero natus
                 ratione recusandae.</p>
-            <form action={uriForm} method="POST">
-                <input type="hidden" name="_method" value="put">
-                <input type="hidden" name="authenticity_token" value={csrfValue}>
-                <div class="form-group">
-                    <label for="name">Category Name</label>
-                    <input class="form-control" id="name" name="name" value={category.name} placeholder="Enter your name..." type="text">
-                </div>
-                <div class="form-group">
-                    <label for="slug">Category Slug</label>
-                    <input class="form-control" id="slug" name="slug" value={category.slug} placeholder="Enter your slug..." type="text">
-                </div>
-                <div class="form-group">
-                    <label for="resume">Category Content</label>
-                    <textarea class="form-control" cols="30" id="resume" name="resume" placeholder="Your content..."
-                              rows="10">{category.resume}</textarea>
-                </div>
-                <button class="btn btn-primary" type="submit">Send</button>
-            </form>
+            <Form uriForm={uriForm} category={category} />
         </div>
     </div>
 </div>

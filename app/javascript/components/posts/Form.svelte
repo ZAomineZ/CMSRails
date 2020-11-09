@@ -78,5 +78,6 @@
     </div>
     <TextareaField cols="30" id="descr" label="Post Content" placeHolder="Enter your content"
                    bind:value={descr}/>
-    <button class="btn btn-primary" type="submit">Send</button>
+    <InputField id="image" label="Choose your image" className='custom-file-input' type="file" />
+    <button class="btn btn-primary mt-4" type="submit">Send</button>
 </form>

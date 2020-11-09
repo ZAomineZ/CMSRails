@@ -44,3 +44,17 @@
 .form-group span.svelte-tags-input-tag.svelte-qtb38v {
   background: #037afb;
 }
+
+.custom-file-label {
+  padding: 10px 15px;
+  border-color: #e6e6e6;
+  height: auto;
+  border-radius: 4px;
+}
+
+.custom-file-label::after {
+  padding: 10px 15px;
+  height: auto;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
