@@ -28,4 +28,15 @@ export class Fetch
         }
         return null
     }
+
+    /**
+     * @param value
+     * @return {FormData}
+     */
+    static FormDataCsrf(value)
+    {
+        let form = new FormData()
+        form.append('authenticity_token', value)
+        return form
+    }
 }

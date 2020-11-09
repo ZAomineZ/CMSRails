@@ -10,15 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add test for pagination posts and categories entity">
-      <change afterPath="$PROJECT_DIR$/app/controllers/api/search_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/controllers/search_controller_spec.rb" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add test to the search controller for the posts and categories">
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/layout/search.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/components/layout/search/ItemsResultsSearch.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/components/layout/search/SearchItemsHeader.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/category.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/pagination_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/pagination_controller_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/packs/helper/FetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/helper/FetchApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +47,8 @@
         <option value="AccountDetailsHeader" />
         <option value="JavaScript File" />
         <option value="PostEntity" />
+        <option value="SeachItemsHeader" />
+        <option value="ItemsResultsSearch" />
       </list>
     </option>
   </component>
@@ -79,14 +79,15 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/javascript/components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/javascript/components/posts" />
       <recent name="$PROJECT_DIR$/app/views/posts" />
       <recent name="$PROJECT_DIR$/app/views/category" />
       <recent name="$PROJECT_DIR$/app/assets/fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/javascript/components/layout/search" />
+      <recent name="$PROJECT_DIR$/app/javascript/components" />
     </key>
   </component>
   <component name="RunManager">
@@ -125,7 +126,7 @@
       <workItem from="1604664089976" duration="19700000" />
       <workItem from="1604741134203" duration="8126000" />
       <workItem from="1604751887427" duration="13420000" />
-      <workItem from="1604917965655" duration="9511000" />
+      <workItem from="1604917965655" duration="15733000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -239,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604765683482</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add test to the search controller for the posts and categories">
+      <created>1604926326946</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1604926326946</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +282,8 @@
     <MESSAGE value="System pagination for category entity" />
     <MESSAGE value="refactor category pagination and fix bug module pagination entity" />
     <MESSAGE value="Add test for pagination posts and categories entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add test for pagination posts and categories entity" />
+    <MESSAGE value="Add test to the search controller for the posts and categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test to the search controller for the posts and categories" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3016" y="3" width="672" height="1077" key="#HTML" timestamp="1604660047747">
@@ -330,10 +339,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604752586359" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604765684444">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604926329800">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604765684444" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604926329800" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -344,11 +353,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604742783529" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604925853789">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604930526396">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604925267767" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604925853788" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604930526396" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

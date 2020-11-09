@@ -1,14 +1,30 @@
 <script>
     import {onMount} from 'svelte';
+
+    // LIB
+    import {Fetch} from "../../packs/helper/FetchApi";
+
     // Modules HTML
     import AccountDetailsHeader from "./navigation/AccountDetailsHeader.svelte";
+    import SearchItemsHeader from "./search/SearchItemsHeader.svelte"
+    import ItemsResultsSearch from "./search/ItemsResultsSearch.svelte";
 
+    // DATA
     let navigation = false
     let body = null
+    let activeShow = false
+    let valueInputSearch = ''
+    let csrfValue = null
+
+    let postsSearch = []
+    let categoriesSearch = []
 
     onMount(() => {
         body = document.querySelector('body')
+        csrfValue = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
     })
+
+    // METHODS
 
     /**
      * @param {Event} e
@@ -23,6 +39,28 @@
             body.classList.remove('sidebar-show')
         }
     }
+
+    /**
+     * @param {Event} event
+     */
+    async function handleInputItems(event) {
+        if (!activeShow) {
+            activeShow = !activeShow
+        }
+        if (valueInputSearch.length === 0) {
+            activeShow = !activeShow
+            return
+        }
+        const uri = '/search/' + valueInputSearch
+        const response = await (new Fetch()).response(uri, 'POST', Fetch.FormDataCsrf(csrfValue))
+        if (response.success) {
+            const data = response.data
+            postsSearch = data.posts
+            categoriesSearch = data.categories
+        }
+    }
+
+    const handleActiveClick = () => activeShow = !activeShow
 </script>
 
 
@@ -42,10 +80,10 @@
             <i class="fas fa-angle-down"></i>
         </button>
         <div class="collapse navbar-collapse">
-            <form action="#" id="search-header" class="form-inline my-2 mt-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search your posts, categories..." aria-label="Search">
-            </form>
-            <AccountDetailsHeader />
+            <SearchItemsHeader bind:value={valueInputSearch} on:input={handleInputItems}/>
+            <AccountDetailsHeader/>
         </div>
     </nav>
 </div>
+<ItemsResultsSearch activeShow={activeShow} items={{posts: postsSearch, categories: categoriesSearch}}
+                    on:click={handleActiveClick} valueInputSearch={valueInputSearch}/>
