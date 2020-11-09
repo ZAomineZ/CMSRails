@@ -10,13 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add test to the search controller for the posts and categories">
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/layout/search.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/layout/search/ItemsResultsSearch.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/layout/search/SearchItemsHeader.svelte" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add search component header">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/helper/FetchApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/helper/FetchApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/Sidebar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/Sidebar.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +122,7 @@
       <workItem from="1604664089976" duration="19700000" />
       <workItem from="1604741134203" duration="8126000" />
       <workItem from="1604751887427" duration="13420000" />
-      <workItem from="1604917965655" duration="15733000" />
+      <workItem from="1604917965655" duration="15821000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -247,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604926326946</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add search component header">
+      <created>1604932526959</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1604932526959</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +286,8 @@
     <MESSAGE value="refactor category pagination and fix bug module pagination entity" />
     <MESSAGE value="Add test for pagination posts and categories entity" />
     <MESSAGE value="Add test to the search controller for the posts and categories" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add test to the search controller for the posts and categories" />
+    <MESSAGE value="Add search component header" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add search component header" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3016" y="3" width="672" height="1077" key="#HTML" timestamp="1604660047747">
@@ -339,10 +343,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604752586359" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604926329800">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604932529598">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604926329800" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604932529598" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -353,11 +357,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604742783529" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604930526396">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604932581454">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604925267767" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604930526396" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604932581454" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

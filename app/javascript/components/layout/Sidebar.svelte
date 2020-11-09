@@ -4,7 +4,6 @@
     // Data
     let linksPost = [{label: 'Posts', link: '/posts'}, {label: 'Create Post', link: '/posts/new'}]
     let linksCategory = [{label: 'Categories', link: '/category'}, {label: 'Create Category', link: '/category/new'}]
-    let linksImage = [{label: 'Images', link: '/images'}, {label: 'Create Image', link: '/images/new'}]
 </script>
 <div class="sidebar">
     <div class="sidebar-inner">
@@ -21,9 +20,6 @@
             </li>
             <li>
                 <MenuItem name="Category" dataLinks={linksCategory} icon="tags"/>
-            </li>
-            <li>
-                <MenuItem name="Image" dataLinks={linksImage} icon="images"/>
             </li>
         </ul>
     </div>
