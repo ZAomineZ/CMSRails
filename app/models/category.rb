@@ -5,6 +5,7 @@ class Category < ApplicationRecord
   validates :resume, presence: true, :length => {minimum: 10}
 
   scope :find_by_slug, -> (slug) { where("slug" => slug) }
+  scope :search, -> (q) { where("name LIKE ?", "%#{q}%") }
 
   def getResume
     read_attribute(:resume)[0, 150] + '...'

@@ -48,7 +48,7 @@ RSpec.describe Api::PaginationController, type: :controller do
         expect(response).to have_http_status(200)
       end
 
-      it 'should return success false with message error' do
+      it 'should return success true without message error' do
         json_response = JSON.parse(response.body)
         data = json_response['data']
 

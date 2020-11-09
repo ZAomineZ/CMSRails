@@ -43,7 +43,7 @@
         </button>
         <div class="collapse navbar-collapse">
             <form action="#" id="search-header" class="form-inline my-2 mt-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search your posts, categories, images..." aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search your posts, categories..." aria-label="Search">
             </form>
             <AccountDetailsHeader />
         </div>

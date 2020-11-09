@@ -10,11 +10,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="refactor category pagination and fix bug module pagination entity">
-      <change afterPath="$PROJECT_DIR$/spec/controllers/pagination_controller_spec.rb" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add test for pagination posts and categories entity">
+      <change afterPath="$PROJECT_DIR$/app/controllers/api/search_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/controllers/search_controller_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/api/pagination_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/pagination_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/pagination_entity.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/pagination_entity.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/category.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/post.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/controllers/pagination_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/pagination_controller_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +72,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PetsyRails" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ExpressTS" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
@@ -120,7 +124,8 @@
       <workItem from="1604659985102" duration="4084000" />
       <workItem from="1604664089976" duration="19700000" />
       <workItem from="1604741134203" duration="8126000" />
-      <workItem from="1604751887427" duration="13270000" />
+      <workItem from="1604751887427" duration="13420000" />
+      <workItem from="1604917965655" duration="9511000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -227,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604763039778</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add test for pagination posts and categories entity">
+      <created>1604765683482</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1604765683482</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +273,8 @@
     <MESSAGE value="System pagination for posts entity and refactor component Post index" />
     <MESSAGE value="System pagination for category entity" />
     <MESSAGE value="refactor category pagination and fix bug module pagination entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor category pagination and fix bug module pagination entity" />
+    <MESSAGE value="Add test for pagination posts and categories entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test for pagination posts and categories entity" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3016" y="3" width="672" height="1077" key="#HTML" timestamp="1604660047747">
@@ -290,13 +303,15 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2018" y="185" width="806" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604417997427" />
-    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604752616293">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="667" y="308" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604918068157">
+      <screen x="0" y="0" width="1920" height="1047" />
     </state>
+    <state x="667" y="308" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604918068157" />
     <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604752616293" />
-    <state x="2183" y="281" width="430" height="481" key="FileChooserDialogImpl" timestamp="1604751922538">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="263" y="272" width="430" height="481" key="FileChooserDialogImpl" timestamp="1604922080824">
+      <screen x="0" y="0" width="1920" height="1047" />
     </state>
+    <state x="263" y="272" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604922080824" />
     <state x="2183" y="281" width="430" height="481" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604751922538" />
     <state width="222" height="539" key="HiddenNamespacesPopup" timestamp="1604417921247">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -315,10 +330,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604752586359" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604763041892">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1604765684444">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604763041892" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604765684444" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -329,11 +344,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604742783529" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604763241417">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1604925853789">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604689125468" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604763241417" />
+    <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604925267767" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604925853788" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>
