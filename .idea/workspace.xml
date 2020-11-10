@@ -10,10 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add system image upload for update action post entity">
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Tests success post_file_uploader">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/carrierwave.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/carrierwave.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/support/uploader/post_file_uploader_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/support/uploader/post_file_uploader_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/controllers/post_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/post_controller_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +127,7 @@
       <workItem from="1604741134203" duration="8126000" />
       <workItem from="1604751887427" duration="13420000" />
       <workItem from="1604917965655" duration="26090000" />
-      <workItem from="1604998697589" duration="24932000" />
+      <workItem from="1604998697589" duration="26390000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -318,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605025446592</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Tests success post_file_uploader">
+      <created>1605026762397</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1605026762397</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +344,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Action CRUD category finish" />
     <MESSAGE value="Add relation category to post with the attribute category_id" />
     <MESSAGE value="Add migration column category_id to table posts" />
     <MESSAGE value="Add test success for edit action" />
@@ -362,7 +368,8 @@
     <MESSAGE value="Add pagination posts entity for the dashboard and refactor structure component" />
     <MESSAGE value="Refactor form edit post and method submit and input event" />
     <MESSAGE value="Add system image upload for update action post entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add system image upload for update action post entity" />
+    <MESSAGE value="Tests success post_file_uploader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests success post_file_uploader" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -422,10 +429,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604752586359" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605025448782">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605026763389">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605025448782" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605026763389" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -436,11 +443,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605022320226" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605026648822">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605027606909">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604925267767" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605026648822" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605027606909" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

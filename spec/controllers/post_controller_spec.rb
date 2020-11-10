@@ -30,7 +30,7 @@ RSpec.describe PostsController, type: :controller do
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
         Category.create({:name => 'Anime', :slug => 'anime', :resume => 'test de description'})
 
-        post :create, params: {name: 'Test de test', slug: 'Test de test', categories: 'Manga,Anime', descr: 'test de test'}
+        post :create, params: {name: 'Test de test', slug: 'Test de test', categories: 'Manga,Anime', descr: 'test de test', image: nil }
       end
 
       it 'should return error validation' do
@@ -57,7 +57,7 @@ RSpec.describe PostsController, type: :controller do
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
         Category.create({:name => 'Anime', :slug => 'anime', :resume => 'test de description'})
 
-        post :create, params: {name: 'Test de test', slug: '', categories: 'Manga,Anime', descr: 'test de test'}
+        post :create, params: {name: 'Test de test', slug: '', categories: 'Manga,Anime', descr: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -93,7 +93,7 @@ RSpec.describe PostsController, type: :controller do
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
         Category.create({:name => 'Anime', :slug => 'anime', :resume => 'test de description'})
 
-        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: 'Manga,Anime', descr: 'test de test'}
+        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: 'Manga,Anime', descr: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -136,7 +136,7 @@ RSpec.describe PostsController, type: :controller do
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
         Category.create({:name => 'Anime', :slug => 'anime', :resume => 'test de description'})
 
-        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: categories, descr: 'test de test'}
+        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: categories, descr: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -168,7 +168,7 @@ RSpec.describe PostsController, type: :controller do
         categories = 'Manga'
         Category.create({:name => categories, :slug => 'manga', :resume => 'test de description'})
 
-        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: categories, descr: 'test de test'}
+        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: categories, descr: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -197,7 +197,7 @@ RSpec.describe PostsController, type: :controller do
     context 'invalid categories dont exist for method create post' do
       before do
         categories = 'Manga'
-        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: categories, descr: 'test de test'}
+        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: categories, descr: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -221,7 +221,7 @@ RSpec.describe PostsController, type: :controller do
 
     context 'invalid categories empty dont exist for method create post' do
       before do
-        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: '', descr: 'test de test'}
+        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: '', descr: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -243,7 +243,9 @@ RSpec.describe PostsController, type: :controller do
     context 'valid create post with file' do
       before do
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
-        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: 'Manga', descr: 'test de test', image: 'image.png'}
+
+        file = Rack::Test::UploadedFile.new(File.join(Rails.root, '/spec/fixtures/images/rails.png'))
+        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: 'Manga', descr: 'test de test', image: file}
       end
 
       it 'should return status 200' do
@@ -258,10 +260,10 @@ RSpec.describe PostsController, type: :controller do
 
       it 'should return post with image' do
         post = Post.find(1)
-        expect(post.img_original).to eq('image.png')
-        expect(post.img_medium).to eq('medium_image.png')
-        expect(post.img_thumb).to eq('thumb_image.png')
-        expect(post.img_mini).to eq('mini_image.png')
+        expect(post['img_original']).to eq('rails.png')
+        expect(post['img_medium']).to eq('medium_rails.png')
+        expect(post['img_thumb']).to eq('thumb_rails.png')
+        expect(post['img_mini']).to eq('mini_rails.png')
       end
     end
   end
@@ -306,7 +308,7 @@ RSpec.describe PostsController, type: :controller do
         Category.create({:name => 'Série', :slug => 'serie', :resume => 'test de description'})
 
         post = create(:post_categories)
-        put :update, params: {id: post.id, name: 'Test de test', slug: 'Test de test', categories: 'Manga,Anime,Série', descr: 'test de test'}
+        put :update, params: {id: post.id, name: 'Test de test', slug: 'Test de test', categories: 'Manga,Anime,Série', descr: 'test de test', image: nil}
       end
 
       it 'should return error validation' do
@@ -343,7 +345,7 @@ RSpec.describe PostsController, type: :controller do
         Category.create({:name => 'Série', :slug => 'serie', :resume => 'test de description'})
 
         post = create(:post_categories)
-        put :update, params: {id: post.id, name: 'Test de test', slug: '', categories: 'Manga,Anime,Série', descr: 'test de test'}
+        put :update, params: {id: post.id, name: 'Test de test', slug: '', categories: 'Manga,Anime,Série', descr: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -389,7 +391,7 @@ RSpec.describe PostsController, type: :controller do
         Category.create({:name => 'Série', :slug => 'serie', :resume => 'test de description'})
 
         post = create(:post_categories)
-        put :update, params: {id: post.id, name: 'Test de test', slug: 'test-de-test-de-test', categories: 'Manga,Anime,Série', descr: 'test de test'}
+        put :update, params: {id: post.id, name: 'Test de test', slug: 'test-de-test-de-test', categories: 'Manga,Anime,Série', descr: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -442,7 +444,7 @@ RSpec.describe PostsController, type: :controller do
         Category.create({:name => 'Série', :slug => 'serie', :resume => 'test de description'})
 
         post = create(:post_categories)
-        put :update, params: {id: post.id, name: 'Test de test', slug: 'test-de-test-de-test', categories: categories, descr: 'test de test'}
+        put :update, params: {id: post.id, name: 'Test de test', slug: 'test-de-test-de-test', categories: categories, descr: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -484,7 +486,7 @@ RSpec.describe PostsController, type: :controller do
         Category.create({:name => 'Anime', :slug => 'anime', :resume => 'test de description'})
 
         post = create(:post_categories)
-        put :update, params: {id: post.id, name: 'Test de test', slug: 'test-de-test-de-test', categories: categories, descr: 'test de test'}
+        put :update, params: {id: post.id, name: 'Test de test', slug: 'test-de-test-de-test', categories: categories, descr: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -517,7 +519,7 @@ RSpec.describe PostsController, type: :controller do
     context 'invalid categories empty dont exist for method create post' do
       before do
         post = create(:post_categories)
-        put :update, params: {id: post.id, name: 'Test de test', slug: 'test-de-test-de-test', categories: '', descr: 'test de test'}
+        put :update, params: {id: post.id, name: 'Test de test', slug: 'test-de-test-de-test', categories: '', descr: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -536,6 +538,34 @@ RSpec.describe PostsController, type: :controller do
         expect(post.slug).not_to eq('test-de-test-de-test')
         expect(post.category_id).not_to eq('')
         expect(post.name).not_to eq('test de test')
+      end
+    end
+
+    context 'valid update post with file' do
+      before do
+        post = create(:post_categories)
+        Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
+
+        file = Rack::Test::UploadedFile.new(File.join(Rails.root, '/spec/fixtures/images/ruby-logo.png'))
+        put :update, params: {id: post.id, name: 'Test de test', slug: 'test-de-test-de-test', categories: 'Manga', descr: 'test de test', image: file}
+      end
+
+      it 'should return status 200' do
+        expect(response).to have_http_status(200)
+      end
+
+      it 'should return response success true' do
+        data = JSON.parse(response.body)
+        expect(data['success']).to be_truthy
+        expect(data['message']).to eq('Post was successfully edited.')
+      end
+
+      it 'should return post with image' do
+        post = Post.find(1)
+        expect(post['img_original']).to eq('ruby-logo.png')
+        expect(post['img_medium']).to eq('medium_ruby-logo.png')
+        expect(post['img_thumb']).to eq('thumb_ruby-logo.png')
+        expect(post['img_mini']).to eq('mini_ruby-logo.png')
       end
     end
   end

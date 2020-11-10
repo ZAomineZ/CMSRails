@@ -38,7 +38,7 @@ class PostsController < ApplicationController
     @post.category_id = categories
     @post.img_original = params[:image]
 
-    if @post.save!
+    if @post.save
       # Update informations file
       set_image_credentials
 
@@ -128,10 +128,12 @@ class PostsController < ApplicationController
   end
 
   def set_image_credentials
-    @post.img_medium = 'medium_' + @post.img_original_identifier
-    @post.img_thumb = 'thumb_' + @post.img_original_identifier
-    @post.img_mini = 'mini_' + @post.img_original_identifier
-    @post.save!
+    if @post.img_original_identifier != nil
+      @post.img_medium = 'medium_' + @post.img_original_identifier
+      @post.img_thumb = 'thumb_' + @post.img_original_identifier
+      @post.img_mini = 'mini_' + @post.img_original_identifier
+      @post.save
+    end
   end
 
 end
