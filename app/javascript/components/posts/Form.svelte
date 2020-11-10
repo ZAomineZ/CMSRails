@@ -38,6 +38,13 @@
     /**
      * @param {Event} event
      */
+    function onInputDescField(event) {
+        descr = event.target.value
+    }
+
+    /**
+     * @param {Event} event
+     */
     function getTags(event) {
         let data = event.detail.tags
         categories = data.join(',')
@@ -78,8 +85,9 @@
         <label for="categories">Post Categories</label>
         <Tags class="form-control" id="categories" on:tags={getTags} placeholder="Your categories..."/>
     </div>
-    <TextareaField cols="30" id="descr" label="Post Content" placeHolder="Enter your content"
-                   bind:value={descr}/>
+    <TextareaField bind:value={descr} cols="30" id="descr" label="Post Content"
+                   noJson={false} on:input={onInputDescField}
+                   placeHolder="Enter your content"/>
     <InputField bind:value={image} className='custom-file-input' id="image" label="Choose your image" type="file"/>
     <button class="btn btn-primary mt-4" type="submit">Send</button>
 </form>
