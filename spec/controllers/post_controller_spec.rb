@@ -258,7 +258,10 @@ RSpec.describe PostsController, type: :controller do
 
       it 'should return post with image' do
         post = Post.find(1)
-        byebug
+        expect(post.img_original).to eq('image.png')
+        expect(post.img_medium).to eq('medium_image.png')
+        expect(post.img_thumb).to eq('thumb_image.png')
+        expect(post.img_mini).to eq('mini_image.png')
       end
     end
   end

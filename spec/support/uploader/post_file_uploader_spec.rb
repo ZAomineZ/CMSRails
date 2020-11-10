@@ -8,11 +8,11 @@ RSpec.describe PostFileUploader, type: :uploader do
 
     let(:file) { 'image.jpg' }
     let(:post) { double('post') }
-    let(:uploader) { PostFileUploader.new(post, :image) }
+    let(:uploader) { PostFileUploader.new(post, :img_original) }
 
     before do
       PostFileUploader.enable_processing = true
-      File.open(file) { |f| uploader.store!(f) }
+      File.open(Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, '/spec/fixtures/images/image.jpg')))) { |f| uploader.store!(f) }
     end
 
     after do

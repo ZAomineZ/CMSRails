@@ -14,7 +14,7 @@
         <label for={id} class="custom-file-label">{label}</label>
     {:else}
         <label for={id}>{label}</label>
-        <input bind:value={value} class='form-control' id={id} name={id} placeholder={placeHolder}
+        <input value={value} on:input|preventDefault class='form-control' id={id} name={id} placeholder={placeHolder}
                type="text"/>
     {/if}
 </div>
