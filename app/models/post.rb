@@ -1,5 +1,7 @@
 class Post < ApplicationRecord
 
+  mount_uploader :img_original, PostFileUploader
+
   validates :name, presence: true, :length => {minimum: 5, maximum: 60}
   validates :descr, presence: true, :length => {minimum: 10}
 
@@ -11,9 +13,5 @@ class Post < ApplicationRecord
     else
       write_attribute(:slug, name.parameterize)
     end
-  end
-
-  def upload_file(uploader, file)
-    uploader.store!(file)
   end
 end

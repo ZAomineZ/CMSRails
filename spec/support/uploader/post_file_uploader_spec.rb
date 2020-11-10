@@ -7,7 +7,8 @@ RSpec.describe PostFileUploader, type: :uploader do
   describe 'upload file' do
 
     let(:file) { 'image.jpg' }
-    let(:uploader) { PostFileUploader.new }
+    let(:post) { double('post') }
+    let(:uploader) { PostFileUploader.new(post, :image) }
 
     before do
       PostFileUploader.enable_processing = true

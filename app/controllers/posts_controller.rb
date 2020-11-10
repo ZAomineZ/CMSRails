@@ -32,13 +32,16 @@ class PostsController < ApplicationController
       return render json: response
     end
 
+    # Set Credentials Post
     @post = Post.new(params_post)
     @post.date_post = Time.now
     @post.category_id = categories
+    @post.img_original = params[:image]
 
-    # Upload File for post entity
-    @post.upload_file(@uploader, params[:image])
-    if @post.save
+    if @post.save!
+      # Update informations file
+      set_image_credentials
+
       response = {
           success: true,
           message: 'Post was successfully created.'
@@ -117,6 +120,13 @@ class PostsController < ApplicationController
 
   def get_uploader
     @uploader = PostFileUploader.new
+  end
+
+  def set_image_credentials
+    @post.img_medium = 'medium_' + @post.img_original_identifier
+    @post.img_thumb = 'thumb_' + @post.img_original_identifier
+    @post.img_mini = 'mini_' + @post.img_original_identifier
+    @post.save!
   end
 
 end
