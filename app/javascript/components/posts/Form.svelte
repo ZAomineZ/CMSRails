@@ -23,6 +23,7 @@
     let slug = ''
     let categories = ''
     let descr = ''
+    let image = null
 
     onMount(() => {
         csrfValue = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
@@ -54,6 +55,7 @@
         formData.append('slug', slug)
         formData.append('categories', categories)
         formData.append('descr', descr)
+        formData.append('image', image)
 
         const actionUri = event.composedPath()[0] ? event.composedPath()[0].action : ''
         const method = uriForm === '/posts' ? 'POST' : 'PUT'
@@ -78,6 +80,6 @@
     </div>
     <TextareaField cols="30" id="descr" label="Post Content" placeHolder="Enter your content"
                    bind:value={descr}/>
-    <InputField id="image" label="Choose your image" className='custom-file-input' type="file" />
+    <InputField bind:value={image} className='custom-file-input' id="image" label="Choose your image" type="file"/>
     <button class="btn btn-primary mt-4" type="submit">Send</button>
 </form>

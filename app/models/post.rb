@@ -12,4 +12,8 @@ class Post < ApplicationRecord
       write_attribute(:slug, name.parameterize)
     end
   end
+
+  def upload_file(uploader, file)
+    uploader.store!(file)
+  end
 end

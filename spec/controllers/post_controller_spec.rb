@@ -52,7 +52,7 @@ RSpec.describe PostsController, type: :controller do
       end
     end
 
-    context 'valide create post method with slug empty' do
+    context 'valid create post method with slug empty' do
       before do
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
         Category.create({:name => 'Anime', :slug => 'anime', :resume => 'test de description'})
@@ -88,7 +88,7 @@ RSpec.describe PostsController, type: :controller do
       end
     end
 
-    context 'valide create post method' do
+    context 'valid create post method' do
       before do
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
         Category.create({:name => 'Anime', :slug => 'anime', :resume => 'test de description'})
@@ -130,7 +130,7 @@ RSpec.describe PostsController, type: :controller do
       end
     end
 
-    context 'valide create post method with many categories' do
+    context 'valid create post method with many categories' do
       before do
         categories = 'Manga,Anime'
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
@@ -163,7 +163,7 @@ RSpec.describe PostsController, type: :controller do
 
     end
 
-    context 'valide create post method with a category' do
+    context 'valid create post method with a category' do
       before do
         categories = 'Manga'
         Category.create({:name => categories, :slug => 'manga', :resume => 'test de description'})
@@ -237,6 +237,28 @@ RSpec.describe PostsController, type: :controller do
       it 'should don\'t return attributes categories' do
         count = Post.count
         expect(count).to eq(0)
+      end
+    end
+
+    context 'valid create post with file' do
+      before do
+        Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
+        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: 'Manga', descr: 'test de test', image: 'image.png'}
+      end
+
+      it 'should return status 200' do
+        expect(response).to have_http_status(200)
+      end
+
+      it 'should return response success true' do
+        data = JSON.parse(response.body)
+        expect(data['success']).to be_truthy
+        expect(data['message']).to eq('Post was successfully created.')
+      end
+
+      it 'should return post with image' do
+        post = Post.find(1)
+        byebug
       end
     end
   end

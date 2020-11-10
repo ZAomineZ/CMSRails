@@ -9,7 +9,7 @@
 
 <div class={type === 'file' ? 'custom-file' : 'form-group'}>
     {#if type === 'file'}
-        <input type="file" class={'form-control ' + className} id={id}>
+        <input bind:value={value} type="file" class={'form-control ' + className} id={id} name={id}>
         <label for={id} class="custom-file-label">{label}</label>
     {:else}
         <label for={id}>{label}</label>

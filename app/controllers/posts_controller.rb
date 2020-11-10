@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update]
+  before_action :get_uploader, only: [:create, :update]
 
   def index
     pagination = PaginationEntity.new(1, Post)
@@ -34,6 +35,9 @@ class PostsController < ApplicationController
     @post = Post.new(params_post)
     @post.date_post = Time.now
     @post.category_id = categories
+
+    # Upload File for post entity
+    @post.upload_file(@uploader, params[:image])
     if @post.save
       response = {
           success: true,
@@ -91,6 +95,7 @@ class PostsController < ApplicationController
     @exist = Post.exists?(id)
 
     if @exist
+      @post = Post.find(id)
       @post.delete
       flash.now[:success] = "Post was successfully deleted."
     else
@@ -108,6 +113,10 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def get_uploader
+    @uploader = PostFileUploader.new
   end
 
 end

@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'svelte-rails'
 gem 'validates_timeliness', '~> 5.0.0.beta1'
 gem 'will_paginate', '~> 3.1.0'
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
