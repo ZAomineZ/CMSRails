@@ -6,13 +6,12 @@ RSpec.describe PostFileUploader, type: :uploader do
 
   describe 'upload file' do
 
-    let(:file) { 'image.jpg' }
-    let(:post) { double('post') }
+    let(:post) { double('post', :id => 1) }
     let(:uploader) { PostFileUploader.new(post, :img_original) }
 
     before do
       PostFileUploader.enable_processing = true
-      File.open(Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, '/spec/fixtures/images/image.jpg')))) { |f| uploader.store!(f) }
+      File.open(Rack::Test::UploadedFile.new(File.open(File.join(Rails.root, '/spec/fixtures/images/rails.png')))) { |f| uploader.store!(f) }
     end
 
     after do
@@ -21,11 +20,13 @@ RSpec.describe PostFileUploader, type: :uploader do
     end
 
     it 'should image upload success' do
-      expect(File.exist?('/images/posts/1/image.jpg')).to be_truthy
-      expect(uploader).to have_permissions(0600)
-      expect(uploader).to be_format('jpg')
+      file = File.join(Rails.root, '/images/post/1')
+
+      expect(file).to be_truthy
+      expect(uploader).to have_permissions(0666)
+      expect(uploader).not_to be_format('jpg')
       expect(uploader).to be_format('png')
-      expect(uploader).to be_format('jpeg')
+      expect(uploader).not_to be_format('jpeg')
     end
 
     it "check dimensions to images" do
