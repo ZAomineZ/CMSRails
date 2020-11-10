@@ -1,1 +1,3 @@
-<%= svelte_component :Home, {name: 'Svelte'}, {prerender: true} %>
+<%= svelte_component :Home, {
+    name: 'Svelte', posts: @posts, posts_count: @posts_count, categories_count: @categories_count, pages: @pages, currentPage: @current_page
+}, {prerender: true} %>

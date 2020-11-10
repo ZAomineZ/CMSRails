@@ -1,12 +1,16 @@
 <script>
+    // MODULES SVELTE
     import {onMount} from "svelte";
 
+    // COMPONENT HTML
     import Header from "../layout/Header.svelte";
     import Sidebar from "../layout/Sidebar.svelte";
     import PostsTable from "./PostsTable.svelte";
-
     import Alert from "../concern/Alert.svelte";
+
+    // LIB
     import {Fetch} from "../../packs/helper/FetchApi";
+    import {RequestDocument} from "../../packs/helper/RequestDocument";
 
     // Props
     export let posts = []
@@ -18,7 +22,7 @@
     let message = null
 
     onMount(() => {
-        csrfValue = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        csrfValue = RequestDocument.getCsrf()
     })
 
     // Methods
@@ -72,6 +76,5 @@
             {/if}
         </div>
     </div>
-    <PostsTable csrfValue={csrfValue} data={{posts, currentPage, pages}} handlePagination={handlePagination}
-                message={message} title="Posts List"/>
+    <PostsTable data={{posts, currentPage, pages}} handlePagination={handlePagination} title="Posts List"/>
 </div>

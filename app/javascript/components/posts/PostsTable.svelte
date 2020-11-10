@@ -8,9 +8,8 @@
         currentPage: 1,
         pages: 1
     }
-    export let message = null
     export let handlePagination = () => {}
-    export let csrfValue = ''
+    export let csrfValue = null
 </script>
 
 <div class="card">
