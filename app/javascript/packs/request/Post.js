@@ -1,5 +1,4 @@
 import {Fetch} from "../helper/FetchApi";
-import {uriForm} from "../../components/posts/Form.svelte";
 
 /**
  * @property {FormData} formData

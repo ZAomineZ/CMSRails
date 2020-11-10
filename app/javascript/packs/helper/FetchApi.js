@@ -22,7 +22,7 @@ export class Fetch
      */
     async response(uriFetch, method = 'POST', formData)
     {
-        const request = await this.api(uriFetch, 'POST', formData)
+        const request = await this.api(uriFetch, method, formData)
         if (request.status === 200 || request.status === 301 || request.status === 302) {
             return await request.json()
         }

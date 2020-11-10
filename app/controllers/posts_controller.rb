@@ -77,8 +77,13 @@ class PostsController < ApplicationController
       return render json: response
     end
 
+    # Update credentials categories and images
     @post.category_id = categories
+    @post.img_original = params[:image]
     if @post.update(params_post)
+      # Update informations file
+      set_image_credentials
+
       response = {
           success: true,
           message: 'Post was successfully edited.'
