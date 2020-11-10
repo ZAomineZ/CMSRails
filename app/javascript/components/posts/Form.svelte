@@ -7,10 +7,6 @@
     // PROPS
     export let uriForm = ''
     export let post = null
-    export let credentials = {
-        name: '',
-        slug: '',
-    }
     export let callInputs = {
         onInputNameField: () => {
         },
@@ -26,14 +22,16 @@
     {#if uriForm === '/posts'}
         <input name="_method" type="hidden" value="put">
     {/if}
-    <InputField id="name" label="Post Name" on:input={callInputs.onInputNameField} placeHolder="Enter your name..."/>
-    <InputField id="slug" label="Post Slug" on:input={callInputs.onInputSlugField} placeHolder="Enter your slug..."/>
+    <InputField id="name" label="Post Name" on:input={callInputs.onInputNameField} placeHolder="Enter your name..."
+                value={post ? post.name : null}/>
+    <InputField id="slug" label="Post Slug" on:input={callInputs.onInputSlugField} placeHolder="Enter your slug..."
+                value={post ? post.slug : null}/>
     <div class="form-group">
         <label for="categories">Post Categories</label>
         <Tags class="form-control" id="categories" on:tags placeholder="Your categories..."/>
     </div>
     <TextareaField cols="30" id="descr" label="Post Content"
-                   noJson={false} on:input={callInputs.onInputDescField}
+                   noJson={false} on:input={callInputs.onInputDescField} valueText={post ? post.descr : null}
                    placeHolder="Enter your content"/>
     <InputField bind:files={files} className='custom-file-input' id="image" label="Choose your image" type="file"/>
     <button class="btn btn-primary mt-4" type="submit">Send</button>

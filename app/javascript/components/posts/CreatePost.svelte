@@ -8,10 +8,15 @@
 
     // Component HTML
     import Alert from "../concern/Alert.svelte";
-    import Form, {uriForm} from "./Form.svelte";
+    import Form from "./Form.svelte";
 
     // LIB
     import {Fetch} from "../../packs/helper/FetchApi";
+    import {Post} from "../../packs/request/Post";
+    import {RequestDocument} from "../../packs/helper/RequestDocument";
+
+    // PROPS
+    export let uriForm = ''
 
     // DATA
     let successResponse = null
@@ -26,7 +31,7 @@
     let files
 
     onMount(() => {
-        csrfValue = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        csrfValue = RequestDocument.getCsrf()
     })
 
     // Methods
@@ -73,17 +78,7 @@
      * @param {Event} event
      */
     async function handleSubmit(event) {
-        let formData = new FormData()
-        formData.append('authenticity_token', csrfValue)
-        formData.append('name', name)
-        formData.append('slug', slug)
-        formData.append('categories', categories)
-        formData.append('descr', descr)
-        formData.append('image', files[0])
-
-        const actionUri = event.composedPath()[0] ? event.composedPath()[0].action : ''
-        const method = uriForm === '/posts' ? 'POST' : 'PUT'
-        const response = await (new Fetch()).response(actionUri, method, formData)
+        const response = (new Post()).resSubmit(event, csrfValue, {name, slug, descr, categories, files, uriForm})
         successResponse = !!response.success;
         messageResponse = response.message
     }
