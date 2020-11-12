@@ -240,7 +240,7 @@ RSpec.describe PostsController, type: :controller do
       end
     end
 
-    context 'valid create post with file' do
+    context 'valid create post with file valid' do
       before do
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
 
@@ -264,6 +264,46 @@ RSpec.describe PostsController, type: :controller do
         expect(post['img_medium']).to eq('medium_rails.png')
         expect(post['img_thumb']).to eq('thumb_rails.png')
         expect(post['img_mini']).to eq('mini_rails.png')
+      end
+    end
+
+    context 'valid create post with file invalid' do
+      before do
+        Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
+
+        file = nil
+        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: 'Manga', descr: 'test de test', image: file}
+      end
+
+      it 'should return status 200' do
+        expect(response).to have_http_status(200)
+      end
+
+      it 'should return response success true' do
+        data = JSON.parse(response.body)
+        expect(data['success']).to be_truthy
+        expect(data['message']).to eq('Post was successfully created.')
+      end
+
+      it 'should return post with image' do
+        post = Post.find(1)
+
+        expect(post['img_original']).to eq('image_1200.png')
+        expect(post['img_medium']).to eq('image_500.png')
+        expect(post['img_thumb']).to eq('image_150.png')
+        expect(post['img_mini']).to eq('image_50.png')
+      end
+
+      it 'should return good dimensions for the custom files' do
+        file_original_custom = File.join(Rails.root, '/public/images/default_posts/image_1200.png')
+        file_medium_custom = File.join(Rails.root, '/public/images/default_posts/image_500.png')
+        file_thumb_custom = File.join(Rails.root, '/public/images/default_posts/image_150.png')
+        file_mini_custom = File.join(Rails.root, '/public/images/default_posts/image_50.png')
+
+        expect(File.exist?(file_original_custom)).to be_truthy
+        expect(File.exist?(file_medium_custom)).to be_truthy
+        expect(File.exist?(file_thumb_custom)).to be_truthy
+        expect(File.exist?(file_mini_custom)).to be_truthy
       end
     end
   end
@@ -566,6 +606,47 @@ RSpec.describe PostsController, type: :controller do
         expect(post['img_medium']).to eq('medium_ruby-logo.png')
         expect(post['img_thumb']).to eq('thumb_ruby-logo.png')
         expect(post['img_mini']).to eq('mini_ruby-logo.png')
+      end
+    end
+
+    context 'valid create post with file invalid' do
+      before do
+        post = create(:post_categories)
+        Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
+
+        file = nil
+        put :update, params: {id: post.id, name: 'Test de test', slug: 'test-de-test-de-test', categories: 'Manga', descr: 'test de test', image: file}
+      end
+
+      it 'should return status 200' do
+        expect(response).to have_http_status(200)
+      end
+
+      it 'should return response success true' do
+        data = JSON.parse(response.body)
+        expect(data['success']).to be_truthy
+        expect(data['message']).to eq('Post was successfully edited.')
+      end
+
+      it 'should return post with image' do
+        post = Post.find(1)
+
+        expect(post['img_original']).to eq('image_1200.png')
+        expect(post['img_medium']).to eq('image_500.png')
+        expect(post['img_thumb']).to eq('image_150.png')
+        expect(post['img_mini']).to eq('image_50.png')
+      end
+
+      it 'should return good dimensions for the custom files' do
+        file_original_custom = File.join(Rails.root, '/public/images/default_posts/image_1200.png')
+        file_medium_custom = File.join(Rails.root, '/public/images/default_posts/image_500.png')
+        file_thumb_custom = File.join(Rails.root, '/public/images/default_posts/image_150.png')
+        file_mini_custom = File.join(Rails.root, '/public/images/default_posts/image_50.png')
+
+        expect(File.exist?(file_original_custom)).to be_truthy
+        expect(File.exist?(file_medium_custom)).to be_truthy
+        expect(File.exist?(file_thumb_custom)).to be_truthy
+        expect(File.exist?(file_mini_custom)).to be_truthy
       end
     end
   end

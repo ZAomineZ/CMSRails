@@ -4,7 +4,7 @@ require 'carrierwave/test/matchers'
 RSpec.describe PostFileUploader, type: :uploader do
   include CarrierWave::Test::Matchers
 
-  describe 'upload file' do
+  describe 'upload file success with image valid' do
 
     let(:post) { double('post', :id => 1) }
     let(:uploader) { PostFileUploader.new(post, :img_original) }

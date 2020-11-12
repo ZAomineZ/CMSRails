@@ -128,12 +128,12 @@ class PostsController < ApplicationController
   end
 
   def set_image_credentials
-    if @post.img_original_identifier != nil
-      @post.img_medium = 'medium_' + @post.img_original_identifier
-      @post.img_thumb = 'thumb_' + @post.img_original_identifier
-      @post.img_mini = 'mini_' + @post.img_original_identifier
-      @post.save
-    end
+    image = params[:image]
+
+    @post.img_medium = image != nil && !image.instance_of?(String) ? 'medium_' + @post.img_original_identifier : 'image_500.png'
+    @post.img_thumb = image != nil && !image.instance_of?(String) ? 'thumb_' + @post.img_original_identifier : 'image_150.png'
+    @post.img_mini = image != nil && !image.instance_of?(String) ? 'mini_' + @post.img_original_identifier : 'image_50.png'
+    @post.save
   end
 
 end
