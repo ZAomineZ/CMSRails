@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  self.per_page = 10
+  mount_uploader :avatar_image, CategoryFileUploader
 
   validates :name, presence: true, :length => {minimum: 3, maximum: 60}
   validates :resume, presence: true, :length => {minimum: 10}
