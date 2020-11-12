@@ -11,4 +11,7 @@ Rails.application.routes.draw do
 
   post '/search/:q' => 'api/search#results'
 
+  # Routes Auth
+  get '/login', to: 'users#login'
+
 end

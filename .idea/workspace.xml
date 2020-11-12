@@ -10,9 +10,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add image preview for edit post page">
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add image preview for edit category page">
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/element/auth_element.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/components/users/Login.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/login.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/factories/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cc6d6bb3-509d-41dc-a199-b1e5104fdf38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cc6d6bb3-509d-41dc-a199-b1e5104fdf38.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/category/Form.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/category/Form.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +52,7 @@
         <option value="DataDashboard" />
         <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="Login" />
       </list>
     </option>
   </component>
@@ -129,7 +136,7 @@
       <workItem from="1604751887427" duration="13420000" />
       <workItem from="1604917965655" duration="26090000" />
       <workItem from="1604998697589" duration="30347000" />
-      <workItem from="1605173957481" duration="10979000" />
+      <workItem from="1605173957481" duration="15182000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -369,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605191265862</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Add image preview for edit category page">
+      <created>1605191614423</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1605191614423</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +402,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add component DeleteEntity and add action delete post for the CRUD posts" />
     <MESSAGE value="Add component dropdown account admin" />
     <MESSAGE value="Init pagination to posts for the front and refactor module" />
     <MESSAGE value="System pagination for posts entity and refactor component Post index" />
@@ -413,7 +426,8 @@
     <MESSAGE value="Test success upload file category for controller category" />
     <MESSAGE value="Test success delete file joined to entity for post and category" />
     <MESSAGE value="Add image preview for edit post page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add image preview for edit post page" />
+    <MESSAGE value="Add image preview for edit category page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add image preview for edit category page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -446,20 +460,20 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2018" y="185" width="806" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604417997427" />
-    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605190025868">
+    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605194001722">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="667" y="308" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604918068157" />
-    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605190025868" />
+    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605194001722" />
     <state width="247" height="195" key="DatabaseViewActions_Filter" timestamp="1605186930547">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="247" height="195" key="DatabaseViewActions_Filter/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605186930547" />
-    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl" timestamp="1605187834099">
+    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl" timestamp="1605194113119">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="263" y="272" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604922080824" />
-    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605187834099" />
+    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605194113117" />
     <state width="222" height="539" key="HiddenNamespacesPopup" timestamp="1604417921247">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -473,14 +487,14 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2149" y="259" width="540" height="540" key="StructurePopup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604418029094" />
-    <state width="498" height="445" key="SwitcherDM" timestamp="1604752586359">
+    <state width="498" height="445" key="SwitcherDM" timestamp="1605193215043">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604752586359" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605191267772">
+    <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605193215043" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605191615661">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605191267772" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605191615661" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -491,11 +505,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605022320226" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605191291485">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605198243534">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604925267767" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605191291485" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605198243534" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

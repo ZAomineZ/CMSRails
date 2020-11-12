@@ -1,0 +1,24 @@
+.login-page {
+  background-image: image-url('background_login.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.middle-login {
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.login-block {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 576px) {
+  .login-block {
+    width: calc(100% - 30px);
+  }
+}
