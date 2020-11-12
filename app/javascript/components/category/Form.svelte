@@ -18,7 +18,7 @@
     })
 </script>
 
-<form action={uriForm} method="POST">
+<form action={uriForm} method="POST" enctype="multipart/form-data">
     {#if uriForm !== '/categories'}
         <input name="_method" type="hidden" value="put">
     {/if}
@@ -32,6 +32,11 @@
     <TextareaField cols="30" id="resume" label="Category Content"
                    noJson placeHolder="Enter your content" valueText={category ? category.resume : null}/>
     <InputField className='custom-file-input' id="image" label="Choose your image" type="file"/>
-
+    <div class="form-group img-info">
+        <h6 class="img-text">Image Preview:</h6>
+        <div class="img-preview">
+            <img src={category.avat_cat.url} alt="Category image {category.id}">
+        </div>
+    </div>
     <button class="btn btn-primary mt-4" type="submit">Send</button>
 </form>
