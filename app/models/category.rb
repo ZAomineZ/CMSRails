@@ -7,6 +7,8 @@ class Category < ApplicationRecord
   scope :find_by_slug, -> (slug) { where("slug" => slug) }
   scope :search, -> (q) { where("name LIKE ?", "%#{q}%") }
 
+  after_destroy :unlink_image
+
   def getResume
     read_attribute(:resume)[0, 150] + '...'
   end
@@ -43,5 +45,12 @@ class Category < ApplicationRecord
       end
     end
     return dont_exist
+  end
+
+  private
+
+  def unlink_image(record)
+    directory = PathHelper.path_dir_public(record.class.name, record.id)
+    Dir.rm_r(directory) if Dir.exist?
   end
 end

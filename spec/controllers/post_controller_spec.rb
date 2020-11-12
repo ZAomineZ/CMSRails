@@ -692,6 +692,33 @@ RSpec.describe PostsController, type: :controller do
         expect(count).to eq(0)
       end
     end
+
+    context 'success method destroy with file exist' do
+      before do
+        # Create a new entity post
+        post = create(:post_categories)
+        delete :destroy, params: {id: post.id}
+      end
+
+      it 'should return a message flash success' do
+        expect(flash[:success]).to match(/Post was successfully deleted.*/)
+      end
+
+      it 'redirect destroy method' do
+        expect(response).to redirect_to(posts_path)
+      end
+
+      it 'error occurred delete category' do
+        count = Category.count
+        expect(count).to eq(0)
+      end
+
+      it 'should remove path directory to image' do
+        directory = PathHelper.path_dir_public('category', 1)
+        path = File.exist?(directory)
+        expect(path).to be_falsey
+      end
+    end
   end
 
 end
