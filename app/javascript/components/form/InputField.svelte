@@ -8,7 +8,7 @@
     export let className = null
 </script>
 
-<div class={type === 'file' ? 'custom-file' : 'form-group'}>
+<div class={type === 'file' ? 'custom-file form-group' : 'form-group'}>
     {#if type === 'file'}
         <input bind:files type="file" class={'form-control ' + className} id={id} name={id}>
         <label for={id} class="custom-file-label">{label}</label>
