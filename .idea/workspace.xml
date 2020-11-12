@@ -10,10 +10,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Test success post controller upload file when image field is nil">
-      <change afterPath="$PROJECT_DIR$/spec/support/uploader/category_file_uploader_spec.rb" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Test success upload file category">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/category_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/category_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/category.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/controllers/category_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/category_controller_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/controllers/post_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/post_controller_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/support/uploader/category_file_uploader_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/support/uploader/category_file_uploader_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +132,7 @@
       <workItem from="1604751887427" duration="13420000" />
       <workItem from="1604917965655" duration="26090000" />
       <workItem from="1604998697589" duration="30347000" />
-      <workItem from="1605173957481" duration="2617000" />
+      <workItem from="1605173957481" duration="6914000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -340,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605174035208</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Test success upload file category">
+      <created>1605176651483</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1605176651483</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +370,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add test success for edit action" />
     <MESSAGE value="Refactor form to post entity" />
     <MESSAGE value="Refactor form action edit to post entity" />
     <MESSAGE value="Test success action delete to post" />
@@ -384,7 +394,8 @@
     <MESSAGE value="Tests success post_file_uploader" />
     <MESSAGE value="Test success post controller upload file for action create and update" />
     <MESSAGE value="Test success post controller upload file when image field is nil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test success post controller upload file when image field is nil" />
+    <MESSAGE value="Test success upload file category" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test success upload file category" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -422,6 +433,10 @@
     </state>
     <state x="667" y="308" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604918068157" />
     <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604752616293" />
+    <state width="247" height="195" key="DatabaseViewActions_Filter" timestamp="1605186930547">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="247" height="195" key="DatabaseViewActions_Filter/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605186930547" />
     <state x="2183" y="281" width="430" height="481" key="FileChooserDialogImpl" timestamp="1605175893169">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -444,10 +459,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604752586359" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605174044898">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605176653472">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605174044898" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605176653472" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -458,11 +473,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605022320226" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605175880335">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605186989987">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604925267767" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605175880335" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605186989987" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

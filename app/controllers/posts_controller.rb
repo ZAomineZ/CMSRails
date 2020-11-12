@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
 
   before_action :set_post, only: [:show, :edit, :update]
-  before_action :get_uploader, only: [:create, :update]
 
   def index
     pagination = PaginationEntity.new(1, Post)
@@ -121,10 +120,6 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
-  end
-
-  def get_uploader
-    @uploader = PostFileUploader.new
   end
 
   def set_image_credentials

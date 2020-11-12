@@ -295,10 +295,10 @@ RSpec.describe PostsController, type: :controller do
       end
 
       it 'should return good dimensions for the custom files' do
-        file_original_custom = File.join(Rails.root, '/public/images/default_posts/image_1200.png')
-        file_medium_custom = File.join(Rails.root, '/public/images/default_posts/image_500.png')
-        file_thumb_custom = File.join(Rails.root, '/public/images/default_posts/image_150.png')
-        file_mini_custom = File.join(Rails.root, '/public/images/default_posts/image_50.png')
+        file_original_custom = File.join(Rails.root, '/public/images/default/image_1200.png')
+        file_medium_custom = File.join(Rails.root, '/public/images/default/image_500.png')
+        file_thumb_custom = File.join(Rails.root, '/public/images/default/image_150.png')
+        file_mini_custom = File.join(Rails.root, '/public/images/default/image_50.png')
 
         expect(File.exist?(file_original_custom)).to be_truthy
         expect(File.exist?(file_medium_custom)).to be_truthy
@@ -638,10 +638,10 @@ RSpec.describe PostsController, type: :controller do
       end
 
       it 'should return good dimensions for the custom files' do
-        file_original_custom = File.join(Rails.root, '/public/images/default_posts/image_1200.png')
-        file_medium_custom = File.join(Rails.root, '/public/images/default_posts/image_500.png')
-        file_thumb_custom = File.join(Rails.root, '/public/images/default_posts/image_150.png')
-        file_mini_custom = File.join(Rails.root, '/public/images/default_posts/image_50.png')
+        file_original_custom = File.join(Rails.root, '/public/images/default/image_1200.png')
+        file_medium_custom = File.join(Rails.root, '/public/images/default/image_500.png')
+        file_thumb_custom = File.join(Rails.root, '/public/images/default/image_150.png')
+        file_mini_custom = File.join(Rails.root, '/public/images/default/image_50.png')
 
         expect(File.exist?(file_original_custom)).to be_truthy
         expect(File.exist?(file_medium_custom)).to be_truthy

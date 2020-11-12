@@ -1,6 +1,6 @@
 class CategoryController < ApplicationController
 
-  before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action :set_category, only: [:show, :edit, :update]
 
   def index
     pagination = PaginationEntity.new(1, Category)
@@ -13,9 +13,15 @@ class CategoryController < ApplicationController
   end
 
   def create
+    # Set credentials category entity
     @category = Category.new(params_category)
     @category.date_cat = Time.now
+    @category.avat_cat = params[:image]
+
     if @category.save
+      # Update informations file
+      set_image_credentials
+
       flash.now[:success] = "Category was successfully created."
       redirect_to @category
     else
@@ -29,7 +35,12 @@ class CategoryController < ApplicationController
   end
 
   def update
+    # Update credentials image
+    @category.avat_cat = params[:image]
     if @category.update(params_category)
+      # Edited version icon avatar
+      set_image_credentials
+
       flash.now[:success] = "Category was successfully edited."
       redirect_to category_path
     else
@@ -43,7 +54,7 @@ class CategoryController < ApplicationController
     id = params[:id]
     @category = Category.exists?(id)
     if @category
-      @category.delete
+      Category.find(id).delete
       flash.now[:success] = "Category was successfully deleted."
     else
       flash.now[:danger] = 'An error occurred when delete your category.'
@@ -59,6 +70,12 @@ class CategoryController < ApplicationController
 
   def set_category
     @category = Category.find(params[:id])
+  end
+
+  def set_image_credentials
+    image = params[:image]
+    @category.icon_cat = image != nil && !image.instance_of?(String) ? 'icon_' + @category.avat_cat_identifier : 'image_50.png'
+    @category.save
   end
 
 end

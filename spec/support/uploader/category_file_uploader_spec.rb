@@ -7,7 +7,7 @@ RSpec.describe CategoryFileUploader, type: :uploader do
   describe 'upload file success with image valid' do
 
     let(:category) { double('category', :id => 1) }
-    let(:uploader) { CategoryFileUploader.new(category, :avatar_image) }
+    let(:uploader) { CategoryFileUploader.new(category, :avat_cat) }
 
     before do
       CategoryFileUploader.enable_processing = true

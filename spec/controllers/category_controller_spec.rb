@@ -22,7 +22,7 @@ RSpec.describe CategoryController, type: :controller do
 
     context 'invalid format params slug' do
       before do
-        post :create, params: {name: 'Test de test', slug: 'Test de test', resume: 'test de test'}
+        post :create, params: {name: 'Test de test', slug: 'Test de test', resume: 'test de test', image: nil}
       end
 
       it 'should return error validation' do
@@ -44,9 +44,9 @@ RSpec.describe CategoryController, type: :controller do
       end
     end
 
-    context 'valide create category method with slug empty' do
+    context 'valid create category method with slug empty' do
       before do
-        post :create, params: {name: 'Test de test', slug: '', resume: 'test de test'}
+        post :create, params: {name: 'Test de test', slug: '', resume: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -76,9 +76,9 @@ RSpec.describe CategoryController, type: :controller do
       end
     end
 
-    context 'valide create category method' do
+    context 'valid create category method' do
       before do
-        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', resume: 'test de test'}
+        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', resume: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -114,13 +114,66 @@ RSpec.describe CategoryController, type: :controller do
       end
     end
 
+    context 'valid create category with image field valid' do
+      before do
+        file = Rack::Test::UploadedFile.new(File.join(Rails.root, '/spec/fixtures/images/ruby-logo.png'))
+
+        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', resume: 'test de test', image: file}
+      end
+
+      it 'should return status 200' do
+        expect(flash[:success]).to match(/Category was successfully created..*/)
+        expect(response).to have_http_status(302)
+      end
+
+      it 'should return don\'t null' do
+        category = Category.find(1)
+        expect(category).not_to be_nil
+      end
+
+      it 'redirect create method' do
+        category = Category.find(1)
+        expect(response).to redirect_to(category)
+      end
+
+      it 'should return post with image' do
+        category = Category.find(1)
+        expect(category['avat_cat']).to eq('avat_cat.png')
+        expect(category['icon_cat']).to eq('icon_avat_cat.png')
+      end
+    end
+
+    context 'valid create category with file invalid' do
+      before do
+        file = nil
+        post :create, params: {name: 'Anime', slug: 'anime', resume: 'test de test', image: file}
+      end
+
+      it 'should return status 200' do
+        expect(flash[:success]).to match(/Category was successfully created..*/)
+        expect(response).to have_http_status(302)
+      end
+
+      it 'should return post with image' do
+        category = Category.find(1)
+        expect(category['avat_cat']).to eq('image_150.png')
+        expect(category['icon_cat']).to eq('image_50.png')
+      end
+
+      it 'should return good dimensions for the custom files' do
+        file_thumb_custom = File.join(Rails.root, '/public/images/default/image_150.png')
+        file_mini_custom = File.join(Rails.root, '/public/images/default/image_50.png')
+        expect(File.exist?(file_thumb_custom)).to be_truthy
+        expect(File.exist?(file_mini_custom)).to be_truthy
+      end
+    end
   end
 
   describe 'CATEGORY PUT #update' do
     context 'invalid params' do
       before do
         cat = create(:category)
-        put :update, params: {id: cat.id, name: 'dd', slug: 'dd', resume: 'test'}
+        put :update, params: {id: cat.id, name: 'dd', slug: 'dd', resume: 'test', image: nil}
       end
 
       it 'should return error validation' do
@@ -137,7 +190,7 @@ RSpec.describe CategoryController, type: :controller do
     context 'invalid format params slug' do
       before do
         cat = create(:category_past)
-        put :update, params: {id: cat.id, name: 'Test de test', slug: 'Test de test', resume: 'test de test'}
+        put :update, params: {id: cat.id, name: 'Test de test', slug: 'Test de test', resume: 'test de test', image: nil}
       end
 
       it 'should return error validation' do
@@ -174,10 +227,10 @@ RSpec.describe CategoryController, type: :controller do
       end
     end
 
-    context 'valide update category method with slug empty' do
+    context 'valid update category method with slug empty' do
       before do
         cat = create(:category_past)
-        put :update, params: {id: cat.id, name: 'Test de test', slug: '', resume: 'test de test'}
+        put :update, params: {id: cat.id, name: 'Test de test', slug: '', resume: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -222,10 +275,10 @@ RSpec.describe CategoryController, type: :controller do
       end
     end
 
-    context 'valide create category method' do
+    context 'valid update category method' do
       before do
         cat = create(:category_past)
-        put :update, params: {id: cat.id, name: 'Test de test', slug: 'test-de-test-de-test', resume: 'test de test'}
+        put :update, params: {id: cat.id, name: 'Test de test', slug: 'test-de-test-de-test', resume: 'test de test', image: nil}
       end
 
       it 'should return status 200' do
@@ -267,6 +320,53 @@ RSpec.describe CategoryController, type: :controller do
         expect(category.resume).to eq('test de test')
 
         expect(Category.count).to eq(1)
+      end
+    end
+
+    context 'valid update category with field image valid' do
+      before do
+        cat = create(:category_past)
+        file = Rack::Test::UploadedFile.new(File.join(Rails.root, '/spec/fixtures/images/ruby-logo.png'))
+
+        put :update, params: {id: cat.id, name: 'Test de test', slug: 'test-de-test-de-test', resume: 'test de test', image: file}
+      end
+
+      it 'should return response status 302 with message flash' do
+        expect(flash[:success]).to match(/Category was successfully edited.*/)
+        expect(response).to have_http_status(302)
+      end
+
+      it 'should avatar_cat and icon_cat to category edited' do
+        category = Category.find(1)
+        expect(category['avat_cat']).to eq('avat_cat.png')
+        expect(category['icon_cat']).to eq('icon_avat_cat.png')
+      end
+    end
+
+    context 'valid create category with file invalid' do
+      before do
+        cat = Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
+
+        file = nil
+        put :update, params: {id: cat.id, name: 'Test de test', slug: 'test-de-test-de-test', resume: 'test de test', image: file}
+      end
+
+      it 'should return status 200' do
+        expect(flash[:success]).to match(/Category was successfully edited.*/)
+        expect(response).to have_http_status(302)
+      end
+
+      it 'should return post with image and check than credentials image are edited' do
+        category = Category.find(1)
+        expect(category['avat_cat']).to eq('image_150.png')
+        expect(category['icon_cat']).to eq('image_50.png')
+      end
+
+      it 'should return good dimensions for the custom files' do
+        file_thumb_custom = File.join(Rails.root, '/public/images/default/image_150.png')
+        file_mini_custom = File.join(Rails.root, '/public/images/default/image_50.png')
+        expect(File.exist?(file_thumb_custom)).to be_truthy
+        expect(File.exist?(file_mini_custom)).to be_truthy
       end
     end
   end
