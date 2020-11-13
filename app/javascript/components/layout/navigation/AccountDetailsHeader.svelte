@@ -1,12 +1,33 @@
 <script>
+    // LIB
+    import {User} from "../../../packs/request/User";
+
+    // PROPS
+    export let csrfValue = ''
+
     // Data
     let dropdown = false
+
+    // METHODS
 
     /**
      * @param {Event} event
      */
     function handleToggle(event) {
         dropdown = !dropdown
+    }
+
+    /**
+     * Send action logout to user entity
+     *
+     * @param {Event} event
+     */
+    function logout(event)
+    {
+        const response = (new User()).resLogout(event, csrfValue)
+        if (response.success) {
+            window.location = '/'
+        }
     }
 </script>
 
@@ -21,7 +42,7 @@
             </li>
             <li class="divider"></li>
             <li>
-                <a class="dropdown-item" href="#">Log Out</a>
+                <a class="dropdown-item" href="/logout" on:click={logout}>Log Out</a>
             </li>
         </ul>
     </li>

@@ -81,7 +81,7 @@
         </button>
         <div class="collapse navbar-collapse">
             <SearchItemsHeader bind:value={valueInputSearch} on:input={handleInputItems}/>
-            <AccountDetailsHeader/>
+            <AccountDetailsHeader csrfValue={csrfValue}/>
         </div>
     </nav>
 </div>
