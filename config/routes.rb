@@ -13,6 +13,10 @@ Rails.application.routes.draw do
 
   # Routes Auth
   get '/login', to: 'users#login', as: 'login'
-  post 'login', to: 'users#signin', as: 'signin'
+  post '/login', to: 'users#signin', as: 'signin'
+
+  # Routes Account
+  get '/account', to: 'users#account', as: 'account'
+  put '/account/:user_id', to: 'users#update_account', as: 'update_account'
 
 end

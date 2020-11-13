@@ -17,10 +17,7 @@
         </a>
         <ul class="dropdown-menu dropdown-menu-right">
             <li>
-                <a class="dropdown-item" href="#">Account</a>
-            </li>
-            <li>
-                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" href="/account">Account</a>
             </li>
             <li class="divider"></li>
             <li>

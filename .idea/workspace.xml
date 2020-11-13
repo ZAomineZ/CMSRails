@@ -10,17 +10,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add validation for user entity with his tests">
-      <change afterPath="$PROJECT_DIR$/spec/controllers/user_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cc6d6bb3-509d-41dc-a199-b1e5104fdf38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cc6d6bb3-509d-41dc-a199-b1e5104fdf38.xml" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add test success authenticate user and add secure password">
+      <change afterPath="$PROJECT_DIR$/app/javascript/components/users/Account.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/javascript/components/users/FormAccount.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/account_validator.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/account.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/form/InputField.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/form/InputField.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/users/Login.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/users/Login.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/navigation/AccountDetailsHeader.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/navigation/AccountDetailsHeader.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/controllers/user_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/user_controller_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +53,7 @@
         <option value="JavaScript File" />
         <option value="SCSS File" />
         <option value="Login" />
+        <option value="FormAccount" />
       </list>
     </option>
   </component>
@@ -139,7 +138,7 @@
       <workItem from="1604917965655" duration="26090000" />
       <workItem from="1604998697589" duration="30347000" />
       <workItem from="1605173957481" duration="20436000" />
-      <workItem from="1605258694270" duration="13695000" />
+      <workItem from="1605258694270" duration="19859000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -393,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605199063730</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Add test success authenticate user and add secure password">
+      <created>1605274672769</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1605274672769</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,7 +418,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Init pagination to posts for the front and refactor module" />
     <MESSAGE value="System pagination for posts entity and refactor component Post index" />
     <MESSAGE value="System pagination for category entity" />
     <MESSAGE value="refactor category pagination and fix bug module pagination entity" />
@@ -437,7 +442,8 @@
     <MESSAGE value="Add image preview for edit post page" />
     <MESSAGE value="Add image preview for edit category page" />
     <MESSAGE value="Add validation for user entity with his tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add validation for user entity with his tests" />
+    <MESSAGE value="Add test success authenticate user and add secure password" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test success authenticate user and add secure password" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -470,11 +476,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2018" y="185" width="806" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604417997427" />
-    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605194001722">
+    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605277663082">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="667" y="308" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604918068157" />
-    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605194001722" />
+    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605277663082" />
     <state x="2563" y="264" width="630" height="519" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1605261414614">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -505,10 +511,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605193215043" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605199064952">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605274674325">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605199064952" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605274674325" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -519,11 +525,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605022320226" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605273516110">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605277731003">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604925267767" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605273516110" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605277731003" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>
