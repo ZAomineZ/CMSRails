@@ -25,7 +25,7 @@
                 <ul class="search-items-results-list">
                     {#each items.posts as post}
                         <li>
-                            <img alt="post img {post.id}" src='/assets/saitama.jpg'>
+                            <img alt="post img {post.id}" src={post.img_original.thumb.url}/>
                             <p>
                                 {post.name}
                                 <br>
@@ -41,7 +41,7 @@
                 <ul class="search-items-results-list">
                     {#each items.categories as category}
                         <li>
-                            <img alt="category img {category.id}" src='/assets/avatar.png' class="categories">
+                            <img alt="category img {category.id}" src={category.avat_cat.icon.url} class="categories">
                             <p class="categories-paragraph">
                                 {category.name}
                                 <br>
