@@ -23,8 +23,8 @@ export class User {
     async resLogout(event, csrfValue) {
         this.formData.append('authenticity_token', csrfValue)
 
-        const uri = event.currentTarget[0].getAttribute('href')
-        return await (new Fetch()).response(uri, 'GET', this.formData)
+        const uri = event.composedPath()[0].getAttribute('href')
+        return await (new Fetch()).response(uri, 'POST', this.formData)
     }
 
 }

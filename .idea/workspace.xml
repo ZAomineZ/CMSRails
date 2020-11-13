@@ -10,12 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add action logout for user entity">
-      <change afterPath="$PROJECT_DIR$/app/views/admin/dashboard.html.erb" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Change structure root template">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/Home.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Home.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/admin/Dashboard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/admin/Dashboard.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/navigation/AccountDetailsHeader.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/navigation/AccountDetailsHeader.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/packs/request/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/request/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +136,7 @@
       <workItem from="1604917965655" duration="26090000" />
       <workItem from="1604998697589" duration="30347000" />
       <workItem from="1605173957481" duration="20436000" />
-      <workItem from="1605258694270" duration="22442000" />
+      <workItem from="1605258694270" duration="26826000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -410,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605283255778</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Change structure root template">
+      <created>1605283475636</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1605283475636</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +437,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor category pagination and fix bug module pagination entity" />
     <MESSAGE value="Add test for pagination posts and categories entity" />
     <MESSAGE value="Add test to the search controller for the posts and categories" />
     <MESSAGE value="Add search component header" />
@@ -454,7 +461,8 @@
     <MESSAGE value="Add test success authenticate user and add secure password" />
     <MESSAGE value="Add test success update credentials for account action" />
     <MESSAGE value="Add action logout for user entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add action logout for user entity" />
+    <MESSAGE value="Change structure root template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change structure root template" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -500,11 +508,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="247" height="195" key="DatabaseViewActions_Filter/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605186930547" />
-    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl" timestamp="1605194113119">
+    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl" timestamp="1605283553685">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="263" y="272" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604922080824" />
-    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605194113117" />
+    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283553685" />
     <state width="222" height="539" key="HiddenNamespacesPopup" timestamp="1604417921247">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -522,10 +530,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605193215043" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605283258865">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605283478286">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283258865" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283478286" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -536,11 +544,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283128617" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605283119582">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605285674297">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604925267767" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283119582" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605285674297" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

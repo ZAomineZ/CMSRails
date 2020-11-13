@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
 
+  before_action :only_signed_in, only: [:admin]
+  before_action :admin_access, only: [:admin]
+
   def home
   end
 

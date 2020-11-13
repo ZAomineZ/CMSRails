@@ -22,9 +22,9 @@
      *
      * @param {Event} event
      */
-    function logout(event)
+    async function logout(event)
     {
-        const response = (new User()).resLogout(event, csrfValue)
+        const response = await (new User()).resLogout(event, csrfValue)
         if (response.success) {
             window.location = '/'
         }
@@ -42,7 +42,7 @@
             </li>
             <li class="divider"></li>
             <li>
-                <a class="dropdown-item" href="/logout" on:click={logout}>Log Out</a>
+                <a class="dropdown-item" href="/logout" on:click|preventDefault={logout}>Log Out</a>
             </li>
         </ul>
     </li>
