@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   # Routes Admin
   get '/admin', to: 'pages#admin', as: 'admin_page'
 
-  resources :posts, controller: 'posts', to: '/admin/posts'
-  resources :category, controller: 'category', to: '/admin/categories'
+  namespace :admin do
+    resources :posts, controller: 'posts', to: '/admin/posts'
+    resources :category, controller: 'category', to: '/admin/categories'
+  end
 
   # Entity routes post pagination
   post '/posts/pagination/:page' => 'api/pagination#set_pagination_posts'

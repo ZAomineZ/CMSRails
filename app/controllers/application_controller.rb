@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   end
 
   def admin_access
-    redirect_to root_path, danger: "Vous n'avez pas le droit d'accéder à cette page !" if current_user && get_user(session[:user]).role != 1
+    redirect_to root_path, danger: "Vous n'avez pas le droit d'accéder à cette page !" if current_user && get_user(session[:user]).role != true
   end
 
 end
