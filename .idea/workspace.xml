@@ -10,16 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add test success update credentials for account action">
-      <change afterPath="$PROJECT_DIR$/app/javascript/packs/request/User.js" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add action logout for user entity">
+      <change afterPath="$PROJECT_DIR$/app/views/admin/dashboard.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/navigation/AccountDetailsHeader.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/navigation/AccountDetailsHeader.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/users/Account.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/users/Account.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/users/FormAccount.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/users/FormAccount.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/helper/RequestDocument.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/helper/RequestDocument.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/Home.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Home.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/admin/Dashboard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/admin/Dashboard.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +135,7 @@
       <workItem from="1604917965655" duration="26090000" />
       <workItem from="1604998697589" duration="30347000" />
       <workItem from="1605173957481" duration="20436000" />
-      <workItem from="1605258694270" duration="22209000" />
+      <workItem from="1605258694270" duration="22442000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -407,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605280849942</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Add action logout for user entity">
+      <created>1605283255778</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1605283255778</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +429,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="System pagination for category entity" />
     <MESSAGE value="refactor category pagination and fix bug module pagination entity" />
     <MESSAGE value="Add test for pagination posts and categories entity" />
     <MESSAGE value="Add test to the search controller for the posts and categories" />
@@ -451,7 +453,8 @@
     <MESSAGE value="Add validation for user entity with his tests" />
     <MESSAGE value="Add test success authenticate user and add secure password" />
     <MESSAGE value="Add test success update credentials for account action" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add test success update credentials for account action" />
+    <MESSAGE value="Add action logout for user entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add action logout for user entity" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -484,11 +487,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2018" y="185" width="806" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604417997427" />
-    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605277663082">
+    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605283340177">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="667" y="308" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604918068157" />
-    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605277663082" />
+    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283340177" />
     <state x="2563" y="264" width="630" height="519" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1605261414614">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -519,10 +522,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605193215043" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605280853496">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605283258865">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605280853496" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283258865" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
