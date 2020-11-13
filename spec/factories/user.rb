@@ -1,8 +1,8 @@
 FactoryBot.define do
 
   factory :user do
-    sequence(:username) { |i| "John Doe #{i}" }
-    sequence(:password) { |i| "password_john_doe" }
+    sequence(:username) { |i| "JohnDoe#{i}" }
+    sequence(:password) { |i| "passwordjohndoe" }
     sequence(:role) { |i| "user" }
 
     # Factory for username field
@@ -33,10 +33,6 @@ FactoryBot.define do
 
     factory :user_password_maximum do
       sequence(:password) { "Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices" }
-    end
-
-    factory :user_password_format do
-      sequence(:password) { "{[#]}" }
     end
   end
 

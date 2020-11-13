@@ -15,6 +15,6 @@
     {:else}
         <label for={id}>{label}</label>
         <input value={value} on:input|preventDefault class='form-control' id={id} name={id} placeholder={placeHolder}
-               type="text"/>
+               type={type}/>
     {/if}
 </div>

@@ -190,7 +190,7 @@
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
     </column>
-    <column id="50" parent="12" name="password">
+    <column id="50" parent="12" name="password_digest">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
     </column>

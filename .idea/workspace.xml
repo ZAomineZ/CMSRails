@@ -10,15 +10,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add image preview for edit category page">
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/element/auth_element.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/users/Login.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/users/login.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/user.rb" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add validation for user entity with his tests">
+      <change afterPath="$PROJECT_DIR$/spec/controllers/user_controller_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/cc6d6bb3-509d-41dc-a199-b1e5104fdf38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cc6d6bb3-509d-41dc-a199-b1e5104fdf38.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/form/InputField.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/form/InputField.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/users/Login.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/users/Login.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/user.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +138,8 @@
       <workItem from="1604751887427" duration="13420000" />
       <workItem from="1604917965655" duration="26090000" />
       <workItem from="1604998697589" duration="30347000" />
-      <workItem from="1605173957481" duration="15182000" />
+      <workItem from="1605173957481" duration="20436000" />
+      <workItem from="1605258694270" duration="13695000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -383,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605191614423</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Add validation for user entity with his tests">
+      <created>1605199063730</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1605199063730</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +412,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add component dropdown account admin" />
     <MESSAGE value="Init pagination to posts for the front and refactor module" />
     <MESSAGE value="System pagination for posts entity and refactor component Post index" />
     <MESSAGE value="System pagination for category entity" />
@@ -427,7 +436,8 @@
     <MESSAGE value="Test success delete file joined to entity for post and category" />
     <MESSAGE value="Add image preview for edit post page" />
     <MESSAGE value="Add image preview for edit category page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add image preview for edit category page" />
+    <MESSAGE value="Add validation for user entity with his tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add validation for user entity with his tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -465,6 +475,10 @@
     </state>
     <state x="667" y="308" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604918068157" />
     <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605194001722" />
+    <state x="2563" y="264" width="630" height="519" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1605261414614">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2563" y="264" width="630" height="519" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605261414614" />
     <state width="247" height="195" key="DatabaseViewActions_Filter" timestamp="1605186930547">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -491,10 +505,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605193215043" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605191615661">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605199064952">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605191615661" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605199064952" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -505,11 +519,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605022320226" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605198243534">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605273516110">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604925267767" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605198243534" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605273516110" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>
