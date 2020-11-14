@@ -109,7 +109,7 @@ class Admin::PostsController < ApplicationController
       flash.now[:danger] = "An error occurred when delete your post."
     end
 
-    redirect_to posts_path
+    redirect_to admin_posts_path
   end
 
   private

@@ -57,5 +57,5 @@
     {#if message !== null}
         <Alert message={message} type="danger"/>
     {/if}
-    <PostsTable data={{posts, currentPage, pages}} handlePagination={handlePagination} title="Posts List"/>
+    <PostsTable data={{posts, currentPage, pages}} handlePagination={handlePagination} title="Posts List" csrfValue={csrfValue}/>
 </div>

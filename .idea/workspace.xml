@@ -10,17 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="add structure admin namespace for post entity and category entity">
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Change uri routes for posts and categories front">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/category_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/category_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/category/CategoriesTable.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/category/CategoriesTable.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/category/Category.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/category/Category.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/Sidebar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/Sidebar.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/navigation/BroadCast.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/navigation/BroadCast.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/search/ItemsResultsSearch.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/search/ItemsResultsSearch.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/Post.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/Post.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/PostsTable.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/PostsTable.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/controllers/category_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/admin/category_controller_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/controllers/post_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/admin/post_controller_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,19 +82,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/views/admin" />
-      <recent name="$PROJECT_DIR$/app/controllers/admin" />
-      <recent name="$PROJECT_DIR$/app/lib" />
-      <recent name="$PROJECT_DIR$/app/lib/helper" />
-      <recent name="$PROJECT_DIR$/spec/support" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/javascript/components/category" />
       <recent name="$PROJECT_DIR$/app/javascript/components/posts" />
       <recent name="$PROJECT_DIR$/app/views/posts" />
       <recent name="$PROJECT_DIR$/app/views/category" />
       <recent name="$PROJECT_DIR$/app/assets/fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spec/controllers/admin" />
+      <recent name="$PROJECT_DIR$/app/views/admin" />
+      <recent name="$PROJECT_DIR$/app/controllers/admin" />
+      <recent name="$PROJECT_DIR$/app/lib" />
+      <recent name="$PROJECT_DIR$/app/lib/helper" />
     </key>
   </component>
   <component name="RunManager">
@@ -142,7 +138,7 @@
       <workItem from="1605173957481" duration="20436000" />
       <workItem from="1605258694270" duration="28723000" />
       <workItem from="1605353517180" duration="1480000" />
-      <workItem from="1605363361890" duration="578000" />
+      <workItem from="1605363361890" duration="2861000" />
     </task>
     <task id="LOCAL-00001" summary="Init CMSRails project">
       <created>1604571584790</created>
@@ -438,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605289507440</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Change uri routes for posts and categories front">
+      <created>1605363965494</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1605363965494</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +460,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add search component header" />
     <MESSAGE value="Remove list images to sidebar" />
     <MESSAGE value="Refactor Form to category entity" />
     <MESSAGE value="Add tests for upload image to posts entity and fix bug constant PostFileUploader" />
@@ -482,7 +484,8 @@
     <MESSAGE value="Change structure root template" />
     <MESSAGE value="Add access role admin and access auth" />
     <MESSAGE value="add structure admin namespace for post entity and category entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="add structure admin namespace for post entity and category entity" />
+    <MESSAGE value="Change uri routes for posts and categories front" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change uri routes for posts and categories front" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -550,11 +553,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605193215043" />
-    <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605289508245">
-      <screen x="0" y="0" width="1920" height="1047" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605363968250">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605289508245" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283478286" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605363968250" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -565,11 +568,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283128617" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605363903935">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605364357005">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605289697112" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605363903935" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605364357005" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

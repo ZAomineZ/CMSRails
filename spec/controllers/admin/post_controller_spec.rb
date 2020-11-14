@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe PostsController, type: :controller do
+RSpec.describe Admin::PostsController, type: :controller do
 
   describe 'POST #create' do
 
@@ -664,7 +664,7 @@ RSpec.describe PostsController, type: :controller do
       end
 
       it 'redirect destroy method' do
-        expect(response).to redirect_to(posts_path)
+        expect(response).to redirect_to(admin_posts_path)
       end
 
       it 'error occurred delete category' do
@@ -684,7 +684,7 @@ RSpec.describe PostsController, type: :controller do
       end
 
       it 'redirect destroy method' do
-        expect(response).to redirect_to(posts_path)
+        expect(response).to redirect_to(admin_posts_path)
       end
 
       it 'error occurred delete post' do
@@ -705,7 +705,7 @@ RSpec.describe PostsController, type: :controller do
       end
 
       it 'redirect destroy method' do
-        expect(response).to redirect_to(posts_path)
+        expect(response).to redirect_to(admin_posts_path)
       end
 
       it 'error occurred delete category' do
