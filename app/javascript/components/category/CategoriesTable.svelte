@@ -17,7 +17,7 @@
     <div class="card-body">
         <h5 class="card-title">
             {title}
-            <a href="/category/new" class="btn btn-success float-right">Create Category</a>
+            <a href="/admin/category/new" class="btn btn-success float-right">Create Category</a>
         </h5>
         <div class="table-responsive">
             <table class="table">
@@ -40,8 +40,8 @@
                         <td>{category.resume.length >= 150 ? category.resume.slice(0, 150) + '...' : category.resume}</td>
                         <td>{category.date_cat}</td>
                         <td>
-                            <a href="/category/{category.id}/edit" class="btn btn-primary">Edit</a>
-                            <DeleteEntity uriAction="/category/{category.id}" csrfValue={csrfValue} />
+                            <a href="/admin/category/{category.id}/edit" class="btn btn-primary">Edit</a>
+                            <DeleteEntity uriAction="/admin/category/{category.id}" csrfValue={csrfValue} />
                         </td>
                     </tr>
                 {/each}

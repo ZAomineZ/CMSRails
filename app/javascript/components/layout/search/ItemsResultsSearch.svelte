@@ -39,7 +39,7 @@
             </div>
             <div class="col-md-6">
                 <ul class="search-items-results-list">
-                    {#each items.categories as category}
+                    {#each items.categories as category}a
                         <li>
                             <img alt="category img {category.id}" src={category.avat_cat.icon.url} class="categories">
                             <p class="categories-paragraph">

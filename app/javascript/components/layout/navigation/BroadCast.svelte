@@ -9,7 +9,7 @@
             <nav>
                 <ol class="navigation">
                     <li class="navigation-item">
-                        <a href="/">Home</a>
+                        <a href="/admin">Home</a>
                     </li>
                     <li class="navigation-item active">
                         <i class="fas fa-chevron-right icon-navigation-item icon-navigation-item-m"></i>

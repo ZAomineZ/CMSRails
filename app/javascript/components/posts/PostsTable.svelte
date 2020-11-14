@@ -16,7 +16,7 @@
     <div class="card-body">
         <h5 class="card-title">
             {title}
-            <a class="btn btn-success float-right" href="/posts/new">Create Post</a>
+            <a class="btn btn-success float-right" href="/admin/posts/new">Create Post</a>
         </h5>
         <div class="table-responsive">
             <table class="table">
@@ -43,8 +43,8 @@
                             <span class="badge badge-success">YES</span>
                         </td>
                         <td>
-                            <a href="/posts/{post.id}/edit" class="btn btn-primary">Edit</a>
-                            <DeleteEntity uriAction="/posts/{post.id}" csrfValue={csrfValue} />
+                            <a href="/admin/posts/{post.id}/edit" class="btn btn-primary">Edit</a>
+                            <DeleteEntity uriAction="/admin/posts/{post.id}" csrfValue={csrfValue} />
                         </td>
                     </tr>
                 {/each}
