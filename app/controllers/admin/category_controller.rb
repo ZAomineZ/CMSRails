@@ -41,7 +41,9 @@ class Admin::CategoryController < ApplicationController
     end
     if @category.update(params_category)
       # Edited version icon avatar
-      set_image_credentials
+      if params[:image] != nil
+        set_image_credentials
+      end
 
       flash.now[:success] = "Category was successfully edited."
       redirect_to admin_category_index_path

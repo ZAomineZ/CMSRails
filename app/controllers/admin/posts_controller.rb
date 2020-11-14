@@ -78,10 +78,14 @@ class Admin::PostsController < ApplicationController
 
     # Update credentials categories and images
     @post.category_id = categories
-    @post.img_original = params[:image]
+    if params[:image] != nil
+      @post.img_original = params[:image]
+    end
     if @post.update(params_post)
       # Update informations file
-      set_image_credentials
+      if params[:image] != nil
+        set_image_credentials
+      end
 
       response = {
           success: true,
