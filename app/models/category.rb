@@ -1,3 +1,5 @@
+require 'fileutils'
+
 class Category < ApplicationRecord
   mount_uploader :avat_cat, CategoryFileUploader
 
@@ -6,8 +8,6 @@ class Category < ApplicationRecord
 
   scope :find_by_slug, -> (slug) { where("slug" => slug) }
   scope :search, -> (q) { where("name LIKE ?", "%#{q}%") }
-
-  after_destroy :unlink_image
 
   def getResume
     read_attribute(:resume)[0, 150] + '...'
@@ -49,8 +49,8 @@ class Category < ApplicationRecord
 
   private
 
-  def unlink_image(record)
-    directory = PathHelper.path_dir_public(record.class.name, record.id)
-    Dir.rm_r(directory) if Dir.exist?
+  def self.unlink_image(record)
+    directory = PathHelper.path_dir_public(record.class.name.downcase, record.id)
+    FileUtils.rm_r(directory) if Dir.exist?(directory)
   end
 end

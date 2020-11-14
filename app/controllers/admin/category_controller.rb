@@ -42,7 +42,7 @@ class Admin::CategoryController < ApplicationController
       set_image_credentials
 
       flash.now[:success] = "Category was successfully edited."
-      redirect_to category_path
+      redirect_to admin_categories_path
     else
       flash.now[:danger] = 'An error occurred when validating to your request.'
       flash.now[:errors] = @category.errors.messages
@@ -54,12 +54,16 @@ class Admin::CategoryController < ApplicationController
     id = params[:id]
     @category = Category.exists?(id)
     if @category
-      Category.find(id).delete
+      # Destroy entity post and image file
+      category = Category.find(id)
+      category.destroy
+      Category.unlink_image(category)
+
       flash.now[:success] = "Category was successfully deleted."
     else
       flash.now[:danger] = 'An error occurred when delete your category.'
     end
-    redirect_to category_path
+    redirect_to admin_categories_path
   end
 
   private

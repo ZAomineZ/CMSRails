@@ -38,7 +38,12 @@ export class Post {
         this.formData.append('image', files[0])
 
         const actionUri = event.composedPath()[0] ? event.composedPath()[0].action : ''
-        const method = uriForm === '/posts' ? 'POST' : 'PUT'
-        return  await (new Fetch()).response(actionUri, method, this.formData)
+        let method
+        if (uriForm || uriForm.length !== 0) {
+            method = uriForm === '/admin/posts' ? 'POST' : 'PUT'
+        } else {
+            method = actionUri.slice(actionUri.length - 5) === 'posts' ? 'POST': 'PUT'
+        }
+        return await (new Fetch()).response(actionUri, method, this.formData)
     }
 }

@@ -1,3 +1,5 @@
+require 'fileutils'
+
 class Post < ApplicationRecord
 
   mount_uploader :img_original, PostFileUploader
@@ -17,8 +19,8 @@ class Post < ApplicationRecord
 
   private
 
-  def unlink_image(record)
-    directory = PathHelper.path_dir_public(record.class.name, record.id)
-    Dir.rm_r(directory) if Dir.exist?
+  def self.unlink_image(record)
+    directory = PathHelper.path_dir_public(record.class.name.downcase, record.id)
+    FileUtils.rm_rf(directory) if Dir.exist?(directory)
   end
 end

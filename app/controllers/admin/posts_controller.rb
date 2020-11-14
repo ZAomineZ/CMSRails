@@ -103,7 +103,10 @@ class Admin::PostsController < ApplicationController
 
     if @exist
       @post = Post.find(id)
-      @post.delete
+      # Destroy entity post and image file
+      Post.unlink_image(@post)
+      @post.destroy
+
       flash.now[:success] = "Post was successfully deleted."
     else
       flash.now[:danger] = "An error occurred when delete your post."

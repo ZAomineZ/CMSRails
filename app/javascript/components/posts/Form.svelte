@@ -34,11 +34,13 @@
                    noJson={false} on:input={callInputs.onInputDescField} valueText={post ? post.descr : null}
                    placeHolder="Enter your content"/>
     <InputField bind:files={files} className='custom-file-input' id="image" label="Choose your image" type="file"/>
-    <div class="form-group img-info">
-        <h6 class="img-text">Image Preview:</h6>
-        <div class="img-preview">
-            <img src={post.img_original.thumb.url} alt="">
+    {#if post && post.img_original}
+        <div class="form-group img-info">
+            <h6 class="img-text">Image Preview:</h6>
+            <div class="img-preview">
+                <img src={post.img_original.thumb.url} alt="">
+            </div>
         </div>
-    </div>
+    {/if}
     <button class="btn btn-primary mt-4" type="submit">Send</button>
 </form>

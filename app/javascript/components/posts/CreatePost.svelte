@@ -101,7 +101,7 @@
                 ratione recusandae.</p>
             <Form callInputs={{onInputNameField, onInputSlugField, onInputDescField}} bind:files={files}
                   on:submit={handleSubmit} on:tags={getTags}
-                  uriForm="/posts"/>
+                  uriForm="/admin/posts"/>
         </div>
     </div>
 </div>
