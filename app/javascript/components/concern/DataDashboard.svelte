@@ -6,7 +6,7 @@
 
 <div class="card card-stat">
     <div class="card-body">
-        <h5 class="card-title">New Posts</h5>
+        <h5 class="card-title">{title}</h5>
         <h2 class="float-right">{data_number}</h2>
         <p>From One Year</p>
         <div class="progress" style="height: 10px">

@@ -10,7 +10,7 @@
         <ul>
             <li class="sidebar-title">CMS</li>
             <li>
-                <a href="#" class="active">
+                <a href="/admin" class="active">
                     <i class="fas fa-home icon-header-sidebar"></i>
                     Dashboard
                 </a>

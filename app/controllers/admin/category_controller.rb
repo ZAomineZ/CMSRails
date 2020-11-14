@@ -23,7 +23,7 @@ class Admin::CategoryController < ApplicationController
       set_image_credentials
 
       flash.now[:success] = "Category was successfully created."
-      redirect_to @category
+      redirect_to admin_category_index_path
     else
       flash.now[:danger] = 'An error occurred when validating to your request.'
       flash.now[:errors] = @category.errors.messages
@@ -36,13 +36,15 @@ class Admin::CategoryController < ApplicationController
 
   def update
     # Update credentials image
-    @category.avat_cat = params[:image]
+    if params[:image] != nil
+      @category.avat_cat = params[:image]
+    end
     if @category.update(params_category)
       # Edited version icon avatar
       set_image_credentials
 
       flash.now[:success] = "Category was successfully edited."
-      redirect_to admin_categories_path
+      redirect_to admin_category_index_path
     else
       flash.now[:danger] = 'An error occurred when validating to your request.'
       flash.now[:errors] = @category.errors.messages
@@ -63,7 +65,7 @@ class Admin::CategoryController < ApplicationController
     else
       flash.now[:danger] = 'An error occurred when delete your category.'
     end
-    redirect_to admin_categories_path
+    redirect_to admin_category_index_path
   end
 
   private
