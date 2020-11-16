@@ -24,6 +24,7 @@
     export let dataCategories = []
 
     onMount(() => {
+        console.log(post)
     })
 </script>
 
@@ -48,7 +49,7 @@
         <div class="form-group img-info">
             <h6 class="img-text">Image Preview:</h6>
             <div class="img-preview">
-                <img src={post.img_original.url} alt="">
+                <img src={post.img_original.thumb.url} alt="">
             </div>
         </div>
     {/if}

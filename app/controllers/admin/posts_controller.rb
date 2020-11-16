@@ -101,12 +101,12 @@ class Admin::PostsController < ApplicationController
 
     # Update credentials categories and images
     @post.category_id = categories
-    if params[:image] != nil
+    if params[:image] != nil && params[:image] != 'null'
       @post.img_original = params[:image]
     end
     if @post.update(params_post)
       # Update informations file
-      if params[:image] != nil
+      if params[:image] != nil && params[:image] != 'null'
         set_image_credentials
       end
 
@@ -155,9 +155,9 @@ class Admin::PostsController < ApplicationController
   def set_image_credentials
     image = params[:image]
 
-    @post.img_medium = image != nil && !image.instance_of?(String) ? 'medium_' + @post.img_original_identifier : 'image_500.png'
-    @post.img_thumb = image != nil && !image.instance_of?(String) ? 'thumb_' + @post.img_original_identifier : 'image_150.png'
-    @post.img_mini = image != nil && !image.instance_of?(String) ? 'mini_' + @post.img_original_identifier : 'image_50.png'
+    @post.img_medium = image != nil && !image.instance_of?(String) ? 'medium_' + @post.img_original_identifier : 'medium_image.png'
+    @post.img_thumb = image != nil && !image.instance_of?(String) ? 'thumb_' + @post.img_original_identifier : 'thumb_image.png'
+    @post.img_mini = image != nil && !image.instance_of?(String) ? 'mini_' + @post.img_original_identifier : 'mini_image.png'
     @post.save
   end
 
