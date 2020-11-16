@@ -40,7 +40,8 @@
         <div class="form-group img-info">
             <h6 class="img-text">Image Preview:</h6>
             <div class="img-preview">
-                <img src={category.avat_cat.url} alt="Category image {category.id}">
+                <img src={category.avat_cat.url ? category.avat_cat.url : '/images/default/thumb_image.png'}
+                     alt="Category image {category.id}">
             </div>
         </div>
     {/if}

@@ -25,7 +25,8 @@
                 <ul class="search-items-results-list">
                     {#each items.posts as post}
                         <li>
-                            <img alt="post img {post.id}" src={post.img_original.thumb.url}/>
+                            <img alt="post img {post.id}"
+                                 src={post.img_original.thumb.url ? post.img_original.thumb.url : '/images/default/thumb_image.png'}/>
                             <p>
                                 {post.name}
                                 <br>
@@ -41,7 +42,9 @@
                 <ul class="search-items-results-list">
                     {#each items.categories as category}
                         <li>
-                            <img alt="category img {category.id}" src={category.avat_cat.icon.url} class="categories">
+                            <img alt="category img {category.id}"
+                                 src={category.avat_cat.icon.url ? category.avat_cat.icon.url : '/images/default/thumb_image.png'}
+                                 class="categories">
                             <p class="categories-paragraph">
                                 {category.name}
                                 <br>

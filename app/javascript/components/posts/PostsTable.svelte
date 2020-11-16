@@ -27,7 +27,6 @@
                     <th scope="col">Slug</th>
                     <th scope="col">Content</th>
                     <th scope="col">Category</th>
-                    <th scope="col">Online?</th>
                     <th scope="col">Actions</th>
                 </tr>
                 </thead>
@@ -39,9 +38,6 @@
                         <td>{post.slug}</td>
                         <td>{post.descr.length >= 150 ? post.descr.slice(0, 150) + '...' : post.descr}</td>
                         <td>{post.category_id}</td>
-                        <td>
-                            <span class="badge badge-success">YES</span>
-                        </td>
                         <td>
                             <a href="/admin/posts/{post.id}/edit" class="btn btn-primary">Edit</a>
                             <DeleteEntity uriAction="/admin/posts/{post.id}" csrfValue={csrfValue} />
