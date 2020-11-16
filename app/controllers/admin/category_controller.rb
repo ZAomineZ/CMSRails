@@ -18,6 +18,13 @@ class Admin::CategoryController < ApplicationController
     @category.date_cat = Time.now
     @category.avat_cat = params[:image]
 
+    # Check if the category title exist already !
+    category_exist = Category.find_by_name(params[:name])
+    unless category_exist.empty?
+      flash.now[:danger] = 'This title is already use in a another category.'
+      return render action: 'new'
+    end
+
     if @category.save
       # Update informations file
       set_image_credentials

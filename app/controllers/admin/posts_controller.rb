@@ -31,6 +31,16 @@ class Admin::PostsController < ApplicationController
       return render json: response
     end
 
+    # Check if the post exist already !
+    post_exist = Post.find_by_name(params[:name])
+    unless post_exist.empty?
+      response = {
+          success: false,
+          message: 'This title is already use in a another post.'
+      }
+      return render json: response
+    end
+
     # Set Credentials Post
     @post = Post.new(params_post)
     @post.date_post = Time.now
@@ -72,6 +82,16 @@ class Admin::PostsController < ApplicationController
       response = {
           success: false,
           message: 'One of the selected categories don\'t exist.'
+      }
+      return render json: response
+    end
+
+    # Check if the post exist already !
+    post_exist = Post.find_by_name(params[:name])
+    unless post_exist.empty?
+      response = {
+          success: false,
+          message: 'This title is already use in a another post.'
       }
       return render json: response
     end

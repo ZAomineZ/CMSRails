@@ -78,7 +78,7 @@
      * @param {Event} event
      */
     async function handleSubmit(event) {
-        const response = (new Post()).resSubmit(event, csrfValue, {name, slug, descr, categories, files, uriForm})
+        const response = await (new Post()).resSubmit(event, csrfValue, {name, slug, descr, categories, files, uriForm})
         successResponse = !!response.success;
         messageResponse = response.message
     }

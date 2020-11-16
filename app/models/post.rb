@@ -8,6 +8,7 @@ class Post < ApplicationRecord
   validates :descr, presence: true, :length => {minimum: 10}
 
   scope :search, -> (q) { where("name LIKE ?", "%#{q}%") }
+  scope :find_by_name, -> (name) { where('name' => name) }
 
   def slug=(new_slug)
     unless new_slug.empty?

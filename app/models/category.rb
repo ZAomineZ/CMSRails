@@ -6,11 +6,12 @@ class Category < ApplicationRecord
   validates :name, presence: true, :length => {minimum: 3, maximum: 60}
   validates :resume, presence: true, :length => {minimum: 10}
 
-  scope :find_by_slug, -> (slug) { where("slug" => slug) }
+  scope :find_by_slug, -> (slug) { where('slug' => slug) }
+  scope :find_by_name, -> (name) { where('name' => name) }
   scope :search, -> (q) { where("name LIKE ?", "%#{q}%") }
 
   def getResume
-    read_attribute(:resume)[0, 150] + '...'
+    read_attribute(:resume)[0, 150] + "..."
   end
 
   def date_cat
