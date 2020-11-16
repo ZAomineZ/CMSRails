@@ -13,6 +13,7 @@
     let navigation = false
     let body = null
     let activeShow = false
+    let activeResponsiveShow = false
     let valueInputSearch = ''
     let csrfValue = null
 
@@ -61,6 +62,7 @@
     }
 
     const handleActiveClick = () => activeShow = !activeShow
+    const handleActiveToggleClick = () => activeResponsiveShow = !activeResponsiveShow
 </script>
 
 
@@ -76,10 +78,10 @@
             </a>
         </section>
         <a class="navbar-brand" href="#">CMS</a>
-        <button class="navbar-toggler">
+        <button class="navbar-toggler" on:click|preventDefault={handleActiveToggleClick}>
             <i class="fas fa-angle-down"></i>
         </button>
-        <div class="collapse navbar-collapse">
+        <div class={activeResponsiveShow ? 'collapse show navbar-collapse' : 'collapse navbar-collapse'}>
             <SearchItemsHeader bind:value={valueInputSearch} on:input={handleInputItems}/>
             <AccountDetailsHeader csrfValue={csrfValue}/>
         </div>

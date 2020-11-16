@@ -183,3 +183,34 @@
 .header .navbar-nav > li > a > svg {
   vertical-align: middle;
 }
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    height: 0 !important;
+    opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    margin-top: 0;
+  }
+
+  .navbar-collapse.show {
+    height: 50px !important;
+    opacity: 1;
+    margin-top: 20px;
+  }
+
+  .header #search-header {
+    width: calc(100% - 90px);
+    left: 0;
+    transform: translateX(0);
+    margin: 0 !important;
+  }
+
+  .header .navbar-nav {
+    flex-direction: row;
+    float: right;
+    margin-right: -13px;
+  }
+}
