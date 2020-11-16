@@ -35,7 +35,7 @@ export class Post {
         this.formData.append('slug', slug)
         this.formData.append('categories', categories)
         this.formData.append('descr', descr)
-        this.formData.append('image', files[0])
+        this.formData.append('image', files ? files[0] : null)
 
         const actionUri = event.composedPath()[0] ? event.composedPath()[0].action : ''
         let method

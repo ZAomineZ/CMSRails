@@ -10,13 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add scope find_by_name and his system checking if entity name exist">
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add under links for broadcast">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/category/EditCategory.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/category/EditCategory.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/category/NewCategory.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/category/NewCategory.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/navigation/BroadCast.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/navigation/BroadCast.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/CreatePost.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/CreatePost.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/EditPost.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/EditPost.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/Form.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/Form.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/packs/request/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/request/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/posts/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/posts/edit.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,14 +139,7 @@
       <workItem from="1605258694270" duration="28723000" />
       <workItem from="1605353517180" duration="1480000" />
       <workItem from="1605363361890" duration="7255000" />
-      <workItem from="1605520314099" duration="5122000" />
-    </task>
-    <task id="LOCAL-00001" summary="Init CMSRails project">
-      <created>1604571584790</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1604571584790</updated>
+      <workItem from="1605520314099" duration="9003000" />
     </task>
     <task id="LOCAL-00002" summary="Add action edit for the controller category">
       <created>1604572947988</created>
@@ -484,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605520927425</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Add under links for broadcast">
+      <created>1605521934574</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1605521934575</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,7 +503,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add pagination posts entity for the dashboard and refactor structure component" />
     <MESSAGE value="Refactor form edit post and method submit and input event" />
     <MESSAGE value="Add system image upload for update action post entity" />
     <MESSAGE value="Tests success post_file_uploader" />
@@ -528,7 +527,8 @@
     <MESSAGE value="Fix bug dont update uploader image, if params image don't defined" />
     <MESSAGE value="Add component toggle searchbar" />
     <MESSAGE value="Add scope find_by_name and his system checking if entity name exist" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add scope find_by_name and his system checking if entity name exist" />
+    <MESSAGE value="Add under links for broadcast" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add under links for broadcast" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -596,10 +596,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605193215043" />
-    <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605519031999">
+    <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605521937234">
       <screen x="0" y="0" width="1920" height="1047" />
     </state>
-    <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605519031999" />
+    <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605521937234" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605370018194" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
@@ -611,11 +611,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283128617" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="623" y="224" width="672" height="658" key="search.everywhere.popup" timestamp="1605521850558">
-      <screen x="0" y="0" width="1920" height="1047" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605523874472">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605521850558" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605369935443" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605523874472" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

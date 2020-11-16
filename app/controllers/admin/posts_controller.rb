@@ -66,6 +66,8 @@ class Admin::PostsController < ApplicationController
   end
 
   def edit
+    @categories = Category.all
+    @categories = @categories.map { |category| category.name }
   end
 
   def update
@@ -88,7 +90,7 @@ class Admin::PostsController < ApplicationController
 
     # Check if the post exist already !
     post_exist = Post.find_by_name(params[:name])
-    unless post_exist.empty?
+    if !post_exist.empty? && @post.id != params[:id].to_i
       response = {
           success: false,
           message: 'This title is already use in a another post.'

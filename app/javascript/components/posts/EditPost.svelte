@@ -16,6 +16,7 @@
     // Props
     export let uriForm = ''
     export let post = {}
+    export let categoriesList = []
 
     // DATA
     let successResponse = null
@@ -31,6 +32,7 @@
 
     onMount(() => {
         csrfValue = RequestDocument.getCsrf()
+        categories += categoriesList.join(',')
     })
 
     // Methods
@@ -77,7 +79,14 @@
      * @param {Event} event
      */
     async function handleSubmit(event) {
-        const response = (new Post()).resSubmit(event, csrfValue, {name, slug, descr, categories, files, uriForm})
+        const response = await (new Post()).resSubmit(event, csrfValue, {
+            name: name.length === 0 ? post.name : name,
+            slug: slug.length === 0 ? post.slug : slug,
+            descr: descr.length === 0 ? post.descr : descr,
+            categories,
+            files,
+            uriForm
+        })
         successResponse = !!response.success;
         messageResponse = response.message
     }
@@ -102,7 +111,7 @@
                 mollitia porro quibusdam reiciendis rem suscipit vel vero? Exercitationem fugit illo iure libero natus
                 ratione recusandae.</p>
             <Form bind:files={files} callInputs={{onInputNameField, onInputSlugField, onInputDescField}}
-                  on:submit={handleSubmit} on:tags={getTags} post={post}
+                  categoriesList={categoriesList} on:submit={handleSubmit} on:tags={getTags} post={post}
                   uriForm={uriForm}/>
         </div>
     </div>

@@ -16,6 +16,7 @@
         }
     }
     export let files
+    export let categoriesList
 </script>
 
 <form action={uriForm} method="POST" on:submit|preventDefault>
@@ -28,7 +29,7 @@
                 value={post ? post.slug : null}/>
     <div class="form-group">
         <label for="categories">Post Categories</label>
-        <Tags class="form-control" id="categories" on:tags placeholder="Your categories..."/>
+        <Tags class="form-control" id="categories" on:tags placeholder="Your categories..." tags={categoriesList}/>
     </div>
     <TextareaField cols="30" id="descr" label="Post Content"
                    noJson={false} on:input={callInputs.onInputDescField} valueText={post ? post.descr : null}
@@ -38,7 +39,7 @@
         <div class="form-group img-info">
             <h6 class="img-text">Image Preview:</h6>
             <div class="img-preview">
-                <img src={post.img_original.thumb.url} alt="">
+                <img src={post.img_original.url} alt="">
             </div>
         </div>
     {/if}
