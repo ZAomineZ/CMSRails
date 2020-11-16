@@ -88,7 +88,10 @@
 <div class="container">
     <BroadCast
             content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur consequuntur distinctio, dolore ex fugit illum in modi necessitatibus nisi non, odio rerum, soluta unde ut? Cumque rem sequi voluptates."
-            title="Edit Post '{post.name}' "/>
+            title="Edit Post '{post.name}'" under_links={[{
+                title: 'Posts',
+                link: '/admin/posts'
+            }]}/>
     {#if successResponse !== null}
         <Alert type={successResponse ? 'success' : 'danger'} message={messageResponse}/>
     {/if}

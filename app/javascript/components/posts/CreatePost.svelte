@@ -11,7 +11,6 @@
     import Form from "./Form.svelte";
 
     // LIB
-    import {Fetch} from "../../packs/helper/FetchApi";
     import {Post} from "../../packs/request/Post";
     import {RequestDocument} from "../../packs/helper/RequestDocument";
 
@@ -89,7 +88,10 @@
 <div class="container">
     <BroadCast
             content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur consequuntur distinctio, dolore ex fugit illum in modi necessitatibus nisi non, odio rerum, soluta unde ut? Cumque rem sequi voluptates."
-            title="Create Post"/>
+            title="Create Post" under_links={[{
+                title: 'Posts',
+                link: '/admin/posts'
+            }]}/>
     {#if successResponse !== null}
         <Alert type={successResponse ? 'success' : 'danger'} message={messageResponse}/>
     {/if}

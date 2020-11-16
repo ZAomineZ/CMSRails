@@ -22,7 +22,10 @@
 <div class="container">
     <BroadCast
             content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur consequuntur distinctio, dolore ex fugit illum in modi necessitatibus nisi non, odio rerum, soluta unde ut? Cumque rem sequi voluptates."
-            title="Create Category"/>
+            title="Create Category" under_links={[{
+                title: 'Categories',
+                link: '/admin/category'
+            }]}/>
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Form to Create Category</h5>
