@@ -45,8 +45,9 @@ class Admin::PostsController < ApplicationController
     @post = Post.new(params_post)
     @post.date_post = Time.now
     @post.category_id = categories
-    @post.img_original = params[:image]
 
+    # Upload Image File
+    @post.img_original = params[:image]
     if @post.save
       # Update informations file
       set_image_credentials
@@ -101,12 +102,13 @@ class Admin::PostsController < ApplicationController
 
     # Update credentials categories and images
     @post.category_id = categories
-    if params[:image] != nil && params[:image] != 'null'
+    puts params[:image]
+    if params[:image] != nil || params[:image] != 'null'
       @post.img_original = params[:image]
     end
     if @post.update(params_post)
       # Update informations file
-      if params[:image] != nil && params[:image] != 'null'
+      if params[:image] != nil || params[:image] != 'null'
         set_image_credentials
       end
 
