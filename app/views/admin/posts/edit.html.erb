@@ -1,1 +1,3 @@
-<%= svelte_component 'posts/EditPost', {name: 'Svelte', uriForm: "/admin/posts/#{@post.id}", post: @post, categoriesList: @categories}, {prerender: false} %>
+<%= svelte_component 'posts/EditPost', {
+    name: 'Svelte', uriForm: "/admin/posts/#{@post.id}", post: @post, categoriesList: @categories, dataCategories: @data_categories
+}, {prerender: false} %>

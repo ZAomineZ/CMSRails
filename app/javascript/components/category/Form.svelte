@@ -9,6 +9,7 @@
     // PROPS
     export let uriForm = ''
     export let category = null
+    export let errorFields = null
 
     // DATA
     let csrfValue = null
@@ -25,12 +26,15 @@
     <input name="authenticity_token" type="hidden" value={csrfValue}>
 
     <InputField id="name" label="Category Name" placeHolder="Enter your name..."
+                error={errorFields ? errorFields.name : null}
                 value={category ? category.name : null}/>
     <InputField id="slug" label="Category Slug" placeHolder="Enter your slug..."
+                error={errorFields ? errorFields.slug : null}
                 value={category ? category.slug : null}/>
 
     <TextareaField cols="30" id="resume" label="Category Content"
-                   noJson placeHolder="Enter your content" valueText={category ? category.resume : null}/>
+                   error={errorFields ? errorFields.resume : null} noJson
+                   placeHolder="Enter your content" valueText={category ? category.resume : null}/>
     <InputField className='custom-file-input' id="image" label="Choose your image" type="file"/>
     {#if category && category.avat_cat}
         <div class="form-group img-info">

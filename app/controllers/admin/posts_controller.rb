@@ -10,7 +10,7 @@ class Admin::PostsController < ApplicationController
   end
 
   def new
-
+    @data_categories = Category.all.map { |category| category.name }
   end
 
   def create
@@ -66,8 +66,9 @@ class Admin::PostsController < ApplicationController
   end
 
   def edit
-    @categories = Category.all
-    @categories = @categories.map { |category| category.name }
+    @categories = @post.category_id
+    @categories = @categories.split(',')
+    @data_categories = Category.all.map { |category| category.name }
   end
 
   def update

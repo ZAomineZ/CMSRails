@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe CategoryController, type: :controller do
+RSpec.describe Admin::CategoryController, type: :controller do
   describe 'CATEGORY POST #create' do
 
     context 'invalid params' do
@@ -9,7 +9,8 @@ RSpec.describe CategoryController, type: :controller do
       end
 
       it 'should return error validation' do
-        expect(response).to render_template(:new)
+        expect(response).to have_http_status(302)
+        expect(response).to redirect_to(new_admin_category_path)
         expect(flash[:danger]).to match(/An error occurred when validating to your request.*/)
       end
 
@@ -38,8 +39,7 @@ RSpec.describe CategoryController, type: :controller do
       end
 
       it 'redirect create method' do
-        category = Category.find(1)
-        expect(response).to redirect_to(category)
+        expect(response).to redirect_to(admin_category_index_path)
       end
     end
 
@@ -71,7 +71,7 @@ RSpec.describe CategoryController, type: :controller do
 
       it 'redirect create method' do
         category = Category.find(1)
-        expect(response).to redirect_to(category)
+        expect(response).to redirect_to(admin_category_index_path)
       end
     end
 
@@ -108,8 +108,7 @@ RSpec.describe CategoryController, type: :controller do
       end
 
       it 'redirect create method' do
-        category = Category.find(1)
-        expect(response).to redirect_to(category)
+        expect(response).to redirect_to(admin_category_index_path)
       end
     end
 
@@ -131,8 +130,7 @@ RSpec.describe CategoryController, type: :controller do
       end
 
       it 'redirect create method' do
-        category = Category.find(1)
-        expect(response).to redirect_to(category)
+        expect(response).to redirect_to(admin_category_index_path)
       end
 
       it 'should return post with image' do
@@ -176,7 +174,8 @@ RSpec.describe CategoryController, type: :controller do
       end
 
       it 'should return error validation' do
-        expect(response).to render_template(:edit)
+        expect(response).to redirect_to(edit_admin_category_path)
+        expect(response).to have_http_status(302)
         expect(flash[:danger]).to match(/An error occurred when validating to your request.*/)
       end
 
@@ -206,7 +205,7 @@ RSpec.describe CategoryController, type: :controller do
       end
 
       it 'redirect update method' do
-        expect(response).to redirect_to(category_path)
+        expect(response).to redirect_to(admin_category_index_path)
       end
 
       it 'should get date_cat is a datetime and the date today is bigger than date today ' do
@@ -254,7 +253,7 @@ RSpec.describe CategoryController, type: :controller do
       end
 
       it 'redirect update method' do
-        expect(response).to redirect_to(category_path)
+        expect(response).to redirect_to(admin_category_index_path)
       end
 
       it 'should get date_cat is a datetime and the date today is bigger than date today ' do
@@ -309,7 +308,7 @@ RSpec.describe CategoryController, type: :controller do
       end
 
       it 'redirect update method' do
-        expect(response).to redirect_to(category_path)
+        expect(response).to redirect_to(admin_category_index_path)
       end
 
       it 'should change data credentials category' do
@@ -382,7 +381,7 @@ RSpec.describe CategoryController, type: :controller do
       end
 
       it 'redirect destroy method' do
-        expect(response).to redirect_to(category_path)
+        expect(response).to redirect_to(admin_category_index_path)
       end
 
       it 'error occurred delete category' do
@@ -402,7 +401,7 @@ RSpec.describe CategoryController, type: :controller do
       end
 
       it 'redirect destroy method' do
-        expect(response).to redirect_to(category_path)
+        expect(response).to redirect_to(admin_category_index_path)
       end
 
       it 'error occurred delete category' do
@@ -427,7 +426,7 @@ RSpec.describe CategoryController, type: :controller do
       end
 
       it 'redirect destroy method' do
-        expect(response).to redirect_to(category_path)
+        expect(response).to redirect_to(admin_category_index_path)
       end
 
       it 'error occurred delete category' do

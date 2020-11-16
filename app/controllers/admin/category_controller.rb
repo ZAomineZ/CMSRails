@@ -10,6 +10,9 @@ class Admin::CategoryController < ApplicationController
   end
 
   def new
+    @errors = flash[:errors]
+    @message_error = flash[:danger]
+    @message_success = flash[:success]
   end
 
   def create
@@ -20,8 +23,8 @@ class Admin::CategoryController < ApplicationController
 
     # Check if the category title exist already !
     category_exist = Category.find_by_name(params[:name])
-    unless category_exist.empty?
-      flash.now[:danger] = 'This title is already use in a another category.'
+    if !category_exist.empty? && @category.id != params[:id]
+      flash[:danger] = 'This title is already use in a another category.'
       return render action: 'new'
     end
 
@@ -29,16 +32,19 @@ class Admin::CategoryController < ApplicationController
       # Update informations file
       set_image_credentials
 
-      flash.now[:success] = "Category was successfully created."
+      flash[:success] = "Category was successfully created."
       redirect_to admin_category_index_path
     else
-      flash.now[:danger] = 'An error occurred when validating to your request.'
-      flash.now[:errors] = @category.errors.messages
-      render action: 'new'
+      flash[:danger] = 'An error occurred when validating to your request.'
+      flash[:errors] = @category.errors.messages
+      redirect_to new_admin_category_path
     end
   end
 
   def edit
+    @errors = flash[:errors]
+    @message_error = flash[:danger]
+    @message_success = flash[:success]
   end
 
   def update
@@ -55,9 +61,9 @@ class Admin::CategoryController < ApplicationController
       flash.now[:success] = "Category was successfully edited."
       redirect_to admin_category_index_path
     else
-      flash.now[:danger] = 'An error occurred when validating to your request.'
-      flash.now[:errors] = @category.errors.messages
-      render action: 'edit'
+      flash[:danger] = 'An error occurred when validating to your request.'
+      flash[:errors] = @category.errors.messages
+      redirect_to edit_admin_category_path
     end
   end
 
@@ -70,9 +76,9 @@ class Admin::CategoryController < ApplicationController
       category.destroy
       Category.unlink_image(category)
 
-      flash.now[:success] = "Category was successfully deleted."
+      flash[:success] = "Category was successfully deleted."
     else
-      flash.now[:danger] = 'An error occurred when delete your category.'
+      flash[:danger] = 'An error occurred when delete your category.'
     end
     redirect_to admin_category_index_path
   end

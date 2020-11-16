@@ -6,6 +6,7 @@
     export let label = ''
     export let type = 'text'
     export let className = null
+    export let error
 </script>
 
 <div class={type === 'file' ? 'custom-file form-group' : 'form-group'}>
@@ -14,7 +15,13 @@
         <label for={id} class="custom-file-label">{label}</label>
     {:else}
         <label for={id}>{label}</label>
-        <input value={value} on:input|preventDefault class='form-control' id={id} name={id} placeholder={placeHolder}
-               type={type}/>
+        <input value={value} on:input|preventDefault
+               class={error ? ('form-control is-invalid ' + className) : ('form-control ' + className)} id={id} name={id}
+               placeholder={placeHolder} type={type} />
+        {#if error}
+            <div class="invalid-feedback">
+                The Field {id} {error.join(', ')}
+            </div>
+        {/if}
     {/if}
 </div>

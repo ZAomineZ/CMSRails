@@ -17,17 +17,19 @@
     export let uriForm = ''
     export let post = {}
     export let categoriesList = []
+    export let dataCategories = []
 
     // DATA
     let successResponse = null
     let messageResponse = ''
     let csrfValue = null
+    let errorFields = null
 
     // CREDENTIALS
-    let name = ''
-    let slug = ''
+    let name = null
+    let slug = null
     let categories = ''
-    let descr = ''
+    let descr = null
     let files
 
     onMount(() => {
@@ -80,15 +82,16 @@
      */
     async function handleSubmit(event) {
         const response = await (new Post()).resSubmit(event, csrfValue, {
-            name: name.length === 0 ? post.name : name,
-            slug: slug.length === 0 ? post.slug : slug,
-            descr: descr.length === 0 ? post.descr : descr,
+            name: name === null ? post.name : name,
+            slug: slug === null ? post.slug : slug,
+            descr: descr === null ? post.descr : descr,
             categories,
             files,
             uriForm
         })
         successResponse = !!response.success;
         messageResponse = response.message
+        errorFields = response.errorFields ? response.errorFields : null
     }
 </script>
 
@@ -112,7 +115,7 @@
                 ratione recusandae.</p>
             <Form bind:files={files} callInputs={{onInputNameField, onInputSlugField, onInputDescField}}
                   categoriesList={categoriesList} on:submit={handleSubmit} on:tags={getTags} post={post}
-                  uriForm={uriForm}/>
+                  dataCategories={dataCategories} errorFields={errorFields} uriForm={uriForm}/>
         </div>
     </div>
 </div>

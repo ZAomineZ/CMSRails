@@ -16,11 +16,13 @@
 
     // PROPS
     export let uriForm = ''
+    export let dataCategories = []
 
     // DATA
     let successResponse = null
     let messageResponse = ''
     let csrfValue = null
+    let errorFields = null
 
     // CREDENTIALS
     let name = ''
@@ -80,6 +82,7 @@
         const response = await (new Post()).resSubmit(event, csrfValue, {name, slug, descr, categories, files, uriForm})
         successResponse = !!response.success;
         messageResponse = response.message
+        errorFields = response.errorFields ? response.errorFields : null
     }
 </script>
 
@@ -103,7 +106,7 @@
                 ratione recusandae.</p>
             <Form callInputs={{onInputNameField, onInputSlugField, onInputDescField}} bind:files={files}
                   on:submit={handleSubmit} on:tags={getTags}
-                  uriForm="/admin/posts"/>
+                  dataCategories={dataCategories} errorFields={errorFields} uriForm="/admin/posts"/>
         </div>
     </div>
 </div>

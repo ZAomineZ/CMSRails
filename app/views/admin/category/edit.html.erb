@@ -1,1 +1,3 @@
-<%= svelte_component 'category/EditCategory', {name: 'Svelte', uriForm: "/admin/category/#{@category.id}", category: @category}, {prerender: true} %>
+<%= svelte_component 'category/EditCategory', {
+    uriForm: "/admin/category/#{@category.id}", category: @category, errorFields: @errors, messageSuccess: @message_success, messageError: @message_error
+}, {prerender: true} %>
