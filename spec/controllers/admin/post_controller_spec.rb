@@ -194,6 +194,37 @@ RSpec.describe Admin::PostsController, type: :controller do
       end
     end
 
+    context 'invalid create post with identical category for one post' do
+      before do
+        categories = 'Manga,Manga'
+        Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
+
+        post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: categories, descr: 'test de test', image: nil}
+      end
+
+      it 'should return status 200' do
+        expect(response).to have_http_status(200)
+      end
+
+      it 'should return response false' do
+        data = JSON.parse(response.body)
+        expect(data['success']).to be_truthy
+        expect(data['message']).to eq('You are add one same category, we are delete the duplicate category.')
+      end
+
+      it 'should return attributes categories with the data uniq categories' do
+        post = Post.find(1)
+        categories = post.category_id
+
+        # Mocks
+        allow(Category).to receive(:check_idem).and_return(true)
+
+        expect(categories).not_to be_nil
+        expect(categories).to eq('Manga')
+        expect(categories).not_to include(',')
+      end
+    end
+
     context 'invalid categories dont exist for method create post' do
       before do
         categories = 'Manga'
@@ -288,17 +319,17 @@ RSpec.describe Admin::PostsController, type: :controller do
       it 'should return post with image' do
         post = Post.find(1)
 
-        expect(post['img_original']).to eq('image_1200.png')
-        expect(post['img_medium']).to eq('image_500.png')
-        expect(post['img_thumb']).to eq('image_150.png')
-        expect(post['img_mini']).to eq('image_50.png')
+        expect(post['img_original']).to be_nil
+        expect(post['img_medium']).to eq('medium_image.png')
+        expect(post['img_thumb']).to eq('thumb_image.png')
+        expect(post['img_mini']).to eq('mini_image.png')
       end
 
       it 'should return good dimensions for the custom files' do
-        file_original_custom = File.join(Rails.root, '/public/images/default/image_1200.png')
-        file_medium_custom = File.join(Rails.root, '/public/images/default/image_500.png')
-        file_thumb_custom = File.join(Rails.root, '/public/images/default/image_150.png')
-        file_mini_custom = File.join(Rails.root, '/public/images/default/image_50.png')
+        file_original_custom = File.join(Rails.root, '/public/images/default/image.png')
+        file_medium_custom = File.join(Rails.root, '/public/images/default/medium_image.png')
+        file_thumb_custom = File.join(Rails.root, '/public/images/default/thumb_image.png')
+        file_mini_custom = File.join(Rails.root, '/public/images/default/mini_image.png')
 
         expect(File.exist?(file_original_custom)).to be_truthy
         expect(File.exist?(file_medium_custom)).to be_truthy
@@ -581,6 +612,38 @@ RSpec.describe Admin::PostsController, type: :controller do
       end
     end
 
+    context 'invalid create post with identical category for one post' do
+      before do
+        categories = 'Manga,Manga'
+        Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
+
+        post = create(:post_categories)
+        put :update, params: {id: post.id, name: 'Test de test', slug: 'test-de-test-de-test', categories: categories, descr: 'test de test', image: nil}
+      end
+
+      it 'should return status 200' do
+        expect(response).to have_http_status(200)
+      end
+
+      it 'should return response false' do
+        data = JSON.parse(response.body)
+        expect(data['success']).to be_truthy
+        expect(data['message']).to eq('You are add one same category, we are delete the duplicate category.')
+      end
+
+      it 'should return attributes categories with the data uniq categories' do
+        post = Post.find(1)
+        categories = post.category_id
+
+        # Mocks
+        allow(Category).to receive(:check_idem).and_return(true)
+
+        expect(categories).not_to be_nil
+        expect(categories).to eq('Manga')
+        expect(categories).not_to include(',')
+      end
+    end
+
     context 'valid update post with file' do
       before do
         post = create(:post_categories)
@@ -631,17 +694,17 @@ RSpec.describe Admin::PostsController, type: :controller do
       it 'should return post with image' do
         post = Post.find(1)
 
-        expect(post['img_original']).to eq('image_1200.png')
-        expect(post['img_medium']).to eq('image_500.png')
-        expect(post['img_thumb']).to eq('image_150.png')
-        expect(post['img_mini']).to eq('image_50.png')
+        expect(post['img_original']).to be_nil
+        expect(post['img_medium']).to eq('medium_image.png')
+        expect(post['img_thumb']).to eq('thumb_image.png')
+        expect(post['img_mini']).to eq('mini_image.png')
       end
 
       it 'should return good dimensions for the custom files' do
-        file_original_custom = File.join(Rails.root, '/public/images/default/image_1200.png')
-        file_medium_custom = File.join(Rails.root, '/public/images/default/image_500.png')
-        file_thumb_custom = File.join(Rails.root, '/public/images/default/image_150.png')
-        file_mini_custom = File.join(Rails.root, '/public/images/default/image_50.png')
+        file_original_custom = File.join(Rails.root, '/public/images/default/image.png')
+        file_medium_custom = File.join(Rails.root, '/public/images/default/medium_image.png')
+        file_thumb_custom = File.join(Rails.root, '/public/images/default/thumb_image.png')
+        file_mini_custom = File.join(Rails.root, '/public/images/default/mini_image.png')
 
         expect(File.exist?(file_original_custom)).to be_truthy
         expect(File.exist?(file_medium_custom)).to be_truthy

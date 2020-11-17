@@ -44,7 +44,7 @@ class Admin::PostsController < ApplicationController
     # Set Credentials Post
     @post = Post.new(params_post)
     @post.date_post = Time.now
-    @post.category_id = categories
+    @post.category_id = Category.get_categories(categories).uniq.join(',')
 
     # Upload Image File
     @post.img_original = params[:image]
@@ -52,10 +52,18 @@ class Admin::PostsController < ApplicationController
       # Update informations file
       set_image_credentials
 
-      response = {
-          success: true,
-          message: 'Post was successfully created.'
-      }
+      # Check if the categories are different from each other
+      if Category.check_idem(categories)
+        response = {
+            success: true,
+            message: 'You are add one same category, we are delete the duplicate category.'
+        }
+      else
+        response = {
+            success: true,
+            message: 'Post was successfully created.'
+        }
+      end
     else
       response = {
           success: false,
@@ -101,8 +109,7 @@ class Admin::PostsController < ApplicationController
     end
 
     # Update credentials categories and images
-    @post.category_id = categories
-    puts params[:image]
+    @post.category_id = Category.get_categories(categories).uniq.join(',')
     if params[:image] != nil || params[:image] != 'null'
       @post.img_original = params[:image]
     end
@@ -112,10 +119,18 @@ class Admin::PostsController < ApplicationController
         set_image_credentials
       end
 
-      response = {
-          success: true,
-          message: 'Post was successfully edited.'
-      }
+      # Check if the categories are different from each other
+      if Category.check_idem(categories)
+        response = {
+            success: true,
+            message: 'You are add one same category, we are delete the duplicate category.'
+        }
+      else
+        response = {
+            success: true,
+            message: 'Post was successfully edited.'
+        }
+      end
     else
       response = {
           success: false,

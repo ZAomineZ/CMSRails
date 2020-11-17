@@ -31,12 +31,7 @@ class Category < ApplicationRecord
     dont_exist = false
 
     unless categories === nil
-      if categories.index(',') != nil
-        data = categories.split(',')
-      else
-        data = [categories]
-      end
-
+      data = self.get_categories(categories)
       data.each do |category|
         slug = category.parameterize
         cat = Category.find_by_slug(slug).to_a
@@ -48,7 +43,22 @@ class Category < ApplicationRecord
     return dont_exist
   end
 
+  def self.check_idem(categories)
+    categories_uniq_data = self.get_categories(categories).uniq
+    categories = self.get_categories(categories)
+    return categories_uniq_data.length != categories.length
+  end
+
   private
+
+  def self.get_categories(categories)
+    if categories.index(',') != nil
+      categories = categories.split(',')
+    else
+      categories = [categories]
+    end
+    return categories
+  end
 
   def self.unlink_image(record)
     directory = PathHelper.path_dir_public(record.class.name.downcase, record.id)
