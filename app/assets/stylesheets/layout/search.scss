@@ -91,6 +91,15 @@
   text-overflow: ellipsis;
 }
 
+.search-items-results-list li p a {
+  color: #384C6D;
+}
+
+.search-items-results-list li p a:hover {
+  font-weight: 700;
+  opacity: 0.8;
+}
+
 .search-items-results-list li p.categories-paragraph {
   width: calc(100% - 50px);
 }

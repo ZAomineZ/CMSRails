@@ -25,10 +25,12 @@
                 <ul class="search-items-results-list">
                     {#each items.posts as post}
                         <li>
-                            <img alt="post img {post.id}"
-                                 src={post.img_original.thumb.url ? post.img_original.thumb.url : '/images/default/thumb_image.png'}/>
+                            <a href="/admin/posts/{post.id}/edit">
+                                <img alt="post img {post.id}"
+                                     src={post.img_original.thumb.url ? post.img_original.thumb.url : '/images/default/thumb_image.png'}/>
+                            </a>
                             <p>
-                                {post.name}
+                                <a href="/admin/posts/{post.id}/edit">{post.name}</a>
                                 <br>
                                 (belongs to <span class="search-items-results-search">{post.category_id}</span>)
                                 <br>
@@ -42,11 +44,13 @@
                 <ul class="search-items-results-list">
                     {#each items.categories as category}
                         <li>
-                            <img alt="category img {category.id}"
-                                 src={category.avat_cat.icon.url ? category.avat_cat.icon.url : '/images/default/thumb_image.png'}
-                                 class="categories">
+                            <a href="/admin/category/{category.id}/edit">
+                                <img alt="category img {category.id}"
+                                     src={category.avat_cat.icon.url ? category.avat_cat.icon.url : '/images/default/thumb_image.png'}
+                                     class="categories">
+                            </a>
                             <p class="categories-paragraph">
-                                {category.name}
+                                <a href="/admin/category/{category.id}/edit">{category.name}</a>
                                 <br>
                                 (result for <span class="search-items-results-search">{valueInputSearch}</span>)
                             </p>
