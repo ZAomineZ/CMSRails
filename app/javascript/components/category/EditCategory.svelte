@@ -26,7 +26,7 @@
 <Header/>
 <div class="container">
     <BroadCast
-            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur consequuntur distinctio, dolore ex fugit illum in modi necessitatibus nisi non, odio rerum, soluta unde ut? Cumque rem sequi voluptates."
+            content="Here, you can edit your category '{category.name}'."
             title="Edit Category '{category.name}'" under_links={[{
                 title: 'Categories',
                 link: '/admin/category'
@@ -37,9 +37,9 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Form to Edit Category "{category.name}"</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eos hic illum ipsam molestiae,
-                mollitia porro quibusdam reiciendis rem suscipit vel vero? Exercitationem fugit illo iure libero natus
-                ratione recusandae.</p>
+            <p>Form category, the field name represents to name category (string between 5 and 60 characters), the field slug
+                must be empty or required, the field content represents to content post (string minimum 10 characters)
+                and also the field file for your image attached to category.</p>
             <Form category={category} errorFields={errorFields} uriForm={uriForm}/>
         </div>
     </div>

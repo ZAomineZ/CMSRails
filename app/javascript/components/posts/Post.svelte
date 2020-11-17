@@ -53,9 +53,9 @@
 <Sidebar/>
 <Header/>
 <div class="container">
-    <BroadCast content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad esse minus quasi sequi! Culpa,
-                    distinctio dolore eum id, in ipsam iure nulla obcaecati odit repellat rerum sint soluta totam
-                    voluptates!" title="Posts"/>
+    <BroadCast
+            content="Here, you can see the listening to posts than you have create, you can also edit or delete the different posts."
+            title="Posts"/>
     {#if message !== null}
         <Alert message={message} type="danger"/>
     {/if}

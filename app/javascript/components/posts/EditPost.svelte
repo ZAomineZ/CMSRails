@@ -99,7 +99,7 @@
 <Header/>
 <div class="container">
     <BroadCast
-            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur consequuntur distinctio, dolore ex fugit illum in modi necessitatibus nisi non, odio rerum, soluta unde ut? Cumque rem sequi voluptates."
+            content="Here, you can edit your post '{post.name}'."
             title="Edit Post '{post.name}'" under_links={[{
                 title: 'Posts',
                 link: '/admin/posts'
@@ -110,9 +110,9 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Form to Edit Post "{post.name}"</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eos hic illum ipsam molestiae,
-                mollitia porro quibusdam reiciendis rem suscipit vel vero? Exercitationem fugit illo iure libero natus
-                ratione recusandae.</p>
+            <p>Form post, the field name represents to title post (string between 5 and 60 characters), the field slug
+                must be empty or required, the field categories represents to categories created, the field content
+                represents to content post (string minimum 10 characters) and also the field file for your image attached to post.</p>
             <Form bind:files={files} callInputs={{onInputNameField, onInputSlugField, onInputDescField}}
                   categoriesList={categoriesList} on:submit={handleSubmit} on:tags={getTags} post={post}
                   dataCategories={dataCategories} errorFields={errorFields} uriForm={uriForm}/>
