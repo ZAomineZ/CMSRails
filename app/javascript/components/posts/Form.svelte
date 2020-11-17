@@ -49,7 +49,7 @@
         <div class="form-group img-info">
             <h6 class="img-text">Image Preview:</h6>
             <div class="img-preview">
-                <a href="#">
+                <a href={post.img_original.url} target="_blank">
                     <img src={post.img_original.thumb.url ? post.img_original.thumb.url : '/images/default/thumb_image.png'}
                          alt="">
                 </a>
