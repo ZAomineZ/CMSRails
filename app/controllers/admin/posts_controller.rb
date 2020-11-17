@@ -1,6 +1,7 @@
 class Admin::PostsController < ApplicationController
 
   before_action :set_post, only: [:show, :edit, :update]
+  before_action :admin_access, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     pagination = PaginationEntity.new(1, Post)
