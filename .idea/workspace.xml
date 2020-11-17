@@ -10,15 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Fix bug signin user with bad password">
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add errors validator for account page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/navigation/AccountDetailsHeader.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/navigation/AccountDetailsHeader.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/users/Account.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/users/Account.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/users/FormAccount.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/users/FormAccount.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/account_validator.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/account_validator.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/account.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/account.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,14 +138,7 @@
       <workItem from="1605353517180" duration="1480000" />
       <workItem from="1605363361890" duration="7255000" />
       <workItem from="1605520314099" duration="26206000" />
-      <workItem from="1605607763850" duration="6303000" />
-    </task>
-    <task id="LOCAL-00007" summary="Refactor form to post entity">
-      <created>1604668755350</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1604668755351</updated>
+      <workItem from="1605607763850" duration="7039000" />
     </task>
     <task id="LOCAL-00008" summary="Refactor form action edit to post entity">
       <created>1604673919182</created>
@@ -487,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605608619631</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Add errors validator for account page">
+      <created>1605616414545</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1605616414545</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +502,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test success upload file category" />
     <MESSAGE value="Test success upload file category for controller category" />
     <MESSAGE value="Test success delete file joined to entity for post and category" />
     <MESSAGE value="Add image preview for edit post page" />
@@ -531,7 +526,8 @@
     <MESSAGE value="Fix bug path image by default for posts entity" />
     <MESSAGE value="Fix bug uploader file post" />
     <MESSAGE value="Fix bug signin user with bad password" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix bug signin user with bad password" />
+    <MESSAGE value="Add errors validator for account page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add errors validator for account page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -599,11 +595,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605608466380" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605608629174">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605616415842">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605521937234" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605608629174" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605616415842" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -614,11 +610,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283128617" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605615504768">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605617067343">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605521850558" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605615504768" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605617067343" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

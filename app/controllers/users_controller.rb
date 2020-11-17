@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     # Check credentials to user
     password = params[:password]
     if @user && !@user.empty? && user_entity.authenticate(password) && user_entity.valid_password(password, @user[0])
-      session[:user] = @user
+      session[:user] = @user[0]
       flash[:success] = "You are connected."
       redirect_to root_url
     else
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   end
 
   def account
-    @user = session[:user] ? session[:user][0] : nil
+    @user = session[:user] ? session[:user] : nil
     @flash_success = flash[:success]
     @flash_danger = flash[:danger]
     @errors = flash[:errors]
@@ -50,9 +50,10 @@ class UsersController < ApplicationController
       return redirect_to account_path
     end
     # Update the credentials to user entit
-    params_accept = params[:password].length != 0 && params[:password_confirmation].length != 0
-    if User.find(params[:user_id]).update(params_user(params_accept))
-      session[:user] = User.find(params[:user_id])
+    @user_entity = User.find(params[:user_id])
+    request_valid = params[:password].length != 0 && params[:password_confirmation].length != 0 ? @user_entity.update(params_user) : @user_entity.update_attribute(:username, params[:username])
+    if request_valid
+      session[:user] = @user_entity
       flash[:success] = "You have edited your credentials."
       redirect_to account_path
     end
@@ -71,9 +72,9 @@ class UsersController < ApplicationController
 
   def params_user(credentials_accept = true)
     if credentials_accept
-      params.require(:user).permit(:username, :password)
+      params.permit(:username, :password)
     else
-      params.require(:user).permit(:username)
+      params.permit(:username)
     end
   end
 

@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   end
 
   def get_user(user_session)
-    User.find(user_session[0] ? user_session[0]['id'] : nil)
+    User.find(user_session ? user_session['id'] : nil)
   end
 
   def admin_access

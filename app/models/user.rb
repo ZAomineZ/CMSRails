@@ -16,8 +16,6 @@ class User < ApplicationRecord
   scope :find_by_username, -> (username) { where('username' => username) }
 
   def valid_password(password, user)
-    puts user.inspect
-    puts '========================================'.inspect
     BCrypt::Password.new(user.password_digest) == password
   end
 end
