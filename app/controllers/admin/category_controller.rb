@@ -59,7 +59,7 @@ class Admin::CategoryController < ApplicationController
         set_image_credentials
       end
 
-      flash.now[:success] = "Category was successfully edited."
+      flash[:success] = "Category was successfully edited."
       redirect_to admin_category_index_path
     else
       flash[:danger] = 'An error occurred when validating to your request.'

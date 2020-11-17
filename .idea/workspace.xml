@@ -10,10 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add role for user account and logout action">
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add link for entity for items search">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/layout/search.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/layout/search.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/search/ItemsResultsSearch.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/search/ItemsResultsSearch.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/category_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/category_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/users/Login.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/users/Login.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/login.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/login.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,14 +140,7 @@
       <workItem from="1605353517180" duration="1480000" />
       <workItem from="1605363361890" duration="7255000" />
       <workItem from="1605520314099" duration="26206000" />
-      <workItem from="1605607763850" duration="10681000" />
-    </task>
-    <task id="LOCAL-00013" summary="System pagination for posts entity and refactor component Post index">
-      <created>1604757669962</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1604757669962</updated>
+      <workItem from="1605607763850" duration="11476000" />
     </task>
     <task id="LOCAL-00014" summary="System pagination for category entity">
       <created>1604761662949</created>
@@ -482,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605620187618</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Add link for entity for items search">
+      <created>1605620783879</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1605620783879</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +504,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add test success authenticate user and add secure password" />
     <MESSAGE value="Add test success update credentials for account action" />
     <MESSAGE value="Add action logout for user entity" />
     <MESSAGE value="Change structure root template" />
@@ -526,7 +528,8 @@
     <MESSAGE value="Fix bug duplicate category for one post" />
     <MESSAGE value="Add role for category entity and post entity" />
     <MESSAGE value="Add role for user account and logout action" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add role for user account and logout action" />
+    <MESSAGE value="Add link for entity for items search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add link for entity for items search" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -594,11 +597,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605608466380" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605620189135">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605620786010">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605521937234" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605620189135" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605620786010" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1604675635832">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -609,11 +612,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283128617" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605620536900">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605621351953">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605521850558" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605620536900" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605621351953" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

@@ -5,15 +5,18 @@ class UsersController < ApplicationController
   before_action :admin_access, only: [:account, :update_account, :logout]
 
   def login
+    @message_success = flash[:success]
+    @message_danger = flash[:danger]
+    @errors = flash[:errors]
   end
 
   def signin
     # Check validation to user entity
     user_entity = User.new(params_user)
     unless user_entity.valid?
-      flash.now[:danger] = 'An error occurred when validating to your request.'
-      flash.now[:errors] = user_entity.errors.messages
-      return render action: 'login'
+      flash[:danger] = 'An error occurred when validating to your request.'
+      flash[:errors] = user_entity.errors.messages
+      return redirect_to login_path
     end
 
     @user = User.find_by_username(params[:username])
@@ -25,7 +28,7 @@ class UsersController < ApplicationController
       redirect_to root_url
     else
       flash[:danger] = 'An error occurred, yours credentials are incorrect.'
-      render action: 'login'
+      redirect_to login_path
     end
   end
 

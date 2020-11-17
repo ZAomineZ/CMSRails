@@ -1,10 +1,11 @@
 <script>
+    // MODULES SVELTE
     import {onMount} from 'svelte';
 
     // LIB
     import {Fetch} from "../../packs/helper/FetchApi";
 
-    // Modules HTML
+    // MODULES HTML
     import AccountDetailsHeader from "./navigation/AccountDetailsHeader.svelte";
     import SearchItemsHeader from "./search/SearchItemsHeader.svelte"
     import ItemsResultsSearch from "./search/ItemsResultsSearch.svelte";
@@ -77,7 +78,7 @@
                 {/if}
             </a>
         </section>
-        <a class="navbar-brand" href="#">CMS</a>
+        <a class="navbar-brand" href="/admin">CMS</a>
         <button class="navbar-toggler" on:click|preventDefault={handleActiveToggleClick}>
             <i class="fas fa-angle-down"></i>
         </button>

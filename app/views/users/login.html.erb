@@ -1,1 +1,3 @@
-<%= svelte_component 'users/Login', {}, {prerender: false} %>
+<%= svelte_component 'users/Login', {
+    successMessage: @message_success, dangerMessage: @message_danger, errorFields: @errors
+}, {prerender: false} %>
