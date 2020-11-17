@@ -46,7 +46,7 @@
                         <td>{post.descr.length >= 150 ? post.descr.slice(0, 150) + '...' : post.descr}</td>
                         <td>{post.category_id}</td>
                         <td>
-                            <ActionTable entity={post} csrfValue={csrfValue}/>
+                            <ActionTable entity={post} csrfValue={csrfValue} entity_name="posts"/>
                         </td>
                     </tr>
                 {/each}

@@ -13,6 +13,9 @@ class Admin::PostsController < ApplicationController
     @posts = pagination.get_data[:items]
     @pages = pagination.get_pages
     @current_page = pagination.get_data[:current_page]
+
+    @message_success = flash[:success]
+    @message_danger = flash[:danger]
   end
 
   def new
@@ -121,9 +124,9 @@ class Admin::PostsController < ApplicationController
       Post.unlink_image(@post)
       @post.destroy
 
-      flash.now[:success] = "Post was successfully deleted."
+      flash[:success] = "Post was successfully deleted."
     else
-      flash.now[:danger] = "An error occurred when delete your post."
+      flash[:danger] = "An error occurred when delete your post."
     end
 
     redirect_to admin_posts_path

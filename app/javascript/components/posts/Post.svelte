@@ -17,6 +17,8 @@
     export let posts = []
     export let pages = 1
     export let currentPage = 1
+    export let messageSuccess
+    export let messageDanger
 
     // Data
     let csrfValue = null
@@ -57,5 +59,9 @@
     {#if message !== null}
         <Alert message={message} type="danger"/>
     {/if}
-    <PostsTable data={{posts, currentPage, pages}} handlePagination={handlePagination} title="Posts List" csrfValue={csrfValue}/>
+    {#if messageSuccess !== null || messageDanger !== null}
+        <Alert type={messageSuccess ? 'success' : 'danger'} message={messageSuccess ? messageSuccess: messageDanger}/>
+    {/if}
+    <PostsTable csrfValue={csrfValue} data={{posts, currentPage, pages}} handlePagination={handlePagination}
+                title="Posts List"/>
 </div>
