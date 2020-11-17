@@ -10,6 +10,7 @@
     export let user = null
     export let flashSuccess = null
     export let flashDanger = null
+    export let errorFields
 </script>
 
 <Sidebar/>
@@ -27,7 +28,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eos hic illum ipsam molestiae,
                 mollitia porro quibusdam reiciendis rem suscipit vel vero? Exercitationem fugit illo iure libero natus
                 ratione recusandae.</p>
-            <FormAccount uriForm="/account/{user.id}" user={user}/>
+            <FormAccount uriForm="/admin/account/{user.id}" user={user} errorFields={errorFields}/>
         </div>
     </div>
 </div>

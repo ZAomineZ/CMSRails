@@ -30,26 +30,30 @@ class UsersController < ApplicationController
 
   def account
     @user = session[:user] ? session[:user][0] : nil
+    @flash_success = flash[:success]
+    @flash_danger = flash[:danger]
+    @errors = flash[:errors]
   end
 
   def update_account
     # Find user to relation with the cretendials
     @user = User.exists?(params[:user_id])
     unless @user
-      flash.now[:danger] = 'An error occurred, yours credentials are incorrect.'
+      flash[:danger] = 'An error occurred, yours credentials are incorrect.'
       return render action: 'account'
     end
     # Check validation to user entity
     user_validation = AccountValidator.new(params_user_account)
-    unless user_validation.valid?
-      flash.now[:danger] = 'An error occurred, yours credentials are invalid.'
-      flash.now[:errors] = user_validation.errors.messages
-      return render action: 'account'
+    unless params_user_account.permitted?
+      flash[:danger] = 'An error occurred, yours credentials are invalid.'
+      flash[:errors] = user_validation.errors.messages
+      return redirect_to account_path
     end
-    # Update the credentials to user entity
-    if User.find(params[:user_id]).update(params_user)
+    # Update the credentials to user entit
+    params_accept = params[:password].length != 0 && params[:password_confirmation].length != 0
+    if User.find(params[:user_id]).update(params_user(params_accept))
       session[:user] = User.find(params[:user_id])
-      flash.now[:success] = "You have edited your credentials."
+      flash[:success] = "You have edited your credentials."
       redirect_to account_path
     end
   end
@@ -65,12 +69,20 @@ class UsersController < ApplicationController
 
   private
 
-  def params_user
-    params.permit(:username, :password)
+  def params_user(credentials_accept = true)
+    if credentials_accept
+      params.require(:user).permit(:username, :password)
+    else
+      params.require(:user).permit(:username)
+    end
   end
 
   def params_user_account
-    params.permit(:username, :password, :password_confirmation)
+    if params[:password].length != 0 && params[:password_confirmation].length != 0
+      params.permit(:username, :password, :password_confirmation)
+    else
+      params.permit(:username)
+    end
   end
 
 end

@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   post '/logout', to: 'users#logout', as: 'logout'
 
   # Routes Account
-  get '/account', to: 'users#account', as: 'account'
-  put '/account/:user_id', to: 'users#update_account', as: 'update_account'
+  get '/admin/account', to: 'users#account', as: 'account'
+  put '/admin/account/:user_id', to: 'users#update_account', as: 'update_account'
 
 end

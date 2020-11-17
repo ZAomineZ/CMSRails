@@ -1,1 +1,3 @@
-<%= svelte_component 'users/Account', {user: @user}, {prerender: false} %>
+<%= svelte_component 'users/Account', {
+    user: @user, flashSuccess: @flash_success, flashDanger: @flash_danger, errorFields: @errors
+}, {prerender: false} %>

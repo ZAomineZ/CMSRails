@@ -38,7 +38,7 @@
         </a>
         <ul class="dropdown-menu dropdown-menu-right">
             <li>
-                <a class="dropdown-item" href="/account">Account</a>
+                <a class="dropdown-item" href="/admin/account">Account</a>
             </li>
             <li class="divider"></li>
             <li>
