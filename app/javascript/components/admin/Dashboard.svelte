@@ -35,7 +35,7 @@
      * @param {Event} event
      */
     async function handlePagination(event) {
-        const response = (new Post()).resPaginationData(event, csrfValue)
+        const response = await (new Post()).resPaginationData(event, csrfValue)
         if (response.success) {
             const data = response.data
             posts = data.items

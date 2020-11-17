@@ -1,4 +1,7 @@
 <script>
+    // MODULES SVELTE
+    import {onMount} from "svelte";
+    // MODULES HTML
     import Pagination from "../form/Pagination.svelte";
     import DeleteEntity from "../concern/Actions/DeleteEntity.svelte";
 
@@ -10,6 +13,10 @@
     }
     export let handlePagination = () => {}
     export let csrfValue = null
+
+    onMount(() => {
+        console.log(data)
+    })
 </script>
 
 <div class="card">

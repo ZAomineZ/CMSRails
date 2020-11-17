@@ -17,7 +17,7 @@ export class Post {
         this.formData.append('authenticity_token', csrfValue)
 
         const page = event.composedPath()[0].dataset ? event.composedPath()[0].dataset.page : 1
-        const uriFetch = '/posts/pagination/' + page
+        const uriFetch = '/admin/posts/pagination/' + page
         return await (new Fetch()).response(uriFetch, 'POST', this.formData)
     }
 

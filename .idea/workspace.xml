@@ -10,15 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add icon search for search bar">
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/admin/concern/DashboardInfo.svelte" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add message success and danger in the dashboard admin and refactor under components for the dashboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/admin/Dashboard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/admin/Dashboard.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/dashboard.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/dashboard.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/spec_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/PostsTable.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/PostsTable.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/packs/request/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/request/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/pagination_entity.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/pagination_entity.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,14 +140,7 @@
       <workItem from="1605353517180" duration="1480000" />
       <workItem from="1605363361890" duration="7255000" />
       <workItem from="1605520314099" duration="26206000" />
-      <workItem from="1605607763850" duration="13271000" />
-    </task>
-    <task id="LOCAL-00016" summary="Add test for pagination posts and categories entity">
-      <created>1604765683482</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1604765683482</updated>
+      <workItem from="1605607763850" duration="15298000" />
     </task>
     <task id="LOCAL-00017" summary="Add test to the search controller for the posts and categories">
       <created>1604926326946</created>
@@ -488,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605622760023</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Add message success and danger in the dashboard admin and refactor under components for the dashboard">
+      <created>1605623346653</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1605623346653</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +504,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change structure root template" />
     <MESSAGE value="Add access role admin and access auth" />
     <MESSAGE value="add structure admin namespace for post entity and category entity" />
     <MESSAGE value="Change uri routes for posts and categories front" />
@@ -532,7 +528,8 @@
     <MESSAGE value="Add link for entity for items search" />
     <MESSAGE value="Add message flash and errors validation for signin page" />
     <MESSAGE value="Add icon search for search bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add icon search for search bar" />
+    <MESSAGE value="Add message success and danger in the dashboard admin and refactor under components for the dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add message success and danger in the dashboard admin and refactor under components for the dashboard" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -600,11 +597,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605608466380" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605622763195">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605623349088">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605521937234" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605622763195" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605623349088" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1605621724354">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -615,11 +612,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283128617" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605623104081">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605626775102">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605521850558" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605623104081" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605626775102" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

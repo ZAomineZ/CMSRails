@@ -1,7 +1,7 @@
 class PaginationEntity
   def initialize(page, entity)
     @page = page.to_i
-    @per_page = 10
+    @per_page = 5
     @entity = entity
   end
 
@@ -15,7 +15,7 @@ class PaginationEntity
 
   def get_pages
     count = @entity.count
-    pages = count <= @per_page ? 1 : (count / @per_page).round(half: :up)
+    pages = count <= @per_page ? 1 : (count.to_f / @per_page.to_f).ceil
     return pages
   end
 
