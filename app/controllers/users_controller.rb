@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   before_action :only_signed_out, only: [:signin, :login]
   before_action :only_signed_in, only: [:account, :update_account, :logout]
+  before_action :admin_access, only: [:account, :update_account, :logout]
 
   def login
   end
