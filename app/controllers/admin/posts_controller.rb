@@ -3,6 +3,11 @@ class Admin::PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update]
   before_action :admin_access, only: [:new, :create, :edit, :update, :destroy]
 
+  def initialize
+    super
+    @response_body = ResponseBody.new
+  end
+
   def index
     pagination = PaginationEntity.new(1, Post)
     @posts = pagination.get_data[:items]
@@ -17,28 +22,19 @@ class Admin::PostsController < ApplicationController
   def create
     categories = params[:categories]
     if categories.empty?
-      response = {
-          success: false,
-          message: 'One category must be selected.'
-      }
+      response = @response_body.response_json(false, 'One category must be selected.')
       return render json: response
     end
 
     if Category.dontExist(categories)
-      response = {
-          success: false,
-          message: 'One of the selected categories don\'t exist.'
-      }
+      response = @response_body.response_json(false, 'One of the selected categories don\'t exist.')
       return render json: response
     end
 
     # Check if the post exist already !
     post_exist = Post.find_by_name(params[:name])
     unless post_exist.empty?
-      response = {
-          success: false,
-          message: 'This title is already use in a another post.'
-      }
+      response = @response_body.response_json(false, 'This title is already use in a another post.')
       return render json: response
     end
 
@@ -55,22 +51,12 @@ class Admin::PostsController < ApplicationController
 
       # Check if the categories are different from each other
       if Category.check_idem(categories)
-        response = {
-            success: true,
-            message: 'You are add one same category, we are delete the duplicate category.'
-        }
+        response = @response_body.response_json(true, 'You are add one same category, we are delete the duplicate category.')
       else
-        response = {
-            success: true,
-            message: 'Post was successfully created.'
-        }
+        response = @response_body.response_json(true, 'Post was successfully created.')
       end
     else
-      response = {
-          success: false,
-          message: 'An error occurred when validating to your request.',
-          errorFields: @post.errors.messages
-      }
+      response = @response_body.response_json(false, 'An error occurred when validating to your request.', @post.errors.messages)
     end
     render json: response
   end
@@ -84,28 +70,19 @@ class Admin::PostsController < ApplicationController
   def update
     categories = params[:categories]
     if categories.empty?
-      response = {
-          success: false,
-          message: 'One category must be selected.'
-      }
+      response = @response_body.response_json(false, 'One category must be selected.')
       return render json: response
     end
 
     if Category.dontExist(categories)
-      response = {
-          success: false,
-          message: 'One of the selected categories don\'t exist.'
-      }
+      response = @response_body.response_json(false, 'One of the selected categories don\'t exist.')
       return render json: response
     end
 
     # Check if the post exist already !
     post_exist = Post.find_by_name(params[:name])
     if !post_exist.empty? && @post.id != params[:id].to_i
-      response = {
-          success: false,
-          message: 'This title is already use in a another post.'
-      }
+      response = @response_body.response_json(false, 'This title is already use in a another post.')
       return render json: response
     end
 
@@ -124,22 +101,12 @@ class Admin::PostsController < ApplicationController
 
       # Check if the categories are different from each other
       if Category.check_idem(categories)
-        response = {
-            success: true,
-            message: 'You are add one same category, we are delete the duplicate category.'
-        }
+        response = @response_body.response_json(true, 'You are add one same category, we are delete the duplicate category.')
       else
-        response = {
-            success: true,
-            message: 'Post was successfully edited.'
-        }
+        response = @response_body.response_json(true, 'Post was successfully edited.')
       end
     else
-      response = {
-          success: false,
-          message: 'An error occurred when validating to your request.',
-          errorFields: @post.errors.messages
-      }
+      response = @response_body.response_json(false, 'An error occurred when validating to your request.', @post.errors.messages)
     end
     render json: response
   end
