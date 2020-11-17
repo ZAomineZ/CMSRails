@@ -1,6 +1,6 @@
 <script>
     import Pagination from "../form/Pagination.svelte";
-    import DeleteEntity from "../concern/Actions/DeleteEntity.svelte";
+    import ActionTable from "../concern/Actions/ActionTable.svelte";
 
     export let title = ''
     export let data = {
@@ -9,7 +9,8 @@
         pages: 1
     }
     export let message = null
-    export let handlePagination = () => {}
+    export let handlePagination = () => {
+    }
     export let csrfValue = ''
 </script>
 
@@ -40,8 +41,7 @@
                         <td>{category.resume.length >= 150 ? category.resume.slice(0, 150) + '...' : category.resume}</td>
                         <td>{category.date_cat}</td>
                         <td>
-                            <a href="/admin/category/{category.id}/edit" class="btn btn-primary">Edit</a>
-                            <DeleteEntity uriAction="/admin/category/{category.id}" csrfValue={csrfValue} />
+                            <ActionTable entity={category} csrfValue={csrfValue} />
                         </td>
                     </tr>
                 {/each}

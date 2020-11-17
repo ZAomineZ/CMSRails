@@ -3,7 +3,7 @@
     import {onMount} from "svelte";
     // MODULES HTML
     import Pagination from "../form/Pagination.svelte";
-    import DeleteEntity from "../concern/Actions/DeleteEntity.svelte";
+    import ActionTable from "../concern/Actions/ActionTable.svelte";
 
     export let title = ''
     export let data = {
@@ -11,11 +11,11 @@
         currentPage: 1,
         pages: 1
     }
-    export let handlePagination = () => {}
+    export let handlePagination = () => {
+    }
     export let csrfValue = null
 
     onMount(() => {
-        console.log(data)
     })
 </script>
 
@@ -46,8 +46,7 @@
                         <td>{post.descr.length >= 150 ? post.descr.slice(0, 150) + '...' : post.descr}</td>
                         <td>{post.category_id}</td>
                         <td>
-                            <a href="/admin/posts/{post.id}/edit" class="btn btn-primary">Edit</a>
-                            <DeleteEntity uriAction="/admin/posts/{post.id}" csrfValue={csrfValue} />
+                            <ActionTable entity={post} csrfValue={csrfValue}/>
                         </td>
                     </tr>
                 {/each}
