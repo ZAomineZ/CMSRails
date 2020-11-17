@@ -14,6 +14,8 @@
     export let categories = []
     export let pages = 1
     export let currentPage = 1
+    export let messageSuccess = null
+    export let messageError = null
 
     // Data
     let csrfValue = null
@@ -51,6 +53,9 @@
             title="Categories"/>
     {#if message !== null}
         <Alert message={message} type="danger"/>
+    {/if}
+    {#if messageSuccess !== null || messageError !== null}
+        <Alert type={messageSuccess ? 'success' : 'danger'} message={messageSuccess ? messageSuccess: messageError}/>
     {/if}
     <CategoriesTable csrfValue={csrfValue} data={{categories, currentPage, pages}} handlePagination={handlePagination}
                      message={message} title="Categories List"/>

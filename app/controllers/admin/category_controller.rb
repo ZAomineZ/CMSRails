@@ -8,6 +8,9 @@ class Admin::CategoryController < ApplicationController
     @categories = pagination.get_data[:items]
     @pages = pagination.get_pages
     @current_page = pagination.get_data[:current_page]
+
+    @message_success = flash[:success]
+    @message_danger = flash[:danger]
   end
 
   def new

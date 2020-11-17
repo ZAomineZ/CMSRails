@@ -10,12 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add message success and danger in the dashboard admin and refactor under components for the dashboard">
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Fix bug pagination data pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/admin/Dashboard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/admin/Dashboard.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/PostsTable.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/PostsTable.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/request/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/request/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/pagination_entity.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/pagination_entity.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/category_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/category_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/category/Category.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/category/Category.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/category/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/category/index.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,14 +139,7 @@
       <workItem from="1605353517180" duration="1480000" />
       <workItem from="1605363361890" duration="7255000" />
       <workItem from="1605520314099" duration="26206000" />
-      <workItem from="1605607763850" duration="15298000" />
-    </task>
-    <task id="LOCAL-00017" summary="Add test to the search controller for the posts and categories">
-      <created>1604926326946</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1604926326946</updated>
+      <workItem from="1605607763850" duration="15583000" />
     </task>
     <task id="LOCAL-00018" summary="Add search component header">
       <created>1604932526959</created>
@@ -485,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605623346653</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Fix bug pagination data pages">
+      <created>1605627237859</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1605627237859</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +503,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add access role admin and access auth" />
     <MESSAGE value="add structure admin namespace for post entity and category entity" />
     <MESSAGE value="Change uri routes for posts and categories front" />
     <MESSAGE value="Add module Admin for posts and categories controller" />
@@ -529,7 +527,8 @@
     <MESSAGE value="Add message flash and errors validation for signin page" />
     <MESSAGE value="Add icon search for search bar" />
     <MESSAGE value="Add message success and danger in the dashboard admin and refactor under components for the dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add message success and danger in the dashboard admin and refactor under components for the dashboard" />
+    <MESSAGE value="Fix bug pagination data pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bug pagination data pages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -597,11 +596,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605608466380" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605623349088">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605627240294">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605521937234" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605623349088" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605627240294" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1605621724354">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -612,11 +611,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283128617" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605626775102">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605627425697">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605521850558" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605626775102" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605627425697" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>
