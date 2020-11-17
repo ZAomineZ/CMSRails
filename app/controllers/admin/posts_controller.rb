@@ -111,12 +111,14 @@ class Admin::PostsController < ApplicationController
 
     # Update credentials categories and images
     @post.category_id = Category.get_categories(categories).uniq.join(',')
-    if params[:image] != nil || params[:image] != 'null'
+    if params[:image] != nil && params[:image] != 'null'
       @post.img_original = params[:image]
     end
-    if @post.update(params_post)
+    puts params[:image].inspect
+    update_action = params[:image] != nil || params[:image] != 'null' ? @post.update(params_post) : update_request_without_image(categories)
+    if update_action
       # Update informations file
-      if params[:image] != nil || params[:image] != 'null'
+      if params[:image] != nil && params[:image] != 'null'
         set_image_credentials
       end
 
@@ -177,6 +179,11 @@ class Admin::PostsController < ApplicationController
     @post.img_thumb = image != nil && !image.instance_of?(String) ? 'thumb_' + @post.img_original_identifier : 'thumb_image.png'
     @post.img_mini = image != nil && !image.instance_of?(String) ? 'mini_' + @post.img_original_identifier : 'mini_image.png'
     @post.save
+  end
+
+  def update_request_without_image(categories = '')
+    attributes = {name: params[:name], slug: params[:slug], category_id: Category.get_categories(categories).uniq.join(','), descr: params[:descr]}
+    @post.update_attributes(attributes)
   end
 
 end

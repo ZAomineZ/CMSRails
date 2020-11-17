@@ -58,14 +58,11 @@
             <DashboardInfo content="Get familiar with dashboard, here are some ways to get started."
                            title="Welcome back Admin !"/>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <DataDashboard data_number={posts_count} title="Posts" type="warning"/>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <DataDashboard data_number={categories_count} title="Categories" type="info"/>
-                </div>
-                <div class="col-md-4">
-                    <DataDashboard data_number={10} title="Tags" type="success"/>
                 </div>
             </div>
             <div class="row">
