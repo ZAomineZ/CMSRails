@@ -45,7 +45,7 @@ RSpec.configure do |config|
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to api `get` and
-  # `post` in specs under `spec/controllers`.
+  # `post` in specs concern `spec/controllers`.
   #
   # You can disable this behaviour by removing the line below, and instead
   # explicitly tag your specs with their type, e.g.:

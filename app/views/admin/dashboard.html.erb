@@ -1,3 +1,4 @@
 <%= svelte_component 'admin/Dashboard', {
-    name: 'Svelte', posts: @posts, posts_count: @posts_count, categories_count: @categories_count, pages: @pages, currentPage: @current_page
+    name: 'Svelte', posts: @posts, posts_count: @posts_count, categories_count: @categories_count, pages: @pages, currentPage: @current_page,
+    messageSuccess: @message_success, messageDanger: @message_danger
 }, {prerender: true} %>

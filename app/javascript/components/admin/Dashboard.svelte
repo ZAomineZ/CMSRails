@@ -12,6 +12,7 @@
     import PostsTable from "./../posts/PostsTable.svelte";
     import DataDashboard from "./../concern/DataDashboard.svelte";
     import Alert from "./../concern/Alert.svelte";
+    import DashboardInfo from "./concern/DashboardInfo.svelte";
 
     // PROPS
     export let posts = []
@@ -19,6 +20,8 @@
     export let categories_count = 0
     export let pages = 1
     export let currentPage = 1
+    export let messageSuccess = null
+    export let messageDanger = null
 
     // DATA
     let csrfValue = null
@@ -48,26 +51,12 @@
 <div class="container_admin">
     <div class="container_body">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card bg-info text-white">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6 info-container-text">
-                                    <h5 class="card-title">Welcome back Admin !</h5>
-                                    <p>Get familiar with dashboard, here are some ways to get started.</p>
-                                    <ul>
-                                        <li>Todo 1</li>
-                                        <li>Todo 2</li>
-                                        <li>Todo 3</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6 info-container-image"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {#if messageSuccess !== null || messageDanger !== null}
+                <Alert type={messageSuccess ? 'success' : 'danger'}
+                       message={messageSuccess ? messageSuccess: messageDanger}/>
+            {/if}
+            <DashboardInfo content="Get familiar with dashboard, here are some ways to get started."
+                           title="Welcome back Admin !"/>
             <div class="row">
                 <div class="col-md-4">
                     <DataDashboard data_number={posts_count} title="Posts" type="warning"/>

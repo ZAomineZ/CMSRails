@@ -15,6 +15,8 @@ class PagesController < ApplicationController
     @pages = pagination.get_pages
     @current_page = pagination.get_data[:current_page]
 
+    @message_success = flash[:success]
+    @message_danger = flash[:danger]
     render 'admin/dashboard'
   end
 
