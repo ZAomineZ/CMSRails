@@ -1,7 +1,10 @@
 class Admin::CategoryController < ApplicationController
 
-  before_action :set_category, only: [:show, :edit, :update]
+  before_action :set_category, only: [:edit, :update]
+  before_action :set_category_with_slug, only: [:show]
   before_action :admin_access, only: [:new, :create, :edit, :update, :destroy]
+
+  layout 'template', only: [:show]
 
   def index
     pagination = PaginationEntity.new(1, Category)
@@ -87,6 +90,11 @@ class Admin::CategoryController < ApplicationController
     redirect_to admin_category_index_path
   end
 
+  def show
+    @posts = Post.find_by_category(@category)
+    @categories = Category.all
+  end
+
   private
 
   def params_category
@@ -95,6 +103,10 @@ class Admin::CategoryController < ApplicationController
 
   def set_category
     @category = Category.find(params[:id])
+  end
+
+  def set_category_with_slug
+    @category = Category.find_by_slug(params[:slug] ? params[:slug] : nil).first
   end
 
   def set_image_credentials

@@ -56,22 +56,22 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   display: inline-block;
 }
 
-.wrap > .header .logo {
+.wrap .header .logo {
   float: left;
   margin-top: -2px;
 }
 
-.wrap > .header .logo img {
+.wrap .header .logo img {
   width: 220px;
 }
 
-.wrap > .header .search {
+.wrap .header .search {
   float: right;
   margin-top: 30px;
   width: 698px;
 }
 
-.wrap > .header .search .block-search {
+.wrap .header .search .block-search {
   float: left;
   min-width: 475px;
   width: 100%;
@@ -80,7 +80,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   height: 76px;
 }
 
-.wrap > .header .search .block-search h2 {
+.wrap .header .search .block-search h2 {
   color: #334260;
   font-size: 12px !important;
   font-weight: normal;
@@ -93,11 +93,11 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 
 }
 
-.wrap > .header .search .block-search > .search-form {
+.wrap .header .search .block-search > .search-form {
   clear: both;
 }
 
-.wrap > .header .search .block-search input {
+.wrap .header .search .block-search input {
   border: 0;
   color: #767676;
   height: 23px;
@@ -110,7 +110,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   float: left;
 }
 
-.wrap > .header .search .block-search input.form-submit {
+.wrap .header .search .block-search input.form-submit {
   border-radius: 5px;
   margin-left: 12px;
   line-height: 18px;
@@ -127,11 +127,11 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   font-family: 'Noto Sans';
 }
 
-.wrap > .header .search .block-search input.form-submit:hover {
+.wrap .header .search .block-search input.form-submit:hover {
   background: #fff;
 }
 
-.wrap > .header .search .block-search input.form-text {
+.wrap .header .search .block-search input.form-text {
   width: 510px;
   position: relative;
   border-radius: 5px;
@@ -144,7 +144,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   text-align: center;
 }
 
-.wrap > .content {
+.wrap .content {
   zoom: 1;
   margin-top: 0px;
   padding-top: 13px;
@@ -156,14 +156,14 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   font-style: italic;
 }
 
-.wrap > .content .block-main .container .img-right {
+.wrap .content .block-main .container .img-right {
   float: right;
   margin-right: 25px;
   margin-left: 26px;
   margin-top: 2px;
 }
 
-.wrap > .content .block-main .container .img-right img {
+.wrap .content .block-main .container .img-right img {
   width: 120px;
 }
 

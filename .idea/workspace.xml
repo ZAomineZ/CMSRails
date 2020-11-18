@@ -10,10 +10,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add posts component for page home">
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/front/layout/Footer.svelte" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add component footer for the front">
+      <change afterPath="$PROJECT_DIR$/app/javascript/components/front/category/ShowCategory.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/category/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/front/_header.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/front/concern/_block_view_categories.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/front/concern/_view_front_posts.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/template.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/template.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/category_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/category_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/Home.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Home.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/front/category/CategoryRow.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/front/category/CategoryRow.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/post.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/template.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/template.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +66,8 @@
         <option value="PostListHome" />
         <option value="PostRow" />
         <option value="Footer" />
+        <option value="ShowCategory" />
+        <option value="ERB File" />
       </list>
     </option>
   </component>
@@ -79,7 +91,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PetsyRails" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RorFormation" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
@@ -149,14 +161,10 @@
       <workItem from="1605706882155" duration="1790000" />
       <workItem from="1605708697820" duration="1792000" />
       <workItem from="1605710513867" duration="2129000" />
-      <workItem from="1605712688949" duration="1188000" />
-    </task>
-    <task id="LOCAL-00027" summary="Add system image upload for update action post entity">
-      <created>1605025446592</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1605025446592</updated>
+      <workItem from="1605712688949" duration="1789000" />
+      <workItem from="1605714504337" duration="3110000" />
+      <workItem from="1605717680700" duration="1796000" />
+      <workItem from="1605719510159" duration="588000" />
     </task>
     <task id="LOCAL-00028" summary="Tests success post_file_uploader">
       <created>1605026762397</created>
@@ -494,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605713618713</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Add component footer for the front">
+      <created>1605713895001</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1605713895001</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +528,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix bug for value categories field and his request" />
     <MESSAGE value="Fix bug show message Flash and validate errors fields" />
     <MESSAGE value="Fix bug path image by default for posts entity" />
     <MESSAGE value="Fix bug uploader file post" />
@@ -538,7 +552,8 @@
     <MESSAGE value="Add content explication for post entity, category entity and dashboard page" />
     <MESSAGE value="Init template front app" />
     <MESSAGE value="Add posts component for page home" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add posts component for page home" />
+    <MESSAGE value="Add component footer for the front" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add component footer for the front" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -571,11 +586,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2018" y="185" width="806" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604417997427" />
-    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605283340177">
+    <state x="2587" y="318" width="682" height="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605719724075">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="667" y="308" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604918068157" />
-    <state x="2587" y="318" width="640" height="411" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605283340177" />
+    <state x="2587" y="318" width="682" height="411" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605719724075" />
     <state x="2563" y="264" width="630" height="519" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1605261414614">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -584,11 +599,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="247" height="195" key="DatabaseViewActions_Filter/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605186930547" />
-    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl" timestamp="1605630868757">
+    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl" timestamp="1605718306886">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="263" y="272" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604922080824" />
-    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605630868757" />
+    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605718306886" />
     <state width="222" height="539" key="HiddenNamespacesPopup" timestamp="1604417921247">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -602,15 +617,15 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2149" y="259" width="540" height="540" key="StructurePopup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604418029094" />
-    <state width="498" height="445" key="SwitcherDM" timestamp="1605608466380">
+    <state width="498" height="445" key="SwitcherDM" timestamp="1605715153144">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605608466380" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605713621263">
+    <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605715153144" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605713896903">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605634448718" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605713621263" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605713896903" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1605621724354">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -621,11 +636,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605631323989" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605712766238">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605719902909">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605634985616" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605712766238" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605719902909" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

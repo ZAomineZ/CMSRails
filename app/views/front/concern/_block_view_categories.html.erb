@@ -1,0 +1,27 @@
+<div class="block-view orange">
+  <h2>Nouveaux catégories ajoutés</h2>
+  <div class="content">
+    <div class="view-front orange">
+      <div class="row">
+        <div class="block-row">
+          <% items.each do |item| %>
+            <div class="row-cell">
+              <div class="view-row">
+                <a href="#" title="<%= item.name %>">
+                  <img src="<%= item.avat_cat.url %>" alt="<%= item.name %>">
+                </a>
+              </div>
+              <div class="title-row">
+                <div class="title-block">
+                  <h4>
+                    <a href="#"><%= item.name %></a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

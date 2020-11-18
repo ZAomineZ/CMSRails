@@ -10,7 +10,6 @@
     export let posts = []
 </script>
 
-<div class="wrap">
     <Header/>
     <div class="content">
         <div class="main-content">
@@ -51,4 +50,3 @@
             </div>
         </div>
     </div>
-</div>

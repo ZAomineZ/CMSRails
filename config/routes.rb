@@ -2,12 +2,15 @@ Rails.application.routes.draw do
 
   root to:'pages#home'
 
+  # Routes coloriages
+  get '/coloriage/:slug', to: 'admin/category#show'
+
   # Routes Admin
   get '/admin', to: 'pages#admin', as: 'admin_page'
 
   scope "admin", as: "admin" do
-    resources :posts, controller: 'admin/post'
-    resources :category, controller: 'admin/category'
+    resources :posts, controller: 'admin/post', only: [:index, :new, :create, :edit, :update, :destroy]
+    resources :category, controller: 'admin/category', only: [:index, :new, :create, :edit, :update, :destroy]
   end
 
   # Entity routes post pagination

@@ -1,0 +1,22 @@
+<div class="view-front">
+  <div class="row">
+    <div class="block-row">
+      <% items.each do |item| %>
+        <div class="row-cell">
+          <div class="view-row">
+            <a href="/coloriage/<%= item.slug %>" title="<%= item.slug %>">
+              <img src="<%= item.img_original.thumb.url %>" alt="<%= item.slug %>">
+            </a>
+          </div>
+          <div class="title-row">
+            <div class="title-block">
+              <h4>
+                <a href="/coloriage/<%= item.slug %>"><%= item.name %></a>
+              </h4>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

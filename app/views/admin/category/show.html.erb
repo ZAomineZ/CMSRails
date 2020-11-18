@@ -1,0 +1,14 @@
+<div class="breadcrumb">
+  <a href="/" title="coloriage">Coloriage</a>
+  >
+  <a href="/colorage/<%= @category.name %>"><%= @category.name %></a>
+</div>
+
+<h1>Coloriages <%= @category.name %></h1>
+<!-- Block View POSTS -->
+<div class="block-view">
+  <div class="content">
+    <%= render 'front/concern/view_front_posts', items: @posts %>
+    <%= render 'front/concern/block_view_categories', items: @categories %>
+  </div>
+</div>

@@ -11,6 +11,17 @@
 </head>
 
 <body class="html front">
-<%= yield %>
+<div class="wrap">
+  <%= render 'front/header' %>
+  <div class="content">
+    <div class="main-content">
+      <div class="region">
+        <div class="block-main">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
