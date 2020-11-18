@@ -1,10 +1,12 @@
 <script>
     import Header from "./front/layout/Header.svelte";
-    import CategoryRow from "./front/category/CategoryRow.svelte";
+    import CategoryListHome from "./front/category/CategoryListHome.svelte";
+    import PostListHome from "./front/post/PostListHome.svelte";
 
     // PROPS
     export let categories_last_4 = []
     export let categories_last_6 = []
+    export let posts = []
 </script>
 
 <div class="wrap">
@@ -36,19 +38,14 @@
                         <div class="block-view">
                             <h2>Coloriages de Winx</h2>
                             <div class="content">
-                                <div class="view-front">
-                                    <div class="row">
-                                        <div class="block-row">
-                                            {#each categories_last_4 as category}
-                                                <CategoryRow category={category}/>
-                                            {/each}
-                                            <div class="block-right"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <CategoryListHome categories_last_4={categories_last_4}
+                                                  categories_last_6={categories_last_6}/>
+                                <div class="block-pub"></div>
+                                <PostListHome posts={posts} />
                             </div>
                         </div>
                     </div>
+                    <Footer />
                 </div>
             </div>
         </div>

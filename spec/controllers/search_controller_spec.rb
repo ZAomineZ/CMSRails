@@ -41,12 +41,12 @@ RSpec.describe Api::SearchController, type: :controller do
 
         json_response = JSON.parse(response.body)
         data = json_response['data']
-        expect(data['posts'].count).to eq(0)
+        expect(data['post'].count).to eq(0)
         expect(data['category'].count).to eq(0)
       end
     end
 
-    context 'valid form search only posts results' do
+    context 'valid form search only post results' do
       before do
         FactoryBot.create_list(:post, 5)
         # Supplementary credentials for test
@@ -66,14 +66,14 @@ RSpec.describe Api::SearchController, type: :controller do
         expect(json_response['success']).to be_truthy
       end
 
-      it 'should return results only posts entity' do
+      it 'should return results only post entity' do
         # Mocks
         allow(Post).to receive(:search).and_return(ActiveRecord::class)
         allow(Category).to receive(:search).and_return(ActiveRecord::class)
 
         json_response = JSON.parse(response.body)
         data = json_response['data']
-        expect(data['posts'].count).to eq(5)
+        expect(data['post'].count).to eq(5)
         expect(data['category'].count).to eq(0)
       end
     end
@@ -104,12 +104,12 @@ RSpec.describe Api::SearchController, type: :controller do
 
         json_response = JSON.parse(response.body)
         data = json_response['data']
-        expect(data['posts'].count).to eq(0)
+        expect(data['post'].count).to eq(0)
         expect(data['category'].count).to eq(5)
       end
     end
 
-    context 'valid form search for category and posts results' do
+    context 'valid form search for category and post results' do
       before do
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description', :date_cat => Time.now})
         Post.create({:name => 'One piece Manga', :slug => 'one-piece-manga', :descr => 'article de test', :date_post => Time.now, :category_id => 'Manga'})
@@ -126,14 +126,14 @@ RSpec.describe Api::SearchController, type: :controller do
         expect(json_response['success']).to be_truthy
       end
 
-      it 'should return results category and posts entity' do
+      it 'should return results category and post entity' do
         # Mocks
         allow(Post).to receive(:search).and_return(ActiveRecord::class)
         allow(Category).to receive(:search).and_return(ActiveRecord::class)
 
         json_response = JSON.parse(response.body)
         data = json_response['data']
-        expect(data['posts'].count).to eq(1)
+        expect(data['post'].count).to eq(1)
         expect(data['category'].count).to eq(1)
       end
     end
@@ -162,7 +162,7 @@ RSpec.describe Api::SearchController, type: :controller do
 
         json_response = JSON.parse(response.body)
         data = json_response['data']
-        expect(data['posts'].count).to eq(1)
+        expect(data['post'].count).to eq(1)
         expect(data['category'].count).to eq(1)
       end
     end
@@ -192,7 +192,7 @@ RSpec.describe Api::SearchController, type: :controller do
 
         json_response = JSON.parse(response.body)
         data = json_response['data']
-        expect(data['posts'].count).to eq(1)
+        expect(data['post'].count).to eq(1)
         expect(data['category'].count).to eq(1)
       end
     end

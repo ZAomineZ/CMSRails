@@ -29,7 +29,7 @@
 </script>
 
 <form action={uriForm} method="POST" on:submit|preventDefault>
-    {#if uriForm !== '/posts'}
+    {#if uriForm !== '/post'}
         <input name="_method" type="hidden" value="put">
     {/if}
     <InputField id="name" label="Post Name" on:input={callInputs.onInputNameField} placeHolder="Enter your name..."

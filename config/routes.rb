@@ -6,12 +6,12 @@ Rails.application.routes.draw do
   get '/admin', to: 'pages#admin', as: 'admin_page'
 
   scope "admin", as: "admin" do
-    resources :posts, controller: 'admin/posts'
+    resources :posts, controller: 'admin/post'
     resources :category, controller: 'admin/category'
   end
 
   # Entity routes post pagination
-  post '/admin/posts/pagination/:page' => 'api/pagination#set_pagination_posts'
+  post '/admin/post/pagination/:page' => 'api/pagination#set_pagination_posts'
   post '/admin/category/pagination/:page' => 'api/pagination#set_pagination_categories'
 
   post '/search/:q' => 'api/search#results'

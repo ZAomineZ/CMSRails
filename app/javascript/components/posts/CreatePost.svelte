@@ -93,7 +93,7 @@
             content="Here, you can create a new post, this new post can be linked by your categories, you can also add a new image to this post."
             title="Create Post" under_links={[{
                 title: 'Posts',
-                link: '/admin/posts'
+                link: '/admin/post'
             }]}/>
     {#if successResponse !== null}
         <Alert type={successResponse ? 'success' : 'danger'} message={messageResponse}/>

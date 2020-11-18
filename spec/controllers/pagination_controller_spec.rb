@@ -4,7 +4,7 @@ RSpec.describe Api::PaginationController, type: :controller do
 
   describe 'POST #set_pagination_posts' do
 
-    context 'pagination posts error page bigger to pages' do
+    context 'pagination post error page bigger to pages' do
       before do
         FactoryBot.create_list(:post, 20)
         post :set_pagination_posts, params: {page: 3}
@@ -21,7 +21,7 @@ RSpec.describe Api::PaginationController, type: :controller do
       end
     end
 
-    context 'pagination posts error page smaller to pages' do
+    context 'pagination post error page smaller to pages' do
       before do
         FactoryBot.create_list(:post, 20)
         post :set_pagination_posts, params: {page: 0}
@@ -38,7 +38,7 @@ RSpec.describe Api::PaginationController, type: :controller do
       end
     end
 
-    context 'pagination posts success' do
+    context 'pagination post success' do
       before do
         FactoryBot.create_list(:post, 20)
         post :set_pagination_posts, params: {page: 2}

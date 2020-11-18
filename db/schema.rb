@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2020_11_12_143706) do
     t.text "date_cat"
   end
 
-  create_table "posts", force: :cascade do |t|
+  create_table "post", force: :cascade do |t|
     t.string "name"
     t.string "slug"
     t.text "descr"

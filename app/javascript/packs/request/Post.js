@@ -17,7 +17,7 @@ export class Post {
         this.formData.append('authenticity_token', csrfValue)
 
         const page = event.composedPath()[0].dataset ? event.composedPath()[0].dataset.page : 1
-        const uriFetch = '/admin/posts/pagination/' + page
+        const uriFetch = '/admin/post/pagination/' + page
         return await (new Fetch()).response(uriFetch, 'POST', this.formData)
     }
 
@@ -40,9 +40,9 @@ export class Post {
         const actionUri = event.composedPath()[0] ? event.composedPath()[0].action : ''
         let method
         if (uriForm || uriForm.length !== 0) {
-            method = uriForm === '/admin/posts' ? 'POST' : 'PUT'
+            method = uriForm === '/admin/post' ? 'POST' : 'PUT'
         } else {
-            method = actionUri.slice(actionUri.length - 5) === 'posts' ? 'POST': 'PUT'
+            method = actionUri.slice(actionUri.length - 5) === 'post' ? 'POST': 'PUT'
         }
         return await (new Fetch()).response(actionUri, method, this.formData)
     }

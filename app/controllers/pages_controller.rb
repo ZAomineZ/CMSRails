@@ -7,6 +7,7 @@ class PagesController < ApplicationController
   def home
     @categories_last_4 = Category.desc.limit(4)
     @categories_last_6 = Category.desc.offset(4).limit(6)
+    @posts = Post.desc.limit(12)
   end
 
   def admin

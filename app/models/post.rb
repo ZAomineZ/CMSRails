@@ -9,6 +9,7 @@ class Post < ApplicationRecord
 
   scope :search, -> (q) { where("name LIKE ?", "%#{q}%") }
   scope :find_by_name, -> (name) { where('name' => name) }
+  scope :desc, -> () { order('id DESC') }
 
   def slug=(new_slug)
     unless new_slug.empty?

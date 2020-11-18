@@ -38,7 +38,7 @@
         formData.append('authenticity_token', csrfValue)
 
         const page = event.composedPath()[0].dataset ? event.composedPath()[0].dataset.page : 1
-        const uriFetch = '/admin/posts/pagination/' + page
+        const uriFetch = '/admin/post/pagination/' + page
         const response = await (new Fetch()).response(uriFetch, 'POST', formData)
         if (response.success) {
             const data = response.data
