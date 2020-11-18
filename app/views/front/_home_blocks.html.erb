@@ -1,0 +1,31 @@
+<div class="view-front">
+  <div class="row">
+    <div class="block-row">
+      <% categories_last_4.each do |category| %>
+        <%= render 'front/concern/category_row', category: category %>
+      <% end %>
+      <div class="block-right"></div>
+      <div class="row">
+        <div class="block-row">
+          <% categories_last_6.each do |category| %>
+            <%= render 'front/concern/category_row', category: category %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block-view orange">
+  <h2>Nouveaux coloriages ajoutés</h2>
+  <div class="content">
+    <div class="view-front orange">
+      <div class="row">
+        <div class="block-row">
+          <% posts.each do |post| %>
+            <%= render 'front/concern/post_row', post: post %>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
