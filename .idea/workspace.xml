@@ -10,32 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Init template front app">
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/front/category/CategoryListHome.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/front/post/PostListHome.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/javascript/components/front/post/PostRow.svelte" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Add posts component for page home">
+      <change afterPath="$PROJECT_DIR$/app/javascript/components/front/layout/Footer.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/posts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/posts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/components/Home.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/Home.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/front/category/CategoryRow.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/front/category/CategoryRow.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/Sidebar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/Sidebar.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/CreatePost.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/CreatePost.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/EditPost.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/EditPost.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/Form.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/Form.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/Post.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/Post.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/request/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/request/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/posts/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/posts/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/posts/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/posts/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/posts/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/posts/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/pagination_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/pagination_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/search_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/search_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/post_slug.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/post_slug.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/posts.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/posts.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +55,7 @@
         <option value="CategoryListHome" />
         <option value="PostListHome" />
         <option value="PostRow" />
+        <option value="Footer" />
       </list>
     </option>
   </component>
@@ -170,14 +149,7 @@
       <workItem from="1605706882155" duration="1790000" />
       <workItem from="1605708697820" duration="1792000" />
       <workItem from="1605710513867" duration="2129000" />
-      <workItem from="1605712688949" duration="864000" />
-    </task>
-    <task id="LOCAL-00026" summary="Refactor form edit post and method submit and input event">
-      <created>1605024839114</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1605024839114</updated>
+      <workItem from="1605712688949" duration="1188000" />
     </task>
     <task id="LOCAL-00027" summary="Add system image upload for update action post entity">
       <created>1605025446592</created>
@@ -515,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605711395396</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Add posts component for page home">
+      <created>1605713618712</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1605713618713</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +513,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add under links for broadcast" />
     <MESSAGE value="Fix bug for value categories field and his request" />
     <MESSAGE value="Fix bug show message Flash and validate errors fields" />
     <MESSAGE value="Fix bug path image by default for posts entity" />
@@ -559,7 +537,8 @@
     <MESSAGE value="Add message danger and success for Post entity and fix refactor ActionTable" />
     <MESSAGE value="Add content explication for post entity, category entity and dashboard page" />
     <MESSAGE value="Init template front app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init template front app" />
+    <MESSAGE value="Add posts component for page home" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add posts component for page home" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -627,11 +606,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605608466380" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605711397819">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605713621263">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605634448718" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605711397819" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605713621263" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1605621724354">
       <screen x="1920" y="0" width="1920" height="1080" />

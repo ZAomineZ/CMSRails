@@ -1,5 +1,6 @@
 <script>
     import Header from "./front/layout/Header.svelte";
+    import Footer from "./front/layout/Footer.svelte";
     import CategoryListHome from "./front/category/CategoryListHome.svelte";
     import PostListHome from "./front/post/PostListHome.svelte";
 
