@@ -66,7 +66,7 @@
     }
 
     /**
-     * Push categories in the data categories to STRING
+     * Push category in the data category to STRING
      *
      * @param {Event} event
      */

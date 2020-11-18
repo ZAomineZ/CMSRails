@@ -30,7 +30,7 @@ class Admin::PostsController < ApplicationController
     end
 
     if Category.dontExist(categories)
-      response = @response_body.response_json(false, 'One of the selected categories don\'t exist.')
+      response = @response_body.response_json(false, 'One of the selected category don\'t exist.')
       return render json: response
     end
 
@@ -52,7 +52,7 @@ class Admin::PostsController < ApplicationController
       # Update informations file
       set_image_credentials
 
-      # Check if the categories are different from each other
+      # Check if the category are different from each other
       if Category.check_idem(categories)
         response = @response_body.response_json(true, 'You are add one same category, we are delete the duplicate category.')
       else
@@ -78,7 +78,7 @@ class Admin::PostsController < ApplicationController
     end
 
     if Category.dontExist(categories)
-      response = @response_body.response_json(false, 'One of the selected categories don\'t exist.')
+      response = @response_body.response_json(false, 'One of the selected category don\'t exist.')
       return render json: response
     end
 
@@ -89,7 +89,7 @@ class Admin::PostsController < ApplicationController
       return render json: response
     end
 
-    # Update credentials categories and images
+    # Update credentials category and images
     @post.category_id = Category.get_categories(categories).uniq.join(',')
     if params[:image] != nil && params[:image] != 'null'
       @post.img_original = params[:image]
@@ -102,7 +102,7 @@ class Admin::PostsController < ApplicationController
         set_image_credentials
       end
 
-      # Check if the categories are different from each other
+      # Check if the category are different from each other
       if Category.check_idem(categories)
         response = @response_body.response_json(true, 'You are add one same category, we are delete the duplicate category.')
       else

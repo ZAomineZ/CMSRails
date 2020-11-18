@@ -1,1 +1,3 @@
-<%= svelte_component :Home, {}, {prerender: true} %>
+<%= svelte_component :Home, {
+    categories_last_4: @categories_last_4, categories_last_6: @categories_last_6
+}, {prerender: true} %>

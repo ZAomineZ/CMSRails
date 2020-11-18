@@ -64,7 +64,7 @@ RSpec.describe Api::PaginationController, type: :controller do
 
   describe 'POST #set_pagination_categories' do
 
-    context 'pagination categories error page bigger to pages' do
+    context 'pagination category error page bigger to pages' do
       before do
         FactoryBot.create_list(:category, 20)
         post :set_pagination_categories, params: {page: 3}
@@ -81,7 +81,7 @@ RSpec.describe Api::PaginationController, type: :controller do
       end
     end
 
-    context 'pagination categories error page smaller to pages' do
+    context 'pagination category error page smaller to pages' do
       before do
         FactoryBot.create_list(:category, 20)
         post :set_pagination_categories, params: {page: 0}
@@ -98,7 +98,7 @@ RSpec.describe Api::PaginationController, type: :controller do
       end
     end
 
-    context 'pagination categories success' do
+    context 'pagination category success' do
       before do
         FactoryBot.create_list(:category, 20)
         post :set_pagination_categories, params: {page: 2}

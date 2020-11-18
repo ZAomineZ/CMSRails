@@ -130,7 +130,7 @@ RSpec.describe Admin::PostsController, type: :controller do
       end
     end
 
-    context 'valid create post method with many categories' do
+    context 'valid create post method with many category' do
       before do
         categories = 'Manga,Anime'
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
@@ -149,7 +149,7 @@ RSpec.describe Admin::PostsController, type: :controller do
         expect(data['message']).to eq('Post was successfully created.')
       end
 
-      it 'should return attributes categories' do
+      it 'should return attributes category' do
         post = Post.find(1)
         categories = post.category_id
 
@@ -181,7 +181,7 @@ RSpec.describe Admin::PostsController, type: :controller do
         expect(data['message']).to eq('Post was successfully created.')
       end
 
-      it 'should return attributes categories' do
+      it 'should return attributes category' do
         post = Post.find(1)
         categories = post.category_id
 
@@ -212,7 +212,7 @@ RSpec.describe Admin::PostsController, type: :controller do
         expect(data['message']).to eq('You are add one same category, we are delete the duplicate category.')
       end
 
-      it 'should return attributes categories with the data uniq categories' do
+      it 'should return attributes category with the data uniq category' do
         post = Post.find(1)
         categories = post.category_id
 
@@ -225,7 +225,7 @@ RSpec.describe Admin::PostsController, type: :controller do
       end
     end
 
-    context 'invalid categories dont exist for method create post' do
+    context 'invalid category dont exist for method create post' do
       before do
         categories = 'Manga'
         post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: categories, descr: 'test de test', image: nil}
@@ -238,10 +238,10 @@ RSpec.describe Admin::PostsController, type: :controller do
       it 'should return response false' do
         data = JSON.parse(response.body)
         expect(data['success']).to be_falsey
-        expect(data['message']).to eq('One of the selected categories don\'t exist.')
+        expect(data['message']).to eq('One of the selected category don\'t exist.')
       end
 
-      it 'should don\'t return attributes categories' do
+      it 'should don\'t return attributes category' do
         # Mocks
         allow(Category).to receive(:dontExist).and_return(true)
 
@@ -250,7 +250,7 @@ RSpec.describe Admin::PostsController, type: :controller do
       end
     end
 
-    context 'invalid categories empty dont exist for method create post' do
+    context 'invalid category empty dont exist for method create post' do
       before do
         post :create, params: {name: 'Test de test', slug: 'test-de-test-de-test', categories: '', descr: 'test de test', image: nil}
       end
@@ -265,7 +265,7 @@ RSpec.describe Admin::PostsController, type: :controller do
         expect(data['message']).to eq('One category must be selected.')
       end
 
-      it 'should don\'t return attributes categories' do
+      it 'should don\'t return attributes category' do
         count = Post.count
         expect(count).to eq(0)
       end
@@ -507,7 +507,7 @@ RSpec.describe Admin::PostsController, type: :controller do
       end
     end
 
-    context 'valide update post method with categories' do
+    context 'valide update post method with category' do
       before do
         categories = 'Manga,Anime,Série'
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
@@ -528,7 +528,7 @@ RSpec.describe Admin::PostsController, type: :controller do
         expect(data['message']).to eq('Post was successfully edited.')
       end
 
-      it 'should return attributes categories' do
+      it 'should return attributes category' do
         post = Post.find(1)
         categories = post.category_id
 
@@ -550,7 +550,7 @@ RSpec.describe Admin::PostsController, type: :controller do
 
     end
 
-    context 'invalid categories dont exist for method update post' do
+    context 'invalid category dont exist for method update post' do
       before do
         categories = 'One piece'
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description'})
@@ -567,10 +567,10 @@ RSpec.describe Admin::PostsController, type: :controller do
       it 'should return response false' do
         data = JSON.parse(response.body)
         expect(data['success']).to be_falsey
-        expect(data['message']).to eq('One of the selected categories don\'t exist.')
+        expect(data['message']).to eq('One of the selected category don\'t exist.')
       end
 
-      it 'should don\'t return attributes categories' do
+      it 'should don\'t return attributes category' do
         # Mocks
         allow(Category).to receive(:dontExist).and_return(true)
 
@@ -587,7 +587,7 @@ RSpec.describe Admin::PostsController, type: :controller do
       end
     end
 
-    context 'invalid categories empty dont exist for method create post' do
+    context 'invalid category empty dont exist for method create post' do
       before do
         post = create(:post_categories)
         put :update, params: {id: post.id, name: 'Test de test', slug: 'test-de-test-de-test', categories: '', descr: 'test de test', image: nil}
@@ -631,7 +631,7 @@ RSpec.describe Admin::PostsController, type: :controller do
         expect(data['message']).to eq('You are add one same category, we are delete the duplicate category.')
       end
 
-      it 'should return attributes categories with the data uniq categories' do
+      it 'should return attributes category with the data uniq category' do
         post = Post.find(1)
         categories = post.category_id
 

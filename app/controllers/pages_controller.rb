@@ -2,8 +2,11 @@ class PagesController < ApplicationController
 
   before_action :only_signed_in, only: [:admin]
   before_action :admin_access, only: [:admin]
+  layout 'template', expect: [:admin]
 
   def home
+    @categories_last_4 = Category.desc.limit(4)
+    @categories_last_6 = Category.desc.offset(4).limit(6)
   end
 
   def admin

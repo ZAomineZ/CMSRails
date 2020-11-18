@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   # Entity routes post pagination
   post '/admin/posts/pagination/:page' => 'api/pagination#set_pagination_posts'
-  post '/admin/categories/pagination/:page' => 'api/pagination#set_pagination_categories'
+  post '/admin/category/pagination/:page' => 'api/pagination#set_pagination_categories'
 
   post '/search/:q' => 'api/search#results'
 

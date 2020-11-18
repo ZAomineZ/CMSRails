@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_11_12_143706) do
 
-  create_table "categories", force: :cascade do |t|
+  create_table "category", force: :cascade do |t|
     t.string "name"
     t.string "slug"
     t.text "resume"

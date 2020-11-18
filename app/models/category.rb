@@ -9,6 +9,7 @@ class Category < ApplicationRecord
   scope :find_by_slug, -> (slug) { where('slug' => slug) }
   scope :find_by_name, -> (name) { where('name' => name) }
   scope :search, -> (q) { where("name LIKE ?", "%#{q}%") }
+  scope :desc, -> () { order('id DESC') }
 
   def getResume
     read_attribute(:resume)[0, 150] + "..."

@@ -42,7 +42,7 @@ RSpec.describe Api::SearchController, type: :controller do
         json_response = JSON.parse(response.body)
         data = json_response['data']
         expect(data['posts'].count).to eq(0)
-        expect(data['categories'].count).to eq(0)
+        expect(data['category'].count).to eq(0)
       end
     end
 
@@ -74,11 +74,11 @@ RSpec.describe Api::SearchController, type: :controller do
         json_response = JSON.parse(response.body)
         data = json_response['data']
         expect(data['posts'].count).to eq(5)
-        expect(data['categories'].count).to eq(0)
+        expect(data['category'].count).to eq(0)
       end
     end
 
-    context 'valid form search only categories results' do
+    context 'valid form search only category results' do
       before do
         FactoryBot.create_list(:category, 5)
         # Supplementary credentials for test
@@ -105,11 +105,11 @@ RSpec.describe Api::SearchController, type: :controller do
         json_response = JSON.parse(response.body)
         data = json_response['data']
         expect(data['posts'].count).to eq(0)
-        expect(data['categories'].count).to eq(5)
+        expect(data['category'].count).to eq(5)
       end
     end
 
-    context 'valid form search for categories and posts results' do
+    context 'valid form search for category and posts results' do
       before do
         Category.create({:name => 'Manga', :slug => 'manga', :resume => 'test de description', :date_cat => Time.now})
         Post.create({:name => 'One piece Manga', :slug => 'one-piece-manga', :descr => 'article de test', :date_post => Time.now, :category_id => 'Manga'})
@@ -134,7 +134,7 @@ RSpec.describe Api::SearchController, type: :controller do
         json_response = JSON.parse(response.body)
         data = json_response['data']
         expect(data['posts'].count).to eq(1)
-        expect(data['categories'].count).to eq(1)
+        expect(data['category'].count).to eq(1)
       end
     end
 
@@ -163,7 +163,7 @@ RSpec.describe Api::SearchController, type: :controller do
         json_response = JSON.parse(response.body)
         data = json_response['data']
         expect(data['posts'].count).to eq(1)
-        expect(data['categories'].count).to eq(1)
+        expect(data['category'].count).to eq(1)
       end
     end
 
@@ -193,7 +193,7 @@ RSpec.describe Api::SearchController, type: :controller do
         json_response = JSON.parse(response.body)
         data = json_response['data']
         expect(data['posts'].count).to eq(1)
-        expect(data['categories'].count).to eq(1)
+        expect(data['category'].count).to eq(1)
       end
     end
   end
