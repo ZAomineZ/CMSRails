@@ -2,10 +2,6 @@ Rails.application.routes.draw do
 
   root to:'pages#home'
 
-  # Routes coloriages
-  get '/coloriage/:slug', to: 'admin/category#show'
-  get '/:slug', to: 'admin/posts#show'
-
   # Routes Admin
   get '/admin', to: 'pages#admin', as: 'admin_page'
 
@@ -28,5 +24,9 @@ Rails.application.routes.draw do
   # Routes Account
   get '/admin/account', to: 'users#account', as: 'account'
   put '/admin/account/:user_id', to: 'users#update_account', as: 'update_account'
+
+  # Routes coloriages
+  get '/coloriage/:slug', to: 'admin/category#show'
+  get '/:slug', to: 'admin/posts#show'
 
 end

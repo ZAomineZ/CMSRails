@@ -7,14 +7,14 @@
           <% items.each do |item| %>
             <div class="row-cell">
               <div class="view-row">
-                <a href="#" title="<%= item.name %>">
+                <a href="/coloriage/<%= item.slug %>" title="<%= item.name %>">
                   <img src="<%= item.avat_cat.url %>" alt="<%= item.name %>">
                 </a>
               </div>
               <div class="title-row">
                 <div class="title-block">
                   <h4>
-                    <a href="#"><%= item.name %></a>
+                    <a href="/coloriage/<%= item.slug %>"><%= item.name %></a>
                   </h4>
                 </div>
               </div>
