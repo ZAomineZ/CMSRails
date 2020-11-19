@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/admin', to: 'pages#admin', as: 'admin_page'
 
   scope "admin", as: "admin" do
-    resources :posts, controller: 'admin/post', only: [:index, :new, :create, :edit, :update, :destroy]
+    resources :posts, controller: 'admin/posts', only: [:index, :new, :create, :edit, :update, :destroy]
     resources :category, controller: 'admin/category', only: [:index, :new, :create, :edit, :update, :destroy]
   end
 

@@ -2,7 +2,7 @@
     import MenuItem from "./MenuItem.svelte";
 
     // Data
-    let linksPost = [{label: 'Posts', link: '/admin/post'}, {label: 'Create Post', link: '/admin/post/new'}]
+    let linksPost = [{label: 'Posts', link: '/admin/posts'}, {label: 'Create Post', link: '/admin/posts/new'}]
     let linksCategory = [{label: 'Categories', link: '/admin/category'}, {label: 'Create Category', link: '/admin/category/new'}]
 </script>
 <div class="sidebar">

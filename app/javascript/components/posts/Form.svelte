@@ -24,12 +24,12 @@
     export let dataCategories = []
 
     onMount(() => {
-        console.log(post)
+        console.log(uriForm)
     })
 </script>
 
 <form action={uriForm} method="POST" on:submit|preventDefault>
-    {#if uriForm !== '/post'}
+    {#if uriForm !== '/admin/posts'}
         <input name="_method" type="hidden" value="put">
     {/if}
     <InputField id="name" label="Post Name" on:input={callInputs.onInputNameField} placeHolder="Enter your name..."
