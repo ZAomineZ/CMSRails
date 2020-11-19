@@ -57,8 +57,10 @@ class Admin::PostsController < ApplicationController
 
       # Check if the category are different from each other
       if Category.check_idem(categories)
+        flash[:success] = 'You are add one same category, we are delete the duplicate category.'
         response = @response_body.response_json(true, 'You are add one same category, we are delete the duplicate category.')
       else
+        flash[:success] = 'Post was successfully created.'
         response = @response_body.response_json(true, 'Post was successfully created.')
       end
     else
@@ -107,8 +109,10 @@ class Admin::PostsController < ApplicationController
 
       # Check if the category are different from each other
       if Category.check_idem(categories)
+        flash[:success] = 'You are add one same category, we are delete the duplicate category.'
         response = @response_body.response_json(true, 'You are add one same category, we are delete the duplicate category.')
       else
+        flash[:success] = 'Post was successfully edited.'
         response = @response_body.response_json(true, 'Post was successfully edited.')
       end
     else

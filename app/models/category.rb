@@ -35,6 +35,7 @@ class Category < ApplicationRecord
       data = self.get_categories(categories)
       data.each do |category|
         slug = category.parameterize
+
         cat_data_slug = Category.find_by_slug(slug).to_a
         cat_data_name = Category.find_by_name(category).to_a
         if cat_data_slug.empty? && cat_data_name.empty?

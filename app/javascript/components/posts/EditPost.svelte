@@ -90,6 +90,9 @@
             uriForm
         })
         successResponse = !!response.success;
+        // Redirect to admin dashboard, if the response is success !
+        if (successResponse) window.location.href = '/admin'
+
         messageResponse = response.message
         errorFields = response.errorFields ? response.errorFields : null
     }
