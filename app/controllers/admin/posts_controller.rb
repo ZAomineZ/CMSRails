@@ -140,6 +140,9 @@ class Admin::PostsController < ApplicationController
   end
 
   def show
+    if @post == nil
+      return redirect_to root_path
+    end
     @posts = Post.all
     @categories = Category.all
     @category = Category.find_by_slug(request.referer.split('coloriage/')[1])[0]

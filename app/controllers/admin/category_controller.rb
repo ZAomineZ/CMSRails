@@ -91,6 +91,9 @@ class Admin::CategoryController < ApplicationController
   end
 
   def show
+    if @category == nil
+      return redirect_to root_path
+    end
     @posts = Post.find_by_category(@category)
     @categories = Category.all
   end
