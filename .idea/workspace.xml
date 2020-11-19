@@ -11,11 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Fix home page compatible to erb html">
-      <change afterPath="$PROJECT_DIR$/app/views/front/_home_blocks.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/front/concern/_category_row.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/front/concern/_post_row.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/home.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/category/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/category/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/posts/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/posts/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/front/concern/_block_view_categories.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/front/concern/_block_view_categories.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/front/concern/_post_row.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/front/concern/_post_row.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/front/concern/_view_front_posts.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/front/concern/_view_front_posts.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +160,7 @@
       <workItem from="1605717680700" duration="1796000" />
       <workItem from="1605719510159" duration="4670000" />
       <workItem from="1605724886395" duration="607000" />
+      <workItem from="1605777754539" duration="2407000" />
     </task>
     <task id="LOCAL-00030" summary="Test success post controller upload file when image field is nil">
       <created>1605174035208</created>
@@ -629,11 +632,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605631323989" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605725301210">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605780010718">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605634985616" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605725301210" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605780010718" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

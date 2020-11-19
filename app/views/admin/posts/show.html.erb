@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/" title="coloriage">Coloriage</a>
+    >
+    <a href="/colorage/<%= @post.name %>"><%= @post.name %></a>
+  </div>
+  <h1>Coloriage <%= @post.name %> à imprimer</h1>
+  <!-- BLOCK POST FULL PANEL -->
+  <div class="block-view">
+    <div class="content">
+      <div class="view-front default">
+        <div class="view-full">
+          <div class="block-right">
+            <div class="container"></div>
+          </div>
+          <div class="container">
+            <div class="block-field">
+              <a href="<%= @post.img_original.url %>">
+                <img src="<%= @post.img_original.medium.url %>" alt="<%= @post.name %>">
+              </a>
+            </div>
+            <div class="extra-link">
+              <div class="extra-field">
+                Vous avez envie de voir plus de
+                <a href="http://www.coloriages.info/coloriage/fille" target="_BLANK">coloriages de fille</a>
+                . Commencez par les
+                <a href="http://www.coloriagesailormoon.com/" title="Coloriages de Sailor Moon" target="_BLANK">coloriages
+                  de Sailor Moon</a>
+                . On passe des belles fées au super-pouvoir à colorier. Ou encore de jolies monstres
+                <a href="http://www.coloriagemonsterhigh.net/">Monster High</a>
+                à dessiner.
+              </div>
+            </div>
+            <div class="btn-block">
+              <div class="grid-btn">
+                <a href="<%= @post.img_original.url %>" target="_blank" class="btn">Imprimer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block-pub"></div>
+        <!-- BLOCK POSTS AND CATEGORIES SIMILAR -->
+        <h2>Coloriages similaires</h2>
+        <div class="block-view">
+          <div class="content">
+            <%= render 'front/concern/view_front_posts', items: @posts %>
+            <%= render 'front/concern/block_view_categories', items: @categories, title: 'Catégories similaires', border_orange: true %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

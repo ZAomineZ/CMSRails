@@ -1,7 +1,7 @@
 <div class="block-view orange">
-  <h2>Nouveaux catégories ajoutés</h2>
+  <h2><%= title %></h2>
   <div class="content">
-    <div class="view-front orange">
+    <div class="view-front <%= border_orange ? 'orange' : 'default' %>">
       <div class="row">
         <div class="block-row">
           <% items.each do |item| %>

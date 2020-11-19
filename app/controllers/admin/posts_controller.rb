@@ -1,7 +1,10 @@
 class Admin::PostsController < ApplicationController
 
-  before_action :set_post, only: [:show, :edit, :update]
+  before_action :set_post, only: [:edit, :update]
+  before_action :set_post_with_slug, only: [:show]
   before_action :admin_access, only: [:new, :create, :edit, :update, :destroy]
+
+  layout 'template', only: [:show]
 
   def initialize
     super
@@ -132,6 +135,11 @@ class Admin::PostsController < ApplicationController
     redirect_to admin_posts_path
   end
 
+  def show
+    @posts = Post.all
+    @categories = Category.all
+  end
+
   private
 
   def params_post
@@ -140,6 +148,10 @@ class Admin::PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def set_post_with_slug
+    @post = Post.find_by_slug(params[:slug] ? params[:slug] : nil)
   end
 
   def set_image_credentials
