@@ -102,7 +102,7 @@
             content="Here, you can edit your post '{post.name}'."
             title="Edit Post '{post.name}'" under_links={[{
                 title: 'Posts',
-                link: '/admin/post'
+                link: '/admin/posts'
             }]}/>
     {#if successResponse !== null}
         <Alert type={successResponse ? 'success' : 'danger'} message={messageResponse}/>

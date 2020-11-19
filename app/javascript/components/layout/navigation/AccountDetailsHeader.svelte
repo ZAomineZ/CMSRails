@@ -40,6 +40,9 @@
             <li>
                 <a class="dropdown-item" href="/admin/account">Account</a>
             </li>
+            <li>
+                <a class="dropdown-item" href="/">Voir site</a>
+            </li>
             <li class="divider"></li>
             <li>
                 <a class="dropdown-item" href="/logout" on:click|preventDefault={logout}>Log Out</a>
