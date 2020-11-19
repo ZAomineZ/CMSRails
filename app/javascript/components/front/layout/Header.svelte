@@ -8,7 +8,7 @@
         <div class="block-search">
             <h2>Recherche un coloriage</h2>
             <div class="search-form">
-                <form accept-charset="UTF-8" action="/fr" class="google-cse" id="search-block-form" method="POST">
+                <form accept-charset="UTF-8" action="#" class="google-cse" id="search-block-form" method="POST">
                     <div>
                         <div class="container-inline">
                             <div class="form-item form-type-textfield form-item-search-block-form">

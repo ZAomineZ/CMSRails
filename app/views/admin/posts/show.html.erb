@@ -2,7 +2,11 @@
   <div class="breadcrumb">
     <a href="/" title="coloriage">Coloriage</a>
     >
-    <a href="/colorage/<%= @post.name %>"><%= @post.name %></a>
+    <% if @category != nil %>
+      <a href="/coloriage/<%= @category.slug %>"><%= @category.name %></a>
+      >
+    <% end %>
+    <a href="/<%= @post.slug %>"><%= @post.name %></a>
   </div>
   <h1>Coloriage <%= @post.name %> à imprimer</h1>
   <!-- BLOCK POST FULL PANEL -->

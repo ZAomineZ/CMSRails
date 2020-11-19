@@ -138,6 +138,7 @@ class Admin::PostsController < ApplicationController
   def show
     @posts = Post.all
     @categories = Category.all
+    @category = Category.find_by_slug(request.referer.split('coloriage/')[1])[0]
   end
 
   private
