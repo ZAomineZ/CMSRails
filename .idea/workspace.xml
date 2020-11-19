@@ -10,12 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Edit page 500 and page 404 for the requests">
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Fix bug link referer for post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/front/layout/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/front/layout/Header.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/category/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/category/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/posts/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/posts/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/category.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/category.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,14 +155,7 @@
       <workItem from="1605717680700" duration="1796000" />
       <workItem from="1605719510159" duration="4670000" />
       <workItem from="1605724886395" duration="607000" />
-      <workItem from="1605777754539" duration="9150000" />
-    </task>
-    <task id="LOCAL-00035" summary="Add image preview for edit category page">
-      <created>1605191614423</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1605191614423</updated>
+      <workItem from="1605777754539" duration="10204000" />
     </task>
     <task id="LOCAL-00036" summary="Add validation for user entity with his tests">
       <created>1605199063730</created>
@@ -503,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605790553210</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Fix bug link referer for post">
+      <created>1605792120043</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1605792120043</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +519,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix bug duplicate category for one post" />
     <MESSAGE value="Add role for category entity and post entity" />
     <MESSAGE value="Add role for user account and logout action" />
     <MESSAGE value="Add link for entity for items search" />
@@ -547,7 +543,8 @@
     <MESSAGE value="Fix bug link posts for the back end" />
     <MESSAGE value="Fix bug links posts controller" />
     <MESSAGE value="Edit page 500 and page 404 for the requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit page 500 and page 404 for the requests" />
+    <MESSAGE value="Fix bug link referer for post" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bug link referer for post" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -615,11 +612,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605720225860" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605790554962">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605792121752">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605634448718" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605790554962" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605792121752" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1605621724354">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -630,11 +627,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605631323989" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605792089291">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605792983252">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605634985616" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605792089291" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605792983252" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>
