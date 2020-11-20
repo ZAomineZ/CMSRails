@@ -12,5 +12,22 @@
         </library>
       </libraries>
     </data-source>
+    <data-source source="LOCAL" name="coloriage_winx@localhost" uuid="a5accf69-de1b-42d9-b44c-3422b34fd575">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/coloriage_winx</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="test" uuid="e9aa9748-69d5-4af8-86c7-749f4a8ecc30">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.31.1/sqlite-jdbc-3.31.1.jar</url>
+        </library>
+      </libraries>
+    </data-source>
   </component>
 </project>

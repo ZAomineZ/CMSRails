@@ -10,11 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Update structure file for upload entity file">
-      <change afterPath="$PROJECT_DIR$/app/views/pages/sitemap.xml.erb" afterDir="false" />
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Init sitemap">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,11 +80,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="DatabaseDriversLRU" value="sqlite&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RorFormation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PetsyRails" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
@@ -158,14 +160,8 @@
       <workItem from="1605719510159" duration="4670000" />
       <workItem from="1605724886395" duration="607000" />
       <workItem from="1605777754539" duration="17757000" />
-      <workItem from="1605864382101" duration="5305000" />
-    </task>
-    <task id="LOCAL-00040" summary="Change structure root template">
-      <created>1605283475636</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1605283475636</updated>
+      <workItem from="1605864382101" duration="7431000" />
+      <workItem from="1605878250822" duration="1020000" />
     </task>
     <task id="LOCAL-00041" summary="Add access role admin and access auth">
       <created>1605289125863</created>
@@ -503,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605866670721</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Init sitemap">
+      <created>1605869697942</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1605869697942</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +525,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add icon search for search bar" />
     <MESSAGE value="Add message success and danger in the dashboard admin and refactor under components for the dashboard" />
     <MESSAGE value="Fix bug pagination data pages" />
     <MESSAGE value="Add message flash success and danger for categories entity" />
@@ -547,7 +549,8 @@
     <MESSAGE value="Redirect to admin, if the response is success for create and edit action to post entity" />
     <MESSAGE value="Redirect root path, if the category or post don't exist in our bdd" />
     <MESSAGE value="Update structure file for upload entity file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update structure file for upload entity file" />
+    <MESSAGE value="Init sitemap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init sitemap" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -576,10 +579,10 @@
     </state>
     <state x="2555" y="0" width="645" height="1077" key="#Ruby/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604999889559" />
     <state x="2555" y="0" key="#Ruby/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586708528" />
-    <state x="2018" y="185" width="806" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604417997427">
+    <state x="2018" y="185" width="806" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605878603789">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2018" y="185" width="806" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604417997427" />
+    <state x="2018" y="185" width="806" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605878603789" />
     <state x="2587" y="318" width="682" height="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605719724075">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -593,15 +596,15 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="247" height="195" key="DatabaseViewActions_Filter/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605186930547" />
-    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl" timestamp="1605718306886">
+    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl" timestamp="1605878560525">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="263" y="272" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1604922080824" />
-    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605718306886" />
-    <state width="222" height="539" key="HiddenNamespacesPopup" timestamp="1604417921247">
+    <state x="2147" y="223" width="430" height="481" key="FileChooserDialogImpl/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605878560525" />
+    <state width="247" height="539" key="HiddenNamespacesPopup" timestamp="1605878291208">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="222" height="539" key="HiddenNamespacesPopup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604417921247" />
+    <state width="247" height="539" key="HiddenNamespacesPopup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605878291208" />
     <state x="2365" y="177" key="SettingsEditor" timestamp="1604673986298">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -630,11 +633,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605802050324" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605869406541">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605878831869">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605634985616" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605869406541" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605878831869" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>
