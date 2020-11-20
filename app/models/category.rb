@@ -15,7 +15,7 @@ class Category < ApplicationRecord
     read_attribute(:resume)[0, 150] + "..."
   end
 
-  def date_cat
+  def get_date_cat
     date_cat = read_attribute(:date_cat)
     DateTime.parse(date_cat).strftime("%m %B %Y")
   end

@@ -10,7 +10,8 @@ class CategoryFileUploader < CarrierWave::Uploader::Base
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "images/category/#{model.id}/"
+    date = Date.parse(model.date_cat)
+    "images/" + date.strftime("%Y") + "/" + date.strftime("%m") + "/" + date.strftime("%d") + "/"
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -18,11 +19,11 @@ class CategoryFileUploader < CarrierWave::Uploader::Base
   end
 
   # Process files as they are uploaded:
-  process resize_to_fill: [150, 150]
+  process resize_to_fit: [150, 150]
 
   # Create different versions of your uploaded files:
   version :icon do
-    process :resize_to_fill => [50, 50]
+    process :resize_to_fit => [50, 50]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -38,7 +39,7 @@ class CategoryFileUploader < CarrierWave::Uploader::Base
       name = "#{mounted_as}"
       parts = original_filename.split('.')
       path = parts[1]
-      (name + '.' + path) if original_filename
+      (name + "_" + model.slug + '.' + path) if original_filename
     end
   end
 end
