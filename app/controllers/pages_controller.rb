@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   before_action :only_signed_in, only: [:admin]
   before_action :admin_access, only: [:admin]
 
+  layout nil, only: [:sitemap]
   layout 'application', only: [:admin]
   layout 'template', only: [:home]
 
@@ -26,4 +27,10 @@ class PagesController < ApplicationController
     render 'admin/dashboard'
   end
 
+  def sitemap
+    @host = "#{request.protocol}#{request.host}"
+    @posts = Post.all
+    @last_post = Post.desc.limit(1)[0]
+    @categories = Category.all
+  end
 end

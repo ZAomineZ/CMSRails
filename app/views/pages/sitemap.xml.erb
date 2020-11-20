@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc><%= @host %></loc>
+    <lastmod><%= Time.zone.at(@last_post.date_post.to_time).to_datetime %></lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <% @posts.each do |post| %>
+    <url>
+      <loc><%= "#{@host}/#{post.slug}" %></loc>
+      <image:image>
+        <image:loc><%= post.img_original.url %></image:loc>
+      </image:image>
+      <lastmod><%= Time.zone.at(post.date_post.to_time).to_datetime %></lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  <% end %>
+  <% @categories.each do |category| %>
+    <url>
+      <loc><%= "#{@host}/coloriage/#{category.slug}" %></loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  <% end %>
+</urlset>

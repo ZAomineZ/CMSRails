@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  root to:'pages#home'
+  root to: 'pages#home'
+
+  # Route Sitemap
+  get '/sitemap', to: 'pages#sitemap', :defaults => {:format => 'xml'}
 
   # Routes Admin
   get '/admin', to: 'pages#admin', as: 'admin_page'
