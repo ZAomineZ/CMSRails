@@ -3,8 +3,7 @@
     export let activeShow = false
     export let valueInputSearch = ''
     export let items = {
-        posts: [],
-        categories: []
+        posts: []
     }
 </script>
 
@@ -21,7 +20,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <ul class="search-items-results-list">
                     {#each items.posts as post}
                         <li>
@@ -33,24 +32,6 @@
                                 <a href="/admin/posts/{post.id}/edit">{post.name}</a>
                                 <br>
                                 (belongs to <span class="search-items-results-search">{post.category_id}</span>)
-                                <br>
-                                (result for <span class="search-items-results-search">{valueInputSearch}</span>)
-                            </p>
-                        </li>
-                    {/each}
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul class="search-items-results-list">
-                    {#each items.categories as category}
-                        <li>
-                            <a href="/admin/category/{category.id}/edit">
-                                <img alt="category img {category.id}"
-                                     src={category.avat_cat.icon.url ? category.avat_cat.icon.url : '/images/default/thumb_image.png'}
-                                     class="categories">
-                            </a>
-                            <p class="categories-paragraph">
-                                <a href="/admin/category/{category.id}/edit">{category.name}</a>
                                 <br>
                                 (result for <span class="search-items-results-search">{valueInputSearch}</span>)
                             </p>

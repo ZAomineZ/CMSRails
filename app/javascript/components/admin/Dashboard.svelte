@@ -17,7 +17,6 @@
     // PROPS
     export let posts = []
     export let posts_count = 0
-    export let categories_count = 0
     export let pages = 1
     export let currentPage = 1
     export let messageSuccess = null
@@ -58,11 +57,8 @@
             <DashboardInfo content="Get familiar with dashboard, here are some ways to get started."
                            title="Welcome back Admin !"/>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <DataDashboard data_number={posts_count} title="Posts" type="warning"/>
-                </div>
-                <div class="col-md-6">
-                    <DataDashboard data_number={categories_count} title="Categories" type="info"/>
                 </div>
             </div>
             <div class="row">

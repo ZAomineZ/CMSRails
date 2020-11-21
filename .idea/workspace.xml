@@ -10,13 +10,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="add file uploader swf and refactor app">
+    <list default="true" id="a6aae013-07ca-4194-9b93-ef4b4db1ede3" name="Default Changelist" comment="Delete module category to app">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/CreatePost.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/CreatePost.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/components/posts/EditPost.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/posts/EditPost.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/packs/request/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/packs/request/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/posts/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/posts/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/api/search_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/api/search_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/admin/Dashboard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/admin/Dashboard.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/Sidebar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/Sidebar.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/components/layout/search/ItemsResultsSearch.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/components/layout/search/ItemsResultsSearch.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/dashboard.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/dashboard.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,14 +166,7 @@
       <workItem from="1605864382101" duration="7431000" />
       <workItem from="1605878250822" duration="1945000" />
       <workItem from="1605880446469" duration="8151000" />
-      <workItem from="1605957519191" duration="11181000" />
-    </task>
-    <task id="LOCAL-00043" summary="Change uri routes for posts and categories front">
-      <created>1605363965494</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1605363965494</updated>
+      <workItem from="1605957519191" duration="11792000" />
     </task>
     <task id="LOCAL-00044" summary="Add module Admin for posts and categories controller">
       <created>1605366321134</created>
@@ -508,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605969336072</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Delete module category to app">
+      <created>1605970607971</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1605970607971</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +530,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add message flash success and danger for categories entity" />
     <MESSAGE value="Add link for image original in edit post and edit category page" />
     <MESSAGE value="Fix bug mustn't upload file if the field file is empty for edit action to entity post" />
     <MESSAGE value="Refactor render message json for post entity" />
@@ -552,7 +554,8 @@
     <MESSAGE value="Init sitemap" />
     <MESSAGE value="Change mode database sqlite to mysql" />
     <MESSAGE value="add file uploader swf and refactor app" />
-    <option name="LAST_COMMIT_MESSAGE" value="add file uploader swf and refactor app" />
+    <MESSAGE value="Delete module category to app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete module category to app" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2546" y="0" width="663" height="1077" key="#General" timestamp="1604999872535">
@@ -620,11 +623,11 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605720225860" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605969346785">
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2" timestamp="1605970609753">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="555" y="249" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605634448718" />
-    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605969346785" />
+    <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605970609753" />
     <state x="2475" y="257" width="806" height="533" key="Vcs.Push.Dialog.v2/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604590340899" />
     <state x="2575" y="124" width="609" height="801" key="find.popup" timestamp="1605621724354">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -635,11 +638,11 @@
     </state>
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605802050324" />
     <state x="2541" y="240" key="run.anything.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604586568457" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605970176416">
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1605971100666">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="623" y="224" width="672" height="658" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@0.0.1920.1047" timestamp="1605634985616" />
-    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605970176416" />
+    <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1047/1920.0.1920.1080@1920.0.1920.1080" timestamp="1605971100666" />
     <state x="2543" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1604594093540" />
     <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1604312208036" />
   </component>

@@ -15,7 +15,6 @@ class PagesController < ApplicationController
 
   def admin
     @posts_count = Post.count
-    @categories_count = Category.count
 
     pagination = PaginationEntity.new(1, Post)
     @posts = pagination.get_data[:items]
@@ -31,6 +30,5 @@ class PagesController < ApplicationController
     @host = "#{request.protocol}#{request.host}"
     @posts = Post.all
     @last_post = Post.desc.limit(1)[0]
-    @categories = Category.all
   end
 end

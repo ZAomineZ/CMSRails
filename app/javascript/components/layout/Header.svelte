@@ -19,7 +19,6 @@
     let csrfValue = null
 
     let postsSearch = []
-    let categoriesSearch = []
 
     onMount(() => {
         body = document.querySelector('body')
@@ -58,7 +57,6 @@
         if (response.success) {
             const data = response.data
             postsSearch = data.posts
-            categoriesSearch = data.categories
         }
     }
 
@@ -88,5 +86,5 @@
         </div>
     </nav>
 </div>
-<ItemsResultsSearch activeShow={activeShow} items={{posts: postsSearch, categories: categoriesSearch}}
+<ItemsResultsSearch activeShow={activeShow} items={{posts: postsSearch}}
                     on:click={handleActiveClick} valueInputSearch={valueInputSearch}/>

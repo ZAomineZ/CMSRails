@@ -7,8 +7,7 @@ class Api::SearchController < ApplicationController
       return render json: response
     end
     posts = Post.search(q).all
-    categories = Category.search(q).all
-    response = {success: true, data: {categories: categories, posts: posts}}
+    response = {success: true, data: {posts: posts}}
     render json: response
   end
 

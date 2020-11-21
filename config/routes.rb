@@ -15,7 +15,6 @@ Rails.application.routes.draw do
 
   # Entity routes post pagination
   post '/admin/post/pagination/:page' => 'api/pagination#set_pagination_posts'
-  post '/admin/category/pagination/:page' => 'api/pagination#set_pagination_categories'
 
   post '/search/:q' => 'api/search#results'
 
