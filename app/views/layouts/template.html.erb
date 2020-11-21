@@ -10,19 +10,9 @@
   <!-- Links Lib JS -->
 </head>
 
-<body class="html front">
-<div class="wrap">
-  <%= render 'front/header' %>
-  <div class="content">
-    <div class="main-content">
-      <div class="region">
-        <div class="block-main">
-          <%= yield %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <%= render 'front/footer' %>
-</div>
+<body bgcolor="#FFFFFF" text="#7A725B" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<%= render 'front/header' %>
+<%= yield %>
+<%= render 'front/footer' %>
 </body>
 </html>

@@ -26,17 +26,6 @@ class Admin::PostsController < ApplicationController
   end
 
   def create
-    categories = params[:categories]
-    if categories.empty?
-      response = @response_body.response_json(false, 'One category must be selected.')
-      return render json: response
-    end
-
-    if Category.dontExist(categories)
-      response = @response_body.response_json(false, 'One of the selected category don\'t exist.')
-      return render json: response
-    end
-
     # Check if the post exist already !
     post_exist = Post.find_by_name(params[:name])
     unless post_exist.empty?
@@ -47,22 +36,15 @@ class Admin::PostsController < ApplicationController
     # Set Credentials Post
     @post = Post.new(params_post)
     @post.date_post = Time.now
-    @post.category_id = Category.get_categories(categories).uniq.join(',')
-
     # Upload Image File
     @post.img_original = params[:image]
+    @post.file_swf = params[:file_swf]
     if @post.save
       # Update informations file
       set_image_credentials
 
-      # Check if the category are different from each other
-      if Category.check_idem(categories)
-        flash[:success] = 'You are add one same category, we are delete the duplicate category.'
-        response = @response_body.response_json(true, 'You are add one same category, we are delete the duplicate category.')
-      else
-        flash[:success] = 'Post was successfully created.'
-        response = @response_body.response_json(true, 'Post was successfully created.')
-      end
+      flash[:success] = 'Post was successfully created.'
+      response = @response_body.response_json(true, 'Post was successfully created.')
     else
       response = @response_body.response_json(false, 'An error occurred when validating to your request.', @post.errors.messages)
     end
@@ -144,8 +126,6 @@ class Admin::PostsController < ApplicationController
       return redirect_to root_path
     end
     @posts = Post.all
-    @categories = Category.all
-    @category = Category.find_by_slug(request.referer.split('coloriage/')[1])[0]
   end
 
   private

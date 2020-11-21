@@ -1,57 +1,176 @@
-<div class="container">
-  <div class="breadcrumb">
-    <a href="/" title="coloriage">Coloriage</a>
-    >
-    <% if @category != nil %>
-      <a href="/coloriage/<%= @category.slug %>"><%= @category.name %></a>
-      >
-    <% end %>
-    <a href="/<%= @post.slug %>"><%= @post.name %></a>
-  </div>
-  <h1>Coloriage <%= @post.name %> à imprimer</h1>
-  <!-- BLOCK POST FULL PANEL -->
-  <div class="block-view">
-    <div class="content">
-      <div class="view-front default">
-        <div class="view-full">
-          <div class="block-right">
-            <div class="container"></div>
-          </div>
-          <div class="container">
-            <div class="block-field">
-              <a href="<%= @post.img_original.url %>">
-                <img src="<%= @post.img_original.medium.url %>" alt="<%= @post.name %>">
-              </a>
-            </div>
-            <div class="extra-link">
-              <div class="extra-field">
-                Vous avez envie de voir plus de
-                <a href="http://www.coloriages.info/coloriage/fille" target="_BLANK">coloriages de fille</a>
-                . Commencez par les
-                <a href="http://www.coloriagesailormoon.com/" title="Coloriages de Sailor Moon" target="_BLANK">coloriages
-                  de Sailor Moon</a>
-                . On passe des belles fées au super-pouvoir à colorier. Ou encore de jolies monstres
-                <a href="http://www.coloriagemonsterhigh.net/">Monster High</a>
-                à dessiner.
-              </div>
-            </div>
-            <div class="btn-block">
-              <div class="grid-btn">
-                <a href="<%= @post.img_original.url %>" target="_blank" class="btn">Imprimer</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="block-pub"></div>
-        <!-- BLOCK POSTS AND CATEGORIES SIMILAR -->
-        <h2>Coloriages similaires</h2>
-        <div class="block-view">
-          <div class="content">
-            <%= render 'front/concern/view_front_posts', items: @posts %>
-            <%= render 'front/concern/block_view_categories', items: @categories, title: 'Catégories similaires', border_orange: true %>
-          </div>
-        </div>
-      </div>
+<tr>
+  <td width="14" style="background-image:url('/images/front/jeux-de-voiture_bar_header.jpg')"></td>
+  <td colspan="2" align="center"></td>
+  <td width="16" style="background-image: url('/images/front/jeux-de-voiture_bar_right.jpg')"></td>
+</tr>
+<tr>
+  <td width="14" style="background-image: url('/images/front/jeux-de-voiture_bar_header.jpg')"></td>
+  <td colspan="2">
+    <p></p>
+    <div style="margin: 25px 90px;">
+      <h1>
+        <font color="#C61212" size="5" face="Arial, Helvetica, sans-serif">
+          <a href="#" title="Jeux de Voiture">
+            <font color="#C61212">Jeux de Voiture</font>
+          </a>
+          » Jeu Caravan parking
+        </font>
+      </h1>
+      <font size="2" face="Arial, Helvetica, sans-serif">
+        Dans 'Caravan Party' ton but est d'arriver à garer correctement ta caravane de vacancier dans l'emplacement qui
+        lui est réservé. Pour cela aide toi des 4 flèches du clavier au travers des 3 niveaux demandés, Plus tu seras
+        rapide, plus tu gagneras de points.
+        Tu vas jouer au jeu Caravan parking gratuit en flash, Caravan parking est un des meilleurs
+        <a style="text-decoration: none;" href="https://web.archive.org/web/20141120023428/http://www.jeu.net/voiture/" target="_blank" title="Jeux de Voiture"><font face="Arial, Helvetica, sans-serif" color="#C61212">jeux
+          de voiture</font></a> du site Jeux de Voiture et de Moto.com !!!
+      </font>
     </div>
-  </div>
-</div>
+    <font size="2" face="Arial, Helvetica, sans-serif">
+      <center>
+        <table width="1036">
+          <tbody>
+          <tr>
+            <td width="1036" valign="top">
+              <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="https://web.archive.org/web/20141120023428oe_/http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1036" height="560" title="">
+                <param name="movie" value="http://komo.fr/ftp/jdmedv/voiture/jeux/caravan_parking.swf">
+                <param name="quality" value="high">
+                <embed src="https://web.archive.org/web/20141120023428oe_/http://komo.fr/ftp/jdmedv/voiture/jeux/caravan_parking.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1036" height="560" allownetworking="internal">
+              </object>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </center>
+      <br>
+      <br>
+      <table border="0" align="center" cellpadding="0" cellspacing="12">
+        <tbody>
+        <tr>
+          <td>
+            <table width="100" height="120" border="0" align="center" cellspacing="0" cellpadding="0">
+              <tbody>
+              <tr>
+                <td width="100" height="100" valign="top">
+                  <center>
+                    <a href="#" style="text-decoration: none" title="Title post">
+                      <img width="100" height="100" src="https://web.archive.org/web/20141120023428im_/http://komo.fr/ftp/jdmedv/voiture/mini/monster_truck_maniac_2.jpg" alt="Title post" border="0">
+                    </a>
+                  </center>
+                </td>
+              </tr>
+              <tr>
+                <td width="100" height="20">
+                  <center>
+                    <a href="#" style="text-decoration: none" title="Title post">
+                      <font face="arial" size="1" color="#C61212">Title post</font>
+                    </a>
+                  </center>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>
+            <table width="100" height="120" border="0" align="center" cellspacing="0" cellpadding="0">
+              <tbody>
+              <tr>
+                <td width="100" height="100" valign="top">
+                  <center>
+                    <a href="#" style="text-decoration: none" title="Title post">
+                      <img width="100" height="100" src="https://web.archive.org/web/20141120023428im_/http://komo.fr/ftp/jdmedv/voiture/mini/monster_truck_maniac_2.jpg" alt="Title post" border="0">
+                    </a>
+                  </center>
+                </td>
+              </tr>
+              <tr>
+                <td width="100" height="20">
+                  <center>
+                    <a href="#" style="text-decoration: none" title="Title post">
+                      <font face="arial" size="1" color="#C61212">Title post</font>
+                    </a>
+                  </center>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>
+            <table width="100" height="120" border="0" align="center" cellspacing="0" cellpadding="0">
+              <tbody>
+              <tr>
+                <td width="100" height="100" valign="top">
+                  <center>
+                    <a href="#" style="text-decoration: none" title="Title post">
+                      <img width="100" height="100" src="https://web.archive.org/web/20141120023428im_/http://komo.fr/ftp/jdmedv/voiture/mini/monster_truck_maniac_2.jpg" alt="Title post" border="0">
+                    </a>
+                  </center>
+                </td>
+              </tr>
+              <tr>
+                <td width="100" height="20">
+                  <center>
+                    <a href="#" style="text-decoration: none" title="Title post">
+                      <font face="arial" size="1" color="#C61212">Title post</font>
+                    </a>
+                  </center>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>
+            <table width="100" height="120" border="0" align="center" cellspacing="0" cellpadding="0">
+              <tbody>
+              <tr>
+                <td width="100" height="100" valign="top">
+                  <center>
+                    <a href="#" style="text-decoration: none" title="Title post">
+                      <img width="100" height="100" src="https://web.archive.org/web/20141120023428im_/http://komo.fr/ftp/jdmedv/voiture/mini/monster_truck_maniac_2.jpg" alt="Title post" border="0">
+                    </a>
+                  </center>
+                </td>
+              </tr>
+              <tr>
+                <td width="100" height="20">
+                  <center>
+                    <a href="#" style="text-decoration: none" title="Title post">
+                      <font face="arial" size="1" color="#C61212">Title post</font>
+                    </a>
+                  </center>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>
+            <table width="100" height="120" border="0" align="center" cellspacing="0" cellpadding="0">
+              <tbody>
+              <tr>
+                <td width="100" height="100" valign="top">
+                  <center>
+                    <a href="#" style="text-decoration: none" title="Title post">
+                      <img width="100" height="100" src="https://web.archive.org/web/20141120023428im_/http://komo.fr/ftp/jdmedv/voiture/mini/monster_truck_maniac_2.jpg" alt="Title post" border="0">
+                    </a>
+                  </center>
+                </td>
+              </tr>
+              <tr>
+                <td width="100" height="20">
+                  <center>
+                    <a href="#" style="text-decoration: none" title="Title post">
+                      <font face="arial" size="1" color="#C61212">Title post</font>
+                    </a>
+                  </center>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </font>
+    <p></p>
+  </td>
+  <td width="16" style="background-image: url('/images/front/jeux-de-voiture_bar_right.jpg')"></td>
+</tr>

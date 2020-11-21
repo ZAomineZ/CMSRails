@@ -30,6 +30,7 @@
     let categories = ''
     let descr = ''
     let files
+    let files_swf
 
     onMount(() => {
         csrfValue = RequestDocument.getCsrf()
@@ -79,7 +80,7 @@
      * @param {Event} event
      */
     async function handleSubmit(event) {
-        const response = await (new Post()).resSubmit(event, csrfValue, {name, slug, descr, categories, files, uriForm})
+        const response = await (new Post()).resSubmit(event, csrfValue, {name, slug, descr, categories, files, files_swf, uriForm})
         successResponse = !!response.success;
         // Redirect to admin dashboard, if the response is success !
         if (successResponse) window.location.href = '/admin'
@@ -108,7 +109,7 @@
                 must be empty or required, the field categories represents to categories created, the field content
                 represents to content post (string minimum 10 characters) and also the field file for your image attached to post.</p>
             <Form callInputs={{onInputNameField, onInputSlugField, onInputDescField}} bind:files={files}
-                  on:submit={handleSubmit} on:tags={getTags}
+                  bind:files_swf={files_swf} on:submit={handleSubmit} on:tags={getTags}
                   dataCategories={dataCategories} errorFields={errorFields} uriForm="/admin/posts"/>
         </div>
     </div>
