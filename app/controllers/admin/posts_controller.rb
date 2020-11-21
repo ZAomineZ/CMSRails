@@ -5,6 +5,7 @@ class Admin::PostsController < ApplicationController
   before_action :admin_access, only: [:new, :create, :edit, :update, :destroy]
 
   layout 'template', only: [:show]
+  layout 'application', only: [:new, :edit]
 
   def initialize
     super
@@ -52,23 +53,9 @@ class Admin::PostsController < ApplicationController
   end
 
   def edit
-    @categories = @post.category_id
-    @categories = @categories.split(',')
-    @data_categories = Category.all.map { |category| category.name }
   end
 
   def update
-    categories = params[:categories]
-    if categories.empty?
-      response = @response_body.response_json(false, 'One category must be selected.')
-      return render json: response
-    end
-
-    if Category.dontExist(categories)
-      response = @response_body.response_json(false, 'One of the selected category don\'t exist.')
-      return render json: response
-    end
-
     # Check if the post exist already !
     post_exist = Post.find_by_name(params[:name])
     if !post_exist.empty? && @post.id != params[:id].to_i
@@ -77,26 +64,21 @@ class Admin::PostsController < ApplicationController
     end
 
     # Update credentials category and images
-    @post.category_id = Category.get_categories(categories).uniq.join(',')
     if params[:image] != nil && params[:image] != 'null'
       @post.img_original = params[:image]
     end
-    puts params[:image].inspect
-    update_action = params[:image] != nil || params[:image] != 'null' ? @post.update(params_post) : update_request_without_image(categories)
+    if params[:swf] != nil && params[:swf] != 'null'
+      @post.file_swf = params[:file_swf]
+    end
+    update_action = params[:image] != nil || params[:image] != 'null' ? @post.update(params_post) : update_request_without_image
     if update_action
       # Update informations file
       if params[:image] != nil && params[:image] != 'null'
         set_image_credentials
       end
 
-      # Check if the category are different from each other
-      if Category.check_idem(categories)
-        flash[:success] = 'You are add one same category, we are delete the duplicate category.'
-        response = @response_body.response_json(true, 'You are add one same category, we are delete the duplicate category.')
-      else
-        flash[:success] = 'Post was successfully edited.'
-        response = @response_body.response_json(true, 'Post was successfully edited.')
-      end
+      flash[:success] = 'Post was successfully edited.'
+      response = @response_body.response_json(true, 'Post was successfully edited.')
     else
       response = @response_body.response_json(false, 'An error occurred when validating to your request.', @post.errors.messages)
     end
@@ -151,8 +133,8 @@ class Admin::PostsController < ApplicationController
     @post.save
   end
 
-  def update_request_without_image(categories = '')
-    attributes = {name: params[:name], slug: params[:slug], category_id: Category.get_categories(categories).uniq.join(','), descr: params[:descr]}
+  def update_request_without_image
+    attributes = {name: params[:name], slug: params[:slug], descr: params[:descr]}
     @post.update_attributes(attributes)
   end
 

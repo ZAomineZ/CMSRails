@@ -28,12 +28,11 @@ export class Post {
      * @return {Promise<void>}
      */
     async resSubmit(event, csrfValue, data) {
-        const {name, slug, categories, descr, files, files_swf, uriForm} = data
+        const {name, slug, descr, files, files_swf, uriForm} = data
 
         this.formData.append('authenticity_token', csrfValue)
         this.formData.append('name', name)
         this.formData.append('slug', slug)
-        this.formData.append('categories', categories)
         this.formData.append('descr', descr)
         this.formData.append('image', files ? files[0] : null)
         this.formData.append('file_swf', files_swf ? files_swf[0] : null)

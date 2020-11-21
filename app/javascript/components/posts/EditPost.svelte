@@ -85,7 +85,6 @@
             name: name === null ? post.name : name,
             slug: slug === null ? post.slug : slug,
             descr: descr === null ? post.descr : descr,
-            categories,
             files,
             uriForm
         })

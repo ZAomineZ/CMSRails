@@ -80,7 +80,7 @@
      * @param {Event} event
      */
     async function handleSubmit(event) {
-        const response = await (new Post()).resSubmit(event, csrfValue, {name, slug, descr, categories, files, files_swf, uriForm})
+        const response = await (new Post()).resSubmit(event, csrfValue, {name, slug, descr, files, files_swf, uriForm})
         successResponse = !!response.success;
         // Redirect to admin dashboard, if the response is success !
         if (successResponse) window.location.href = '/admin'
