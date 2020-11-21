@@ -10,28 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_21_134815) do
-
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.string "slug"
-    t.text "resume"
-    t.text "avat_cat"
-    t.text "icon_cat"
-    t.text "date_cat"
-  end
+ActiveRecord::Schema.define(version: 2020_11_21_152554) do
 
   create_table "posts", force: :cascade do |t|
     t.string "name"
     t.string "slug"
     t.text "descr"
     t.datetime "date_post"
-    t.text "img_original"
-    t.text "img_medium"
-    t.text "img_thumb"
-    t.text "img_mini"
-    t.string "category_id"
     t.string "file_swf"
+    t.string "image"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,7 +1,7 @@
 require 'fileutils'
 
 class Post < ApplicationRecord
-  mount_uploader :img_original, PostFileUploader
+  mount_uploader :image, PostFileUploader
   mount_uploader :file_swf, PostFileSwfUploader
 
   validates :name, presence: true, :length => {minimum: 5, maximum: 60}
