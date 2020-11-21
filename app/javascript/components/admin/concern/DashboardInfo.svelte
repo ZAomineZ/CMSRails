@@ -14,8 +14,7 @@
                         <p>{content}</p>
                         <ul>
                             <li>You can create and edit your post !</li>
-                            <li>You can create and edit your categories !</li>
-                            <li>You can see the listening to your posts and categories !</li>
+                            <li>You can see the listening to your posts</li>
                         </ul>
                     </div>
                     <div class="col-md-6 info-container-image"></div>

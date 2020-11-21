@@ -45,10 +45,7 @@ class PostFileUploader < CarrierWave::Uploader::Base
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   def filename
     if file != nil
-      path = "#{mounted_as}_#{original_filename}"
-      parts = path.split('img_original_')
-      path = parts[1]
-      path if original_filename
+      original_filename
     end
   end
 end

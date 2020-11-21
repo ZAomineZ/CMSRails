@@ -27,7 +27,6 @@ Rails.application.routes.draw do
   put '/admin/account/:user_id', to: 'users#update_account', as: 'update_account'
 
   # Routes coloriages
-  get '/coloriage/:slug', to: 'admin/category#show'
   get '/:slug', to: 'admin/posts#show'
 
 end

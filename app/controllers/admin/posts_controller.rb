@@ -23,7 +23,6 @@ class Admin::PostsController < ApplicationController
   end
 
   def new
-    @data_categories = Category.all.map { |category| category.name }
   end
 
   def create

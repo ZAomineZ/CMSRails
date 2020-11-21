@@ -26,7 +26,7 @@
                         <li>
                             <a href="/admin/posts/{post.id}/edit">
                                 <img alt="post img {post.id}"
-                                     src={post.img_original.thumb.url ? post.img_original.thumb.url : '/images/default/thumb_image.png'}/>
+                                     src={post.image.url ? post.img_original.thumb.url : '/images/default/thumb_image.png'}/>
                             </a>
                             <p>
                                 <a href="/admin/posts/{post.id}/edit">{post.name}</a>

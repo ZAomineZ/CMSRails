@@ -42,12 +42,12 @@
     <InputField bind:files={files_swf} className='custom-file-input' id="file_swf" label="Choose your file SWF"
                 type="file"/>
     <InputField bind:files={files} className='custom-file-input' id="image" label="Choose your image" type="file"/>
-    {#if post && post.img_original}
+    {#if post && post.image}
         <div class="form-group img-info">
             <h6 class="img-text">Image Preview:</h6>
             <div class="img-preview">
-                <a href={post.img_original.url} target="_blank">
-                    <img src={post.img_original.thumb.url ? post.img_original.thumb.url : '/images/default/thumb_image.png'}
+                <a href={post.image.url} target="_blank">
+                    <img src={post.image.thumb.url ? post.image.thumb.url : '/images/default/thumb_image.png'}
                          alt="">
                 </a>
             </div>
