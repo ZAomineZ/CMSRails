@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
   scope "admin", as: "admin" do
     resources :posts, controller: 'admin/posts', only: [:index, :new, :create, :edit, :update, :destroy]
-    resources :category, controller: 'admin/category', only: [:index, :new, :create, :edit, :update, :destroy]
   end
 
   # Entity routes post pagination
